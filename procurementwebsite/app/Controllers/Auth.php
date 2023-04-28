@@ -9,10 +9,10 @@ class Auth extends Controller
 {
     public function index()
     {
-        echo "login page";
+        return view('auth/login');
     }
     public function register()
     {
-        echo "register page";
+        return view('auth/register');
     }
 }
