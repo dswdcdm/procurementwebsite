@@ -275,6 +275,10 @@
             <h3>Register</h3>
         </a>
 
+        <a href="<?= site_url('pages') ?>">
+            <h3>Dashboard</h3>
+        </a>
+
         <a href="<?= site_url('auth') ?>">
             <h3>Login</h3>
         </a>

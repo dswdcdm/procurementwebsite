@@ -2,9 +2,6 @@
 
 namespace Config;
 
-use CodeIgniter\Router\RouteCollection;
-use CodeIgniter\Router\Route;
-
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
@@ -38,6 +35,9 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->add('auth', 'Auth::index');
 $routes->add('auth/register', 'Auth::register');
+
+
+$routes->add('pages', 'Pages::index');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
