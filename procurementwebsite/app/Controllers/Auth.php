@@ -9,10 +9,14 @@ class Auth extends Controller
 {
     public function index()
     {
-        return view('auth/login');
+        return view('components/header')
+            . view('auth/login')
+            . view('components/footer');
     }
     public function register()
     {
-        return view('auth/register');
+        return view('components/header')
+            . view('auth/register')
+            . view('components/footer');
     }
 }
