@@ -76,10 +76,9 @@ class Auth extends Controller
                 . view('components/footer');
         } else {
             //register user into dswd user db
-
-            $name = $this->request->getPost('name');
-            $email = $this->request->getPost('email');
-            $password = $this->request->getPost('password');
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
 
 
             $values = [
@@ -94,7 +93,7 @@ class Auth extends Controller
             if (!$query) {
                 return redirect()->back()->with('fail', 'Something went wrong');
             } else {
-                return redirect()->to('register')->with('success', 'Registered Successfully');
+                return redirect()->to('auth/register')->with('success', 'Registered Successfully');
             }
         }
     }
@@ -126,10 +125,10 @@ class Auth extends Controller
                 . view('components/footer');
         } else {
 
-            $email = $this->request->getPost('email');
-            $password = $this->request->getPost('password');
-            $userModel = new App\Models\UserModel();
-            $user_info = $userModel->where('email', $email)->first();
+            $email = $email = $_POST['email'];
+            $password  = $_POST['password'];
+            $usersModel = new App\Models\UserModel();
+            $user_info = $usersModel->where('email', $email)->first();
         }
     }
 }
