@@ -135,7 +135,7 @@ class Auth extends Controller
 
             if (!$check_password) {
                 session()->setFlashdata('fail', 'Incorrect password');
-                return redirect()->to('/auth')->withInput();
+                return redirect()->to('auth')->withInput();
             } else {
                 $user_id = $user_info['id'];
                 session()->set('loggedUser', $user_id);

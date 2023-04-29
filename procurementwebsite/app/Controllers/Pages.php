@@ -9,6 +9,7 @@ class Pages extends Controller
 {
     public function index()
     {
+
         return view('components/header')
             . view('components/navbar')
             . view('pages/dashboard')
