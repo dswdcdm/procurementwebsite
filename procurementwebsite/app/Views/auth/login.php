@@ -6,7 +6,8 @@
                     <h3 class="text-center">Login</h3>
                 </div>
                 <div class="card-body">
-                    <form action="" method="POST">
+                    <form action="<?= site_url('auth/check') ?>" method="POST">
+                        <?= csrf_field(); ?>
                         <div class="form-group">
                             <label for="email">Email address</label>
                             <input type="email" class="form-control" id="email" name="email" required>

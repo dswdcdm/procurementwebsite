@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
-use App\Controllers\BaseController;
+use App\Libraries\Hash;
 
 class Auth extends Controller
 {
@@ -76,7 +76,31 @@ class Auth extends Controller
                 . view('components/footer');
         } else {
             //register user into dswd user db
+
             $name = $this->request->getPost('name');
+            $email = $this->request->getPost('email');
+            $password = $this->request->getPost('password');
+
+
+            $values = [
+                'name' => $name,
+                'email' => $email,
+                'password' => Hash::make($password)
+            ];
+
+
+            $userModel = new \App\Models\UserModel();
+            $query = $userModel->insert($values);
+            if (!$query) {
+                return redirect()->back()->with('fail', 'Something went wrong');
+            } else {
+                return redirect()->to('register')->with('success', 'Registered Successfully');
+            }
         }
+    }
+
+    function check()
+    {
+        echo 'check login process...';
     }
 }
