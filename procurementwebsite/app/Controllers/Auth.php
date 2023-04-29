@@ -50,7 +50,7 @@ class Auth extends Controller
                 ]
             ],
             'password' => [
-                'rules' => 'required|min_length [5] |max_length[12]',
+                'rules' => 'required|min_length[5]|max_length[12]',
                 'errors' => [
                     'required' => 'Password is Required',
                     'min_length' => 'Password must have atleast 5 characters in length',
@@ -59,7 +59,7 @@ class Auth extends Controller
             ],
 
             'cpassword' => [
-                'rules' => 'required|min_length[5] | max_length [12] | matches [password]',
+                'rules' => 'required|min_length[5]|max_length[12]|matches[password]',
                 'errors' => [
                     'required' => 'Confirm Password is Required',
                     'min_length' => 'Password must have atleast 5 characters in length',
@@ -75,7 +75,8 @@ class Auth extends Controller
                 . view('auth/register', ['validation' => $this->validator])
                 . view('components/footer');
         } else {
-            echo "validated successfully";
+            //register user into dswd user db
+            $name = $this->request->getPost('name');
         }
     }
 }
