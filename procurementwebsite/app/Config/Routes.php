@@ -35,6 +35,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->add('auth', 'Auth::index');
 $routes->add('auth/register', 'Auth::register');
+$routes->add('auth/submitRegister', 'Auth::submitRegister');
 
 
 $routes->add('pages', 'Pages::index');
