@@ -2,7 +2,7 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <h2 class="text-center mb-4">Registration</h2>
-            <form action="<?= site_url('auth/submitRegister') ?>" method="POST">
+            <form action="<?= site_url('auth/submitRegister') ?>" method="POST" autocomplete="off">
                 <?= csrf_field(); ?>
                 <?php if (!empty(session()->getFlashdata('fail'))) : ?>
                     <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>

@@ -37,9 +37,13 @@ $routes->add('auth', 'Auth::index');
 $routes->add('auth/register', 'Auth::register');
 $routes->add('auth/submitRegister', 'Auth::submitRegister');
 $routes->add('auth/check', 'Auth::check');
+$routes->add('auth/logout', 'Auth::logout');
+
+$routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
+    $routes->get('pages', 'Pages::index');
+});
 
 
-$routes->add('pages', 'Pages::index');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

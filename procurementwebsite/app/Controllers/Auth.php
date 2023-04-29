@@ -93,7 +93,9 @@ class Auth extends Controller
             if (!$query) {
                 return redirect()->back()->with('fail', 'Something went wrong');
             } else {
-                return redirect()->to('auth/register')->with('success', 'Registered Successfully');
+                $last_id = $userModel->insertID();
+                session()->set('loggedUser', $last_id);
+                return redirect()->to('/pages');
             }
         }
     }
@@ -127,8 +129,27 @@ class Auth extends Controller
 
             $email = $email = $_POST['email'];
             $password  = $_POST['password'];
-            $usersModel = new App\Models\UserModel();
+            $usersModel = new \App\Models\UserModel();
             $user_info = $usersModel->where('email', $email)->first();
+            $check_password = Hash::check($password, $user_info['password']);
+
+            if (!$check_password) {
+                session()->setFlashdata('fail', 'Incorrect password');
+                return redirect()->to('/auth')->withInput();
+            } else {
+                $user_id = $user_info['id'];
+                session()->set('loggedUser', $user_id);
+                return redirect()->to('/pages');
+            }
+        }
+    }
+
+
+    function logout()
+    {
+        if (session()->has('loggedUser')) {
+            session()->remove('loggedUser');
+            return redirect()->to('/auth?access=out')->with('fail', 'Logged out!');
         }
     }
 }

@@ -6,7 +6,7 @@
                     <h3 class="text-center">Login</h3>
                 </div>
                 <div class="card-body">
-                    <form action="<?= site_url('auth/check') ?>" method="POST">
+                    <form action="<?= site_url('auth/check') ?>" method="POST" autocomplete="off">
 
                         <?= csrf_field(); ?>
                         <?php if (!empty(session()->getFlashdata('fail'))) : ?>

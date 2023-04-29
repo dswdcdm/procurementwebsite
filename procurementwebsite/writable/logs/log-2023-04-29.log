@@ -279,3 +279,450 @@ INFO - 2023-04-29 15:24:58 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-04-29 15:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-04-29 15:25:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-04-29 15:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 15:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 15:30:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 15:30:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 15:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 15:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-29 15:32:25 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\Auth.php on line 141.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Controllers\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Auth', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:32:26 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\Auth.php on line 141.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Controllers\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Auth', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-04-29 15:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 15:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 15:32:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 15:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 15:37:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-29 15:37:10 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:38:23 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:38:24 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:39:32 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:39:32 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:42:29 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:42:29 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:42:30 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:42:30 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:42:30 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:42:30 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:42:30 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:43:00 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:43:01 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-04-29 15:43:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 15:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 15:44:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 15:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 15:44:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 15:44:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-29 15:44:28 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:47:59 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\Auth.php on line 99.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Controllers\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Auth', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:48:01 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\Auth.php on line 99.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Controllers\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Auth', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:48:04 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\Auth.php on line 99.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Controllers\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Auth', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-04-29 15:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 15:48:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-29 15:48:38 --> Call to undefined method App\Models\UserModel::insetID
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Auth.php(96): CodeIgniter\Model->__call('insetID', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->submitRegister()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-04-29 15:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 15:48:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 15:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 15:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-29 15:49:19 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:57:44 --> Class App\Filters\AuthCheckFilter contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (CodeIgniter\Filters\FilterInterface::after)
+in APPPATH\Filters\AuthCheckFilter.php on line 9.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-04-29 15:58:46 --> Cannot instantiate abstract class App\Filters\AuthCheckFilter
+in SYSTEMPATH\Filters\Filters.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('pages', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:58:47 --> Cannot instantiate abstract class App\Filters\AuthCheckFilter
+in SYSTEMPATH\Filters\Filters.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('pages', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+CRITICAL - 2023-04-29 15:58:48 --> Cannot instantiate abstract class App\Filters\AuthCheckFilter
+in SYSTEMPATH\Filters\Filters.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('pages', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-04-29 16:01:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-29 16:01:30 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-04-29 16:01:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-29 16:01:34 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-04-29 16:01:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-29 16:01:34 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-04-29 16:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 16:01:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-29 16:01:46 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-04-29 16:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 16:02:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 16:02:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 16:02:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 16:02:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 16:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 16:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 16:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-29 16:04:12 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-04-29 16:04:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-29 16:04:15 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-04-29 16:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-29 16:04:29 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-04-29 16:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-29 16:04:30 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-04-29 16:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-29 16:04:30 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-04-29 16:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-29 16:04:37 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-04-29 16:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 16:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 16:04:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-29 16:04:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-29 16:04:54 --> Undefined variable $userInfo
+in APPPATH\Views\pages\dashboard.php on line 2.
+ 1 APPPATH\Views\pages\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userInfo', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('pages/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
