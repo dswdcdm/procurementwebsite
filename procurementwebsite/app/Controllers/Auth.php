@@ -101,6 +101,35 @@ class Auth extends Controller
 
     function check()
     {
-        echo 'check login process...';
+        $validation = $this->validate([
+            'email' => [
+                'rules' => 'required|valid_email|is_not_unique[users.email]',
+                'errors' => [
+                    'required' => 'Email is Required',
+                    'valid_email' => 'Enter a Valid Email',
+                    'is_not_unique' => 'Email is not registered'
+                ]
+            ],
+            'password' => [
+                'rules' => 'required|min_length[5]|max_length[12]',
+                'errors' => [
+                    'required' => 'Password is Required',
+                    'min_length' => 'Password must have atleast 5 characters in length',
+                    'max_length' => 'Password must not have characters more than 12 in length'
+                ]
+            ],
+        ]);
+
+        if (!$validation) {
+            return view('components/header')
+                . view('auth/login', ['validation' => $this->validator])
+                . view('components/footer');
+        } else {
+
+            $email = $this->request->getPost('email');
+            $password = $this->request->getPost('password');
+            $userModel = new App\Models\UserModel();
+            $user_info = $userModel->where('email', $email)->first();
+        }
     }
 }
