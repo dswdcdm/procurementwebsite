@@ -65,7 +65,7 @@
                 <span class="text-danger"><?= isset($validation) ? display_error($validation, 'password') : '' ?></span>
             </div>
             <button type="submit" class="sign-in_btn">
-                <span> <a href="/dashboard" id="Login-button">Sign In</a></span>
+                <span id="Login-button"> Sign In </span>
             </button>
 
             <div class="separator">
