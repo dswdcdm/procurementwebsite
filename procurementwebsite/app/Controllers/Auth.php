@@ -126,9 +126,11 @@ class Auth extends Controller
         ]);
 
         if (!$validation) {
-            return view('components/header')
-                . view('auth/login', ['validation' => $this->validator])
-                . view('components/footer');
+            $data = [
+                'title' => 'invalid login'
+            ];
+            return view('components/header', $data)
+                . view('auth/login', ['validation' => $this->validator]);
         } else {
 
             $email = $email = $_POST['email'];
