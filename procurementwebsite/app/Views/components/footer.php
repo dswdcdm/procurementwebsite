@@ -1,7 +1,34 @@
-<h1>footer</h1>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-</body>
+    <!-- FOOTER: DEBUG INFO + COPYRIGHTS -->
 
-</html>
+    <footer>
+        <div class="environment">
+
+            <p>Page rendered in {elapsed_time} seconds</p>
+
+            <p>Environment: <?= ENVIRONMENT ?></p>
+
+        </div>
+
+        <div class="copyrights">
+
+            <p>&copy; <?= date('Y') ?> CodeIgniter Foundation. CodeIgniter is open source project released under the MIT
+                open source licence.</p>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+        function toggleMenu() {
+            var menuItems = document.getElementsByClassName('menu-item');
+            for (var i = 0; i < menuItems.length; i++) {
+                var menuItem = menuItems[i];
+                menuItem.classList.toggle("hidden");
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    </body>
+
+    </html>

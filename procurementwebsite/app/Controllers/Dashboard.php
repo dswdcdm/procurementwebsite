@@ -28,7 +28,7 @@ class Dashboard extends BaseController
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);
         $data = [
-            'title' => 'Dashboard',
+            'title' => 'profile',
             'userInfo' => $userInfo
         ];
         return view('components/header', $data)

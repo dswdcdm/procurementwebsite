@@ -13,15 +13,19 @@ class Auth extends Controller
     }
     public function index()
     {
-        return view('components/header')
-            . view('auth/login')
-            . view('components/footer');
+        $data = [
+            'title' => 'login'
+        ];
+        return view('components/header', $data)
+            . view('auth/login');
     }
     public function register()
     {
-        return view('components/header')
-            . view('auth/register')
-            . view('components/footer');
+        $data = [
+            'title' => 'register'
+        ];
+        return view('components/header', $data)
+            . view('auth/register');
     }
 
     public function submitRegister()
