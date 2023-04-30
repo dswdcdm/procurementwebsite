@@ -39,10 +39,11 @@ $routes->add('auth/logout', 'Auth::logout');
 
 $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
     $routes->get('pages', 'Dashboard::index');
+    $routes->get('pages/profile', 'Dashboard::profile');
 });
 
 $routes->group('', ['filter' => 'AlreadyLoggedInFilter'], function ($routes) {
-    $routes->get('pages/profile', 'Dashboard::profile');
+
     $routes->get('/', 'Home::index');
     $routes->add('auth', 'Auth::index');
     $routes->add('auth/register', 'Auth::register');
