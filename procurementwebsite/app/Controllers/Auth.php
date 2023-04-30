@@ -19,6 +19,15 @@ class Auth extends Controller
         return view('components/header', $data)
             . view('auth/login');
     }
+
+    public function forgotpassword()
+    {
+        $data = [
+            'title' => 'login'
+        ];
+        return view('components/header', $data)
+            . view('auth/forgotpassword');
+    }
     public function register()
     {
         $data = [
@@ -30,13 +39,6 @@ class Auth extends Controller
 
     public function submitRegister()
     {
-        /*  $validation = $this->validate([
-            'name' => 'required',
-            'email' => 'required|valid_email|is_unique[users.email]',
-            'password' => 'required|min_length [5] |max_length[12]',
-            'cpassword' => 'required|min_length[5] | max_length [12] | matches [password]'
-        ]); */
-
 
         $validation = $this->validate([
             'name' => [

@@ -46,6 +46,7 @@ $routes->group('', ['filter' => 'AlreadyLoggedInFilter'], function ($routes) {
     $routes->get('/', 'Home::index');
     $routes->add('auth', 'Auth::index');
     $routes->add('auth/register', 'Auth::register');
+    $routes->add('auth/forgotpassword', 'Auth::forgotpassword');
 });
 
 /*
