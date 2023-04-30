@@ -1,1 +1,1 @@
-__ci_last_regenerate|i:1682844972;_ci_previous_url|s:35:"http://localhost:8080/pages/profile";loggedUser|s:1:"7";
+__ci_last_regenerate|i:1682844972;_ci_previous_url|s:26:"http://localhost:8080/auth";fail|s:22:"you must be logged in!";__ci_vars|a:1:{s:4:"fail";s:3:"old";}
