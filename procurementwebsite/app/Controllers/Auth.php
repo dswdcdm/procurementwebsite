@@ -147,7 +147,11 @@ class Auth extends Controller
             } else {
                 $user_id = $user_info['id'];
                 session()->set('loggedUser', $user_id);
-                return redirect()->to('/pages');
+                if ($user_info['is_admin'] === 'admin') {
+                    echo "admin";
+                } else {
+                    return redirect()->to('/pages');
+                }
             }
         }
     }
