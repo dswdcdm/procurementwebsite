@@ -7,12 +7,13 @@
   outline: none;
 }
 
-.hr-red{
-  border: 3px solid red ;
+.hr-red {
+  border: 3px solid red;
   width: 75%;
 }
-.hr-blue{
-  border: 3px solid blue ;
+
+.hr-blue {
+  border: 3px solid blue;
   width: 75%;
 }
 
@@ -29,7 +30,8 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-header ,.menu{
+header,
+.menu {
   background-color: rgba(247, 248, 249, 1);
   padding: 0.4rem 0 0;
 }
@@ -70,8 +72,9 @@ header li.menu-item a {
 
 header li.menu-item a:hover,
 header li.menu-item a:focus {
-  background-color: rgba(221, 72, 20, 0.2);
-  color: rgba(221, 72, 20, 1);
+  text-decoration: none;
+  background-color: rgba(17, 10, 122, 0.2);
+  color: rgb(36, 21, 252);
 }
 
 header .logo {

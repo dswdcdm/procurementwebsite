@@ -1,7 +1,7 @@
     <header >
 
         <div class="menu shadow position-fixed  w-100 sticky-top">
-            <ul>
+            <ul clas>
                 <li class="logo">
                     <a href="/pages">
                         <img src="<?php echo base_url('assets/images/logob.png'); ?>" width="100%" height="100%" alt="logo" />
@@ -20,9 +20,7 @@
                 </li>
             </ul>
         </div>
-
-
-        <div class="row p-5 mt-5">
+        <div class="row p-5 mt-5 border">
             <div class="col-sm-8">
                 <img class="img-fluid " src="<?php echo base_url('assets/images/dswdlogo.png'); ?> " width="100%" height="60%" alt="logo" />
             </div>
@@ -30,10 +28,6 @@
                 <img class="img-fluid mt-3" src="<?php echo base_url('assets/images/maagap.png'); ?> " width="60%" height="60%" alt="logo" />
             </div>
         </div>
-
         <hr>
-
-
-
         <hr>
     </header>
