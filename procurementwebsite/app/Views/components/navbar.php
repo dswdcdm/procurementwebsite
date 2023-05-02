@@ -20,11 +20,8 @@
     </div>
 
     <div class="heroe">
-
         <h1> Department of Social Welfare and Development (DSWD) </h1>
-
         <h2>AS - BGMD</h2>
-
     </div>
 
 </header>

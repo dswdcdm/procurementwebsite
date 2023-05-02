@@ -2,12 +2,12 @@
 
     <footer>
         <div class="environment">
-            <p>Page rendered in {elapsed_time} seconds</p>
-            <p>Environment: <?= ENVIRONMENT ?></p>
+            <p>Page rendered in  seconds</p>
+        
         </div>
 
         <div class="copyrights">
-            <p>&copy;COPYRIGHTS 20230 - <?= date('Y') ?> DSWD AS - BGMD</p>
+            <p>&copy;COPYRIGHTS 2023 - <?= date('Y') ?> DSWD AS - BGMD</p>
         </div>
 
     </footer>
