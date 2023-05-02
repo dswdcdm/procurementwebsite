@@ -19,9 +19,7 @@
     </div>
     <!--  <div class="">
                 <span class="greeting">AS - BGMD</span>
-
-            </div>
- -->
+    </div>-->
 </section>
 
 <section style="background-color: #eee;">
@@ -55,20 +53,13 @@
                                     </div>
                                     <div class="mt-1 mb-0 text-muted small">
                                         <span> <?= $product['description']; ?></span>
-
                                     </div>
-
-
                                 </div>
                                 <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
                                     <div class="d-flex flex-row align-items-center mb-1">
                                         <h4 class="mb-1 me-1">₱ <?= $product['price']; ?></h4>
                                         <!-- <span class="text-danger"><s>₱ 4,010</s></span> -->
                                     </div>
-
-
-
-
                                     <?php if ($product['status'] == "ACTIVE") : ?>
                                         <h6 class="text-success"> <?= $product['status']; ?> </h6>
                                     <?php else : ?>
@@ -88,10 +79,6 @@
                 </div>
             </div>
         <?php endforeach; ?>
-
-
     </div>
-</section>
-
-
+    </section>
 </section>

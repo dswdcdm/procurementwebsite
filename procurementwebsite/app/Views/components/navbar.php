@@ -33,7 +33,7 @@
 
         <hr>
 
-        <div class="row ">
+      <!--   <div class="row ">
             <div class="col-3 ml-5 ">
                  <img class="img-fluid mt-3" src="<?php echo base_url('assets/images/dswdlogo.png'); ?> " width="100%" height="20%" alt="logo" />
             </div>
@@ -43,7 +43,7 @@
                 <div class="col-md-12 ">BUILDING AND GROUNDS MANAGEMENT DIVISION</div>
             </div>
         <span class="container-fluid ml-5 mt-2 "><hr class="hr-red"/></span>
-        </div>
+        </div> -->
 
         <hr>
     </header>
