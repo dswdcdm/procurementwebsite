@@ -21,13 +21,11 @@
                 <span class="greeting">AS - BGMD</span>
     </div>-->
 </section>
-
-<section style="background-color: #eee;">
-    <div class="container">
-        <?php foreach ($producttb as $product) : ?>
-            <div class="row justify-content-center mb-3 " >
-                <div class="col-md-12 col-xl-10">
-                    <div class="card shadow-0 border rounded-3">
+<div class="row ml-4">
+       
+<?php foreach ($producttb as $product) : ?>
+    <div class="col-12 col-md-6">
+    <div class="card shadow-0 border rounded-3 mb-3 ">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0 s">
@@ -76,9 +74,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
     </div>
-    </section>
+    
+    <?php endforeach; ?>
+  </div>
+
+
 </section>
