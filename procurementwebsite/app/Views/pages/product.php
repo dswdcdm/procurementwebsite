@@ -38,16 +38,6 @@
                                 </a>
                             </div>
                         </div>
-
-
-
-
-
-
-
-
-
-
                         <div class="col-md-6 col-lg-6 col-xl-6">
                             <h5><?= $product['name']; ?></h5>
                             <div class="d-flex flex-row">
