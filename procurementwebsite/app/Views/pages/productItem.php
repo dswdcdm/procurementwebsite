@@ -17,7 +17,7 @@
                     <div class="col-lg-8 m-15px-tb">
                         <article class="article">
                             <div class="article-img">
-                                <img src="<?php echo base_url('assets/images/fan.webp   '); ?>" width="50%" height="60%" alt="logo" />
+                                <img src="<?= $product['image']; ?>" width="50%" height="60%" alt="logo" />
                             </div>
                             <div class="article-title">
                                 <h6><a href="#">Product Overview</a> <?php if ($product['status'] == "ACTIVE") : ?>
