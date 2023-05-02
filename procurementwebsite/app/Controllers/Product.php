@@ -23,4 +23,24 @@ class Product extends BaseController
             . view('pages/product', $productdata)
             . view('components/footer');
     }
+
+
+    
+
+    public function productItem()
+    {
+        $userModel = new \App\Models\UserModel();
+        $loggedUserID = session()->get('loggedUser');
+        $userInfo = $userModel->find($loggedUserID);
+        $data = [
+            'title' => 'Product specs',
+            'userInfo' => $userInfo
+        ];
+        $model = new ProductModel();
+        $productdata['producttb'] = $model->findAll();
+        return view('components/header', $data)
+            . view('components/navbar')
+            . view('pages/productitem', $productdata)
+            . view('components/footer');
+    }
 }

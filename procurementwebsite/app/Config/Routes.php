@@ -39,6 +39,7 @@ $routes->add('auth/logout', 'Auth::logout');
 
 $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
     $routes->get('Product', 'Product::index');
+    $routes->get('Product/productItem', 'Product::productItem');
     $routes->get('pages', 'Dashboard::index');
     $routes->get('pages/profile', 'Dashboard::profile');
     $routes->add('admin', 'Admin::index');
