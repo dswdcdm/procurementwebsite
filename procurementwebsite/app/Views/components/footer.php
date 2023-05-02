@@ -1,6 +1,6 @@
     <!-- FOOTER: DEBUG INFO + COPYRIGHTS -->
 
-    <footer>
+    <footer >
         <div class="environment">
             <p>Page rendered in  seconds</p>
         
@@ -14,6 +14,7 @@
 
 
     <script>
+        AOS.init();
         function toggleMenu() {
             var menuItems = document.getElementsByClassName('menu-item');
             for (var i = 0; i < menuItems.length; i++) {

@@ -29,7 +29,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-header {
+header ,.menu{
   background-color: rgba(247, 248, 249, 1);
   padding: 0.4rem 0 0;
 }

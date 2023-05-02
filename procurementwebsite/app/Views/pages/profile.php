@@ -20,12 +20,11 @@
                         <p class="text-muted mb-1"><?= $userInfo['email']; ?></p>
                         <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
                         <div class="d-flex justify-content-center mb-2">
-                            <button type="button" class="btn btn-primary">Follow</button>
-                            <button type="button" class="btn btn-outline-primary ms-1">Message</button>
+                    ADMIN
                         </div>
                     </div>
                 </div>
-                <div class="card mb-4 mb-lg-0">
+    <!--             <div class="card mb-4 mb-lg-0">
                     <div class="card-body p-0">
                         <ul class="list-group list-group-flush rounded-3">
 
@@ -43,7 +42,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="col-lg-8">
                 <div class="card mb-4">
