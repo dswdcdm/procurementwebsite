@@ -6,7 +6,7 @@
         </div>
 
         <div class="copyrights">
-            <p>&copy;COPYRIGHTS 2023 - <?= date('Y') ?> DSWD AS - BGMD</p>
+            <p>&copy;COPYRIGHTS 2023 - <?= date('Y') ?> DSWD ADMINISTRATIVE SERVICES - BUILDING AND GROUNDS MANAGEMENT DIVISION</p>
         </div>
 
     </footer>
