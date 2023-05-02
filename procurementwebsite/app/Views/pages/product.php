@@ -25,7 +25,7 @@
 <section style="background-color: #eee;">
     <div class="container">
         <?php foreach ($producttb as $product) : ?>
-            <div class="row justify-content-center mb-3 ">
+            <div class="row justify-content-center mb-3 " >
                 <div class="col-md-12 col-xl-10">
                     <div class="card shadow-0 border rounded-3">
                         <div class="card-body">
