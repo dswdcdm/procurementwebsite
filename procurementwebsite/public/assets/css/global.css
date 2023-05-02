@@ -41,6 +41,10 @@ header,
   padding: 0.4rem 2rem;
 }
 
+ul{
+  list-style-type: none;
+}
+
 header ul {
   border-bottom: 1px solid rgba(242, 242, 242, 1);
   list-style-type: none;
@@ -180,7 +184,7 @@ section svg {
 }
 
 footer {
-  background-color: rgba(221, 72, 20, 0.8);
+  background-color: rgba(248, 248, 255, 0.8);
   text-align: center;
 }
 

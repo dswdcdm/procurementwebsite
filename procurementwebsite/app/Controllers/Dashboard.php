@@ -15,12 +15,12 @@ class Dashboard extends BaseController
             'title' => 'Dashboard',
             'userInfo' => $userInfo
         ];
-        return view('components/header', $data)
+        return view('components/header', $data) 
             . view('components/navbar')
             . view('components/hero')
             . view('components/carousel')
             . view('pages/dashboard', $data)
-            . view('components/footer');
+            . view('components/footer');    
     }
 
 
@@ -37,6 +37,7 @@ class Dashboard extends BaseController
             . view('components/navbar')
             . view('components/hero')
             . view('pages/profile', $data)
+            
             . view('components/footer');
     }
 }

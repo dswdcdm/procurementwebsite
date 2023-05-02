@@ -2,13 +2,31 @@
 
     <footer>
         <div class="environment">
-       
+            <div class="row">
+                <div class="col">
+                    <img class=" img-fluid" src="<?php echo base_url('assets/images/dswdlogo.png'); ?>" width="40%" height="60%" alt="logo" />
+                </div>
+                <div class="col">
+                    <p class="text-dark font-weight-bold"> #DSWDMaymalasakit </p>
+                </div>
+                <div class="col">
+                <img class=" img-fluid" src="<?php echo base_url('assets/images/maagap.png'); ?>" width="40%" height="60%" alt="logo" />
+                </div>
+                <div class="col">
+                    <ul class="d-flex gap-2">
+                        <li class="text-dark font-weight-bold"><a class="btn btn-primary" style="background-color: #3b5998;" href="https://www.facebook.com/" role="button" target="_blank">FACEBOOK <i class="fab fa-facebook-f"></i></a></li>
+                        <li class="text-dark font-weight-bold"> <a class="btn btn-primary" style="background-color: #ac2bac;" href="#!" role="button" target="_blank">INSTAGRAM <i class="fab fa-instagram"></i></a></li>
+                        <li class="text-dark font-weight-bold"> <a class="btn btn-primary" style="background-color: #ed302f;" href="#!" role="button" target="_blank">YOUTUBE <i class="fab fa-youtube"></i></a></li>
+                    </ul>
+
+
+                </div>
+            </div>
         </div>
 
         <div class="copyrights">
             <p>&copy;COPYRIGHTS 2023 - <?= date('Y') ?> DSWD ADMINISTRATIVE SERVICES - BUILDING AND GROUNDS MANAGEMENT DIVISION</p>
         </div>
-
     </footer>
 
 
