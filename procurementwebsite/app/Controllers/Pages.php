@@ -12,6 +12,7 @@ class Pages extends Controller
 
         return view('components/header')
             . view('components/navbar')
+            . view('components/hero')
             . view('pages/dashboard')
             . view('components/footer');
     }

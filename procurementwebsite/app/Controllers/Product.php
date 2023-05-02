@@ -20,6 +20,7 @@ class Product extends BaseController
         $productdata['producttb'] = $model->findAll();
         return view('components/header', $data)
             . view('components/navbar')
+            . view('components/hero')
             . view('pages/product', $productdata)
             . view('components/footer');
     }

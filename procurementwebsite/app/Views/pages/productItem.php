@@ -9,13 +9,8 @@
                         <li class="breadcrumb-item active" aria-current="page">Products Item</li>
                     </ol>
                 </nav>
-            </div>
-        <div class="">
-            <span class="greeting">AS - BGMD</span>
-        </div>
+            </div>        
     </section>
-
-
     <div class="blog-single gray-bg">
         <?php foreach ($producttb as $product) : ?>
             <div class="container">
@@ -98,7 +93,7 @@
                             <div class="widget-body">
                                 <div class="nav tag-cloud">
                                     <a href="<?= $product['ta']; ?>" target="_blank">SPECIFICATION TA</a>
-                                    <a href="<?= $product['ms']; ?>" target="_blank">MARKET SCANNING</a>
+                                    <a href="<?= $product['ta']; ?>" target="_blank">MARKET SCANNING</a>
 
                                 </div>
                             </div>
