@@ -7,6 +7,15 @@
   outline: none;
 }
 
+.hr-red{
+  border: 3px solid red ;
+  width: 75%;
+}
+.hr-blue{
+  border: 3px solid blue ;
+  width: 75%;
+}
+
 html,
 body {
   color: rgba(33, 37, 41, 1);

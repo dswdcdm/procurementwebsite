@@ -86,7 +86,6 @@ class Auth extends Controller
             $email = $_POST['email'];
             $password = $_POST['password'];
 
-
             $values = [
                 'name' => $name,
                 'email' => $email,

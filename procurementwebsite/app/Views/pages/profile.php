@@ -15,8 +15,8 @@
             <div class="col-lg-4">
                 <div class="card mb-4">
                     <div class="card-body text-center">
-                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
-                        <h5 class="my-3"><?= ucfirst($userInfo['name']); ?></h5>
+
+                    <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " width="60%" height="60%" alt="logo"  class="rounded-circle img-fluid" alt="avatar" style="width: 150px;"/>
                         <p class="text-muted mb-1"><?= $userInfo['email']; ?></p>
                         <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
                         <div class="d-flex justify-content-center mb-2">
