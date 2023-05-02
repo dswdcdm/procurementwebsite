@@ -33,13 +33,14 @@
                                         <img src="<?php echo base_url('assets/images/logob.png   '); ?>" width="100%" height="60%" alt="logo" />
                                     </div>
                                     <div class="media-body">
-                                        <label> ₱3,480</label>
+                                        <label> ₱<?= $product['price']; ?> </label>
                                         <span>26 APRIL 2023 - 26 MAY 2023</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="article-content">
-                                <p class="font-weight-bold"><span class="font-weight-bolder text-info">TA</span> <?= $product['tasub']; ?></p>
+                                <p class="font-weight-bold">
+                                        <span class="font-weight-bolder text-info">TA</span> <?= $product['tasub']; ?></p>
                                 <hr />
                                 <p> <?= $product['description']; ?></p>
 
