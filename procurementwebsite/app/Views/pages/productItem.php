@@ -106,12 +106,60 @@
 
 
                                         <?php if ($product['status'] == "ACTIVE") : ?>
-                                            <a href="<?= $product['ta']; ?>" target="_blank">SPECIFICATION TA</a>
-                                            <a href="<?= $product['ta']; ?>" target="_blank">MARKET SCANNING</a>
+                                            <a href="<?= $product['ta']; ?>" data-toggle="modal" data-target="#downloadModal">DOWNLOAD FILES</a>
+                                            <a href="<?= $product['ta']; ?>" data-toggle="modal" data-target="#viewModal">VIEW FILES</a>
                                         <?php else : ?>
                                             <a href="<?= $product['ta']; ?>" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">SPECIFICATION TA</a>
                                             <a href="<?= $product['ta']; ?>" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">MARKET SCANNING</a>
                                         <?php endif; ?>
+
+
+
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="modal-footer">
+                                                        <a href="<?= $product['ta']; ?>" target="_blank" class="btn btn-secondary">DOWNLOAD SPECIFICATION TA</a>
+                                                        <a href="<?= $product['ta']; ?>" target="_blank" class="btn btn-secondary">DOWNLOAD MARKET SCANNING</a>
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="modal-footer">
+                                                        <a href="<?= $product['ta']; ?>" target="_blank" class="btn btn-secondary">VIEW SPECIFICATION TA</a>
+                                                        <a href="<?= $product['ta']; ?>" target="_blank" class="btn btn-secondary">VIEW MARKET SCANNING</a>
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
 
 
 
