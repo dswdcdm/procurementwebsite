@@ -18,6 +18,13 @@
   width: 75%;
 }
 
+.soc-icon{
+  border: none;
+}
+div{
+  border: 1px solid hotpink;
+}
+
 html,
 body {
   color: rgba(33, 37, 41, 1);

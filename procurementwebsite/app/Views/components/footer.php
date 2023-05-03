@@ -4,7 +4,7 @@
         <div class="environment">
             <div class="row">
                 <div class="col">
-                    <img class=" img-fluid" src="<?php echo base_url('assets/images/dswdlogo.png'); ?>" width="40%" height="60%" alt="logo" />
+                    <img class="img-fluid" src="<?php echo base_url('assets/images/dswdlogo.png'); ?>" width="40%" height="60%" alt="logo" />
                 </div>
                 <div class="col">
                     <p class="text-dark font-weight-bold"> #DSWDMaymalasakit </p>
