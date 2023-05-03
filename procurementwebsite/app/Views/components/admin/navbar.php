@@ -13,6 +13,8 @@
             <li class="menu-item hidden"><a href="/pages">HOME</a></li>
             <li class="menu-item hidden"><a href="/Product">PRODUCTS</a>
             </li>
+            <li class="menu-item hidden"><a href="userProfile">USERS</a>
+            </li>
             <li class="menu-item hidden"><a href="<?= site_url('auth/logout') ?>">LOG OUT</a>
             </li>
         </ul>

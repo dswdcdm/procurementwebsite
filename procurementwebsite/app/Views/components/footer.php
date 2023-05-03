@@ -10,7 +10,7 @@
                     <p class="text-dark font-weight-bold"> #DSWDMaymalasakit </p>
                 </div>
                 <div class="col">
-                <img class=" img-fluid" src="<?php echo base_url('assets/images/maagap.png'); ?>" width="40%" height="60%" alt="logo" />
+                    <img class=" img-fluid" src="<?php echo base_url('assets/images/maagap.png'); ?>" width="40%" height="60%" alt="logo" />
                 </div>
                 <div class="col">
                     <ul class="d-flex gap-2">
@@ -31,6 +31,9 @@
 
 
     <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
 
         function toggleMenu() {
             var menuItems = document.getElementsByClassName('menu-item');

@@ -40,7 +40,8 @@
                             </div>
                             <div class="article-content">
                                 <p class="font-weight-bold">
-                                        <span class="font-weight-bolder text-info">TA</span> <?= $product['tasub']; ?></p>
+                                    <span class="font-weight-bolder text-info">TA</span> <?= $product['tasub']; ?>
+                                </p>
                                 <hr />
                                 <p> <?= $product['description']; ?></p>
 
@@ -69,7 +70,7 @@
                                 </form>
                             </div>
                         <?php else : ?>
-                           
+
                         <?php endif; ?>
 
 
@@ -101,9 +102,38 @@
                             </div>
                             <div class="widget-body">
                                 <div class="nav tag-cloud">
-                                    <a href="<?= $product['ta']; ?>" target="_blank">SPECIFICATION TA</a>
-                                    <a href="<?= $product['ta']; ?>" target="_blank">MARKET SCANNING</a>
 
+
+                                    <?php if ($product['status'] == "ACTIVE") : ?>
+                                        <a href="<?= $product['ta']; ?>" target="_blank">SPECIFICATION TA</a>
+                                        <a href="<?= $product['ta']; ?>" target="_blank">MARKET SCANNING</a>
+                                    <?php else : ?>
+                                        <a href="<?= $product['ta']; ?>" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">SPECIFICATION TA</a>
+                                        <a href="<?= $product['ta']; ?>" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">MARKET SCANNING</a>
+                                    <?php endif; ?>
+
+
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                   
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                PRODUCT SPECS IS IN ACTIVE
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

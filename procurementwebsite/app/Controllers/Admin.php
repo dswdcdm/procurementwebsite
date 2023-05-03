@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\UserModel;
 
 class Admin extends BaseController
 {
@@ -29,9 +30,11 @@ class Admin extends BaseController
             'title' => 'user Profile',
             'userInfo' => $userInfo
         ];
+        $model = new UserModel();
+        $userdata['users'] = $model->findAll();
         return view('components/admin/header', $data)
             . view('components/admin/navbar')
-            . view('components/admin/userProfile    ')
+            . view('components/admin/userProfile',$userdata)
             . view('pages/dashboard', $data);
     }
 }
