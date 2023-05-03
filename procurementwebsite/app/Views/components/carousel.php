@@ -1,5 +1,5 @@
-<div class="d-flex h-50 w-100 row">
-    <div class="my-5 col-7  mx-2">
+<div class="d-md-inline-flex h-50 w-100">
+    <div class=" col-12 col-md-4 mb-4 mt-2">
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="6000">
@@ -22,9 +22,9 @@
             </button>
         </div>
     </div>
-    <div class="container py-5 col-4">
-        <div class="accordion" id="accordionPanelsStayOpenExample">
-            <div class="accordion-item">
+    <div class="col-12 col-md-8">
+        <div class="accordion " id="accordionPanelsStayOpenExample ">
+            <div class="accordion-item ">
                 <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                         <strong>Administrative Service - Building and Grounds Management Division </strong>

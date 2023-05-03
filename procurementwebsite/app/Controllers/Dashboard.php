@@ -19,6 +19,7 @@ class Dashboard extends BaseController
             . view('components/navbar')
             . view('components/hero')
             . view('components/carousel')
+            . view('components/services')
             . view('pages/dashboard', $data)
             . view('components/footer');    
     }

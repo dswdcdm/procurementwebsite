@@ -31,7 +31,6 @@
 
 
     <script>
-        AOS.init();
 
         function toggleMenu() {
             var menuItems = document.getElementsByClassName('menu-item');

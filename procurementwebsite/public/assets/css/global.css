@@ -23,6 +23,7 @@
 }
 
 
+
 html,
 body {
   color: rgba(33, 37, 41, 1);
@@ -203,6 +204,40 @@ footer .copyrights {
   color: rgba(200, 200, 200, 1);
   padding: 0.25rem 1.75rem;
 }
+
+/* services pages */
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.section-title {
+  padding-bottom: 45px;
+}
+
+.section-title h2 {
+  font-weight: 700;
+  color: #20247b;
+  font-size: 45px;
+  margin: 0 0 15px;
+  padding-left: 15px;
+}
+
+.feature-box-1{
+  background-color: #fffbfb;
+  color: #20247b;
+  margin: 0 0 15px;
+  border-left: 5px solid #fc5356;
+  padding-left: 15px;
+}
+
+.feature-box-1:hover{
+  background-color: #eee;
+  border-left: 5px solid #9e282a;
+  cursor: pointer;
+  transition: 0.4s;
+}
+/* end services */
 
 @media (max-width: 629px) {
   header ul {
