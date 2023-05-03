@@ -14,11 +14,10 @@
         </form>
     </nav>
     </section>
-    <div class="row ml-4">
 
         <?php foreach ($producttb as $product) : ?>
-            <div class="col-12 col-md-6">
-                <div class="card shadow-0 border rounded-3 mb-3 ">
+            <div class="col-12 col-md-12 pl-4 pr-4 mt-4">
+                <div class="card shadow-0 border rounded-3 mb-3">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0 ">
@@ -71,5 +70,4 @@
                 </div>
             </div>
 
-        <?php endforeach; ?>
-    </div>
+        <?php endforeach; ?>    
