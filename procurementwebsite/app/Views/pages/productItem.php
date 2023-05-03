@@ -99,7 +99,7 @@
                             </div>
                             <div class="widget widget-tags">
                                 <div class="widget-title">
-                                    <h3>DOWNLOAD FILES</h3>
+                                    <h3>DOCUMENTS</h3>
                                 </div>
                                 <div class="widget-body">
                                     <div class="nav tag-cloud">

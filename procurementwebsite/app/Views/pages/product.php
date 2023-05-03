@@ -32,9 +32,9 @@
 
                                 <div class="text-danger mb-1 me-2">
                                     <?php
-                                    for ($i = 1; $i <= $product['ratings']; $i++) {
-                                        echo '  <i class="fa fa-star"></i>';
-                                    }
+                                   /*  for ($i = 1; $i <= $product['ratings']; $i++) { */
+                                        echo '  <i class="fa fa-download"></i> DOWNLOADS';
+                                  /*   } */
                                     ?>
                                 </div>
                                 <span class="font-weight-bold"><?= $product['ratings']; ?></span>
