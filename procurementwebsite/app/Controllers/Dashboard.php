@@ -49,14 +49,14 @@ class Dashboard extends BaseController
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);
         $data = [
-            'title' => 'Profile',
+            'title' => 'Directory',
             'userInfo' => $userInfo
         ];
         return view('components/header', $data)
             . view('components/navbar')
             . view('components/hero')
             . view('pages/directory', $data)
-            
+     
             . view('components/footer');
     }
 }
