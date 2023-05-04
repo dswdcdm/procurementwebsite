@@ -53,8 +53,6 @@
                                     <h4> Leave a comment</h4>
                                     <form id="contact-form" method="POST">
                                         <div class="row">
-
-
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <textarea name="message" id="message" placeholder="Your message *" rows="4" class="form-control"></textarea>
@@ -76,7 +74,6 @@
                             <div class="widget widget-author">
                                 <div class="widget-title">
                                     <h3>NOTE</h3>
-
                                 </div>
                                 <div class="widget-body">
                                     <div class="media align-items-center">
@@ -120,7 +117,6 @@
                                                         <a href="<?= $product['ta']; ?>" target="_blank" class="btn btn-secondary">DOWNLOAD MARKET SCANNING</a>
                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -141,7 +137,6 @@
                                                         <a href="<?= $product['ta']; ?>" target="_blank" class="btn btn-secondary">VIEW MARKET SCANNING</a>
                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
