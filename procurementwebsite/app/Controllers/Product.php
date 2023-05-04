@@ -24,7 +24,7 @@ class Product extends BaseController
             . view('pages/product', $productdata)
             . view('components/footer');
     }
-    
+
 
     public function productItem($productId)
     {
@@ -39,12 +39,11 @@ class Product extends BaseController
         $model = new ProductModel();
         $productdata['producttb'] = $model->findAll();
         $request = \Config\Services::request();
-         $productId = $request->uri->getSegment(3);
+        $productId = $request->uri->getSegment(3);
         return view('components/header', $data)
-            . view('components/navbar',$data)
+            . view('components/navbar', $data)
             . view('pages/productitem', $productdata)
             . view('components/footer');
-    
     }
 
 
@@ -61,14 +60,27 @@ class Product extends BaseController
         $model = new ProductModel();
         $productdata['producttb'] = $model->findAll();
         $request = \Config\Services::request();
-         $productId = $request->uri->getSegment(3);
+        $productId = $request->uri->getSegment(3);
         return view('components/header', $data)
-            . view('components/navbar',$data)
+            . view('components/navbar', $data)
             . view('pages/productitem', $productdata)
             . view('components/footer');
     }
 
-
-
-  
+    public function requestProduct()
+    {
+        $userModel = new \App\Models\UserModel();
+        $loggedUserID = session()->get('loggedUser');
+        $userInfo = $userModel->find($loggedUserID);
+        $data = [
+            'title' => 'Product specs',
+            'userInfo' => $userInfo
+        ];
+        $model = new ProductModel();
+        $productdata['producttb'] = $model->findAll();
+        return view('components/header', $data)
+            . view('components/navbar')
+            . view('pages/requestItem')
+            . view('components/footer');
+    }
 }

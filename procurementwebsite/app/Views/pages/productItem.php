@@ -45,9 +45,7 @@
                                     </p>
                                     <hr />
                                     <p> <?= $product['description']; ?></p>
-
                                 </div>
-
                             </article>
 
                             <?php if ($product['status'] == "ACTIVE") : ?>
@@ -71,11 +69,7 @@
                                     </form>
                                 </div>
                             <?php else : ?>
-
                             <?php endif; ?>
-
-
-
                         </div>
                         <div class="col-lg-4 m-15px-tb blog-aside">
                             <!-- Author -->
@@ -87,8 +81,7 @@
                                 <div class="widget-body">
                                     <div class="media align-items-center">
                                         <div class="avatar">
-                                            <img src="<?php echo base_url('assets/images/logob.png   '); ?>" width="100%" height="60%" alt="logo" />
-
+                                            <img src="<?php echo base_url('assets/images/logob.png'); ?>" width="100%" height="60%" alt="logo" />
                                         </div>
                                         <div class="media-body">
                                             <h6>Hello, I'm<br>admin</h6>
@@ -104,7 +97,6 @@
                                 <div class="widget-body">
                                     <div class="nav tag-cloud">
 
-
                                         <?php if ($product['status'] == "ACTIVE") : ?>
                                             <a href="<?= $product['ta']; ?>" data-toggle="modal" data-target="#downloadModal">DOWNLOAD FILES</a>
                                             <a href="<?= $product['ta']; ?>" data-toggle="modal" data-target="#viewModal">VIEW FILES</a>
@@ -112,9 +104,6 @@
                                             <a href="<?= $product['ta']; ?>" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">SPECIFICATION TA</a>
                                             <a href="<?= $product['ta']; ?>" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">MARKET SCANNING</a>
                                         <?php endif; ?>
-
-
-
 
                                         <!-- Modal -->
                                         <div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -137,7 +126,6 @@
                                         </div>
 
 
-
                                         <!-- Modal -->
                                         <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
@@ -157,11 +145,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
-
-
-
 
                                         <!-- Modal -->
                                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
