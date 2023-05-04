@@ -86,6 +86,9 @@ class Auth extends Controller
             $email = $_POST['email'];
             $password = $_POST['password'];
 
+            $allowed_domains = array('example.com', 'example2.com');
+            $domain = explode('@', $email);
+            $domain = end($domain);
 
             $values = [
                 'name' => $name,
@@ -93,15 +96,18 @@ class Auth extends Controller
                 'password' => Hash::make($password)
             ];
 
-
-            $userModel = new \App\Models\UserModel();
-            $query = $userModel->insert($values);
-            if (!$query) {
-                return redirect()->back()->with('fail', 'Something went wrong');
+            if (!in_array($domain, $allowed_domains)) {
+                return redirect()->back()->with('fail', 'email not valid');
             } else {
-                $last_id = $userModel->insertID();
-                session()->set('loggedUser', $last_id);
-                return redirect()->to('/pages');
+                $userModel = new \App\Models\UserModel();
+                $query = $userModel->insert($values);
+                if (!$query) {
+                    return redirect()->back()->with('fail', 'Something went wrong');
+                } else {
+                    $last_id = $userModel->insertID();
+                    session()->set('loggedUser', $last_id);
+                    return redirect()->to('/pages');
+                }
             }
         }
     }
