@@ -42,4 +42,21 @@ class Dashboard extends BaseController
             
             . view('components/footer');
     }
+
+    function directory()
+    {
+        $userModel = new \App\Models\UserModel();
+        $loggedUserID = session()->get('loggedUser');
+        $userInfo = $userModel->find($loggedUserID);
+        $data = [
+            'title' => 'Profile',
+            'userInfo' => $userInfo
+        ];
+        return view('components/header', $data)
+            . view('components/navbar')
+            . view('components/hero')
+            . view('pages/directory', $data)
+            
+            . view('components/footer');
+    }
 }
