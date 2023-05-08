@@ -22,20 +22,20 @@
 .soc-icon {
   border: none;
 }
-/* div{
-  border: 1px solid hotpink;
-}
+/*   .div{
+    border: 1px solid hotpink;
+  }
  */
 /* directory css */
 .teamWrapper {
   margin-top: 50px;
 }
-
-.section-container {
-  --container: 1160px;
-  max-width: var(--container);
-  margin: auto;
-}
+  /* 
+  .section-container {
+    --container: 2080px;
+    max-width: var(--container);
+    margin: auto;
+  } */
 
 .teamGrid {
   grid-template-columns: 32.33% 32.33% 32.33%;
@@ -45,33 +45,31 @@
 
 
 .topgrid {
-  margin-top: 100px;
+  margin-top:100px;
   cursor: pointer;
 }
 
 .avatar {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: -80px;
+  left: 0;  
   text-align: center;
 }
 
 .teamcolinner {
   position: relative;
+  
 }
 
 .avatar>img {
-  width: 150px;
+  width: 100px;
   margin: auto;
-  border-radius: 50%;
   border: 1px solid rgb(170 170 173/ 1);
   box-shadow: 0px 3px 10px 3px rgb(170 170 173 / 0.5);
 }
 
 .teamcolinner {
   position: relative;
-  border: 1px dashed #ddd;
+  border: 1px dashed #e5e6df;
   min-height: 100px;
   background: #fff;
   z-index: 9;
@@ -79,13 +77,22 @@
 
 .teamcol {
   margin-top:16%;
-  padding: 15px;
+  padding: 10px;
   background: #fff;
+  min-width: 300px;
   border-radius: 10px;
   position: relative;
   transition: transform 1s ease-in-out;
 }
-
+.teamcol-box {
+  margin-top:16%;
+  padding: 10px;
+  background: #fff;
+  min-width: 300px;
+  border-radius: 10px;
+  position: relative;
+  transition: transform 1s ease-in-out;
+}
 .teamcol:hover {
   transform: translateY(-30px);
   box-shadow: 0px 3px 10px 3px rgb(170 170 173 / 0.5);
@@ -123,7 +130,8 @@
 }
 
 .member-name {
-  margin-top: 80px;
+  margin-top: 5px;
+  margin-left: 110px;
 }
 
 .member-info {
