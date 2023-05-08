@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\EmployeeModel;
 use App\Models\UserModel;
 use App\Models\ProductModel;
 
@@ -14,13 +15,15 @@ class Admin extends BaseController
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);
         $data = [
-            'title' => 'Dashboard',
+            'title' => 'user Profile',
             'userInfo' => $userInfo
         ];
+        $model = new UserModel();
+        $userdata['users'] = $model->findAll();
         return view('components/admin/header', $data)
             . view('components/admin/navbar')  
             . view('components/admin/hero')
-            . view('components/admin/dashboard', $data)
+            . view('components/admin/dashboard', $userdata)
             . view('components/admin/footer');
     }
 

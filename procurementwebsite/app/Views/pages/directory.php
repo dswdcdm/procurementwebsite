@@ -60,6 +60,7 @@
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="row justify-content-md-between ">
             <div class="col-12 col-lg-3">
@@ -69,8 +70,13 @@
                         <div class="member-name">
                             <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
                             <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+
                         </div>
                     </div>
+
+                </div>
+                <div class="d-flex" style="height: 10px;">
+                    <div class="vr offset-6"></div>
                 </div>
             </div>
             <div class="col-12 col-lg-3">
@@ -83,6 +89,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="d-flex" style="height: 10px;">
+                    <div class="vr offset-6"></div>
+                </div>
             </div>
             <div class="col-12 col-lg-3">
                 <div class="teamcol">
@@ -93,6 +102,9 @@
                             <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
                         </div>
                     </div>
+                </div>
+                <div class="d-flex" style="height: 10px;">
+                    <div class="vr offset-6"></div>
                 </div>
             </div>
         </div>
@@ -227,209 +239,210 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="col-12 col-md-4  div">
-              
-                    <div class="col-12 col-lg-12 col-xl-4 div offset-xl-2">
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
+
+                <div class="col-12 col-lg-12 col-xl-4 div offset-xl-2">
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
                             </div>
                         </div>
                     </div>
                     
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="col-12 col-md-4  div">
-             
-                    <div class="col-12 col-lg-12 col-xl-4 div">
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
+
+                <div class="col-12 col-lg-12 col-xl-4 div">
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
                             </div>
                         </div>
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamcol">
-                            <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
-                                <div class="member-name">
-                                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-                                </div>
-                            </div>
-                        </div>  
                     </div>
-            
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamcol">
+                        <div class="teamcolinner">
+                            <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="member-name">
+                                <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                                <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
