@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\EmployeeModel;
 use App\Models\UserModel;
 
 class Dashboard extends BaseController
@@ -39,24 +40,24 @@ class Dashboard extends BaseController
             . view('components/navbar')
             . view('components/hero')
             . view('pages/profile', $data)
-            
             . view('components/footer');
     }
 
     function directory()
     {
-        $userModel = new \App\Models\UserModel();
+        $userModel = new \App\Models\EmployeeModel();
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);
         $data = [
-            'title' => 'Directory',
+            'title' => 'Product',
             'userInfo' => $userInfo
         ];
+        $model = new EmployeeModel();
+        $employeedata['employee'] = $model->findAll();
         return view('components/header', $data)
             . view('components/navbar')
             . view('components/hero')
-            . view('pages/directory', $data)
-     
+            . view('pages/directory', $employeedata)
             . view('components/footer');
     }
 }

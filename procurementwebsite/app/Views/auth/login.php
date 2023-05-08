@@ -1,7 +1,7 @@
 
 <div class="container p-4" id="login">
     <div class="col-lg-6 col-md-12 mb-4 mb-md-0  m-auto">
-        <form class="form_container" action="<?= site_url('auth/check') ?>" method="POST" autocomplete="off">
+        <form class="form_container" action="<?php echo htmlspecialchars(site_url('auth/check'));  ?>" method="POST" autocomplete="off">
 
             <img src="<?php echo base_url('assets/images/logob.png'); ?>" width="50%" height="60%" alt="logo" />
             <?= csrf_field(); ?>
