@@ -45,7 +45,9 @@ $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
     $routes->get('pages/profile', 'Dashboard::profile');
     $routes->get('pages/directory', 'Dashboard::directory');
     $routes->add('admin', 'Admin::index');
+    
     $routes->add('admin/userProfile', 'Admin::userProfile');
+    $routes->add('admin/adminproduct', 'Admin::adminproduct');
 });
 
 $routes->group('', ['filter' => 'AlreadyLoggedInFilter'], function ($routes) {
