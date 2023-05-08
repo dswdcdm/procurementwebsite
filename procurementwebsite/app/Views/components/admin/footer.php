@@ -2,18 +2,39 @@
 
     <footer>
         <div class="environment">
-            <p>Page rendered in {elapsed_time} seconds</p>
-            <p>Environment: <?= ENVIRONMENT ?></p>
+            <div class="row">
+                <div class="col">
+                    <img class="img-fluid" src="<?php echo base_url('assets/images/dswdlogo.png'); ?>" width="40%" height="60%" alt="logo" />
+                </div>
+                <div class="col">
+                    <p class="text-dark font-weight-bold"> #DSWDMaymalasakit </p>
+                </div>
+                <div class="col">
+                    <img class=" img-fluid" src="<?php echo base_url('assets/images/maagap.png'); ?>" width="40%" height="60%" alt="logo" />
+                </div>
+                <div class="col">
+                    <ul class="d-flex gap-2">
+                        <li class="text-dark font-weight-bold"><a class="btn btn-primary" style="background-color: #3b5998;" href="https://www.facebook.com/" role="button" target="_blank">FACEBOOK <i class="fab fa-facebook-f"></i></a></li>
+                        <li class="text-dark font-weight-bold"> <a class="btn btn-primary" style="background-color: #ac2bac;" href="#!" role="button" target="_blank">INSTAGRAM <i class="fab fa-instagram"></i></a></li>
+                        <li class="text-dark font-weight-bold"> <a class="btn btn-primary" style="background-color: #ed302f;" href="#!" role="button" target="_blank">YOUTUBE <i class="fab fa-youtube"></i></a></li>
+                    </ul>
+
+
+                </div>
+            </div>
         </div>
 
         <div class="copyrights">
-            <p>&copy;COPYRIGHTS 20230 - <?= date('Y') ?> DSWD AS - BGMD</p>
+            <p>&copy;COPYRIGHTS 2023 - <?= date('Y') ?> DSWD ADMINISTRATIVE SERVICES - BUILDING AND GROUNDS MANAGEMENT DIVISION</p>
         </div>
-
     </footer>
 
 
     <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
         function toggleMenu() {
             var menuItems = document.getElementsByClassName('menu-item');
             for (var i = 0; i < menuItems.length; i++) {
@@ -22,6 +43,7 @@
             }
         }
     </script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>

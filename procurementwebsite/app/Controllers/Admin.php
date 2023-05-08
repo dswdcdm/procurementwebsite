@@ -19,7 +19,9 @@ class Admin extends BaseController
         ];
         return view('components/admin/header', $data)
             . view('components/admin/navbar')  
-            . view('pages/dashboard', $data);
+            . view('components/admin/hero')
+            . view('components/admin/dashboard', $data)
+            . view('components/admin/footer');
     }
 
     public function userProfile()
@@ -35,8 +37,10 @@ class Admin extends BaseController
         $userdata['users'] = $model->findAll();
         return view('components/admin/header', $data)
             . view('components/admin/navbar')
+            . view('components/admin/hero')
             . view('components/admin/userProfile',$userdata)
-            . view('pages/dashboard', $data);
+            . view('pages/dashboard', $data)
+            . view('components/admin/footer');
     }
     public function adminproduct()
     {
@@ -51,6 +55,7 @@ class Admin extends BaseController
         $productdata['producttb'] = $model->findAll();
         return view('components/admin/header', $data)
             . view('components/admin/navbar')
+            . view('components/admin/hero')
             . view('components/admin/adminproduct', $productdata)
             . view('components/footer');
     }

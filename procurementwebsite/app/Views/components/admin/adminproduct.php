@@ -1,6 +1,6 @@
 <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 ">
     <ol class="breadcrumb mb-0">
-        <li class="breadcrumb-item"><a href="/pages">Home</a></li>
+        <li class="breadcrumb-item"><a href="/admin">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">Products</li>
     </ol>
     <form method="get" action="<?= site_url('Product/search'); ?>">
@@ -9,7 +9,7 @@
             <button type="submit" class="btn btn-outline-primary">search</button>
         </div>
     </form>
-    <div class="py-4 mx-auto text-center"> <a href="<?= site_url('Product/requestProduct') ?>" class="btn btn-outline-primary ">REQUEST ITEM SPECIFICATION</a></div>
+    <div class="py-4 mx-auto text-center"> <a href="" class="btn btn-outline-primary ">Add Item</a></div>
 </nav>
 </section>
 <?php foreach ($producttb as $product) : ?>
@@ -56,10 +56,10 @@
                         <?php endif; ?>
 
                         <div class="d-flex flex-column mt-4">
-                            <a href="/Product/productItem/<?= $product['id']; ?>" class="btn btn-primary btn-sm" type="button">Details</a>
-                            <button class="btn btn-outline-primary btn-sm mt-2" type="button">
-                                Add Request
-                            </button>
+                            <a href="" class="btn btn-primary btn-sm" type="button">Update</a>
+                           <!--  <button class="btn btn-outline-primary btn-sm mt-2" type="button">
+                                Update
+                            </button> -->
                         </div>
                     </div>
                 </div>
