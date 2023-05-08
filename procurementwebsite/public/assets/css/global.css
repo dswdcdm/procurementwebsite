@@ -22,9 +22,9 @@
 .soc-icon {
   border: none;
 }
-/* div{
-  border: 1px solid hotpink;
-}
+/*   .div{
+    border: 1px solid hotpink;
+  }
  */
 /* directory css */
 .teamWrapper {
@@ -57,6 +57,7 @@
 
 .teamcolinner {
   position: relative;
+  
 }
 
 .avatar>img {
@@ -68,7 +69,7 @@
 
 .teamcolinner {
   position: relative;
-  border: 1px dashed #ddd;
+  border: 1px dashed #e5e6df;
   min-height: 100px;
   background: #fff;
   z-index: 9;
@@ -83,7 +84,15 @@
   position: relative;
   transition: transform 1s ease-in-out;
 }
-
+.teamcol-box {
+  margin-top:16%;
+  padding: 10px;
+  background: #fff;
+  min-width: 300px;
+  border-radius: 10px;
+  position: relative;
+  transition: transform 1s ease-in-out;
+}
 .teamcol:hover {
   transform: translateY(-30px);
   box-shadow: 0px 3px 10px 3px rgb(170 170 173 / 0.5);
