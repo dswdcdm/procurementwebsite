@@ -1,46 +1,46 @@
 
 <!-- Gallery -->
 <div class="row mt-5 p-5">
-  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+  <div class="col-lg-7 col-md-12 mb-4 mb-lg-0">
     <img
-      src="<?php echo base_url('assets/images/imagea.jpg'); ?>"
+      src="<?php echo base_url('assets/images/frontimage.jpg'); ?>"
       class="w-100 shadow-1-strong rounded mb-4"
       alt="Boat on Calm Water"
     />
 
-    <img
+   <!--  <img
       src="<?php echo base_url('assets/images/imageb.jpg'); ?>"
       class="w-100 shadow-1-strong rounded mb-4"
       alt="Wintry Mountain Landscape"
-    />
+    /> -->
   </div>
 
   <div class="col-lg-4 mb-4 mb-lg-0">
     <img
-      src="<?php echo base_url('assets/images/imagec.jpg'); ?>"
+      src="<?php echo base_url('assets/images/imagef.jpg'); ?>"
       class="w-100 shadow-1-strong rounded mb-4"
       alt="Mountains in the Clouds"
     />
 
-    <img
+    <!-- <img
       src="<?php echo base_url('assets/images/imaged.jpg'); ?>"
       class="w-100 shadow-1-strong rounded mb-4"
       alt="Boat on Calm Water"
-    />
+    /> -->
   </div>
 
   <div class="col-lg-4 mb-4 mb-lg-0">
-    <img
+ <!--    <img
       src="<?php echo base_url('assets/images/imagee.jpg'); ?>"
       class="w-100 shadow-1-strong rounded mb-4"
       alt="Waves at Sea"
-    />
+    /> -->
 
-    <img
+  <!--   <img
       src="<?php echo base_url('assets/images/imagef.jpg'); ?>"
       class="w-100 shadow-1-strong rounded mb-4"
       alt="Yosemite National Park"
-    />
+    /> -->
   </div>
 </div>
 <!-- Gallery -->
