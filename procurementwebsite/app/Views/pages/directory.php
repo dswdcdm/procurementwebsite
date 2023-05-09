@@ -36,7 +36,6 @@
 
                                             <div class="d-flex flex-column mt-4">
                                                 <a href="/Product/productItem/<?= $employee['id']; ?>" class="btn btn-primary btn-sm" type="button">Contact</a>
-
                                             </div>
                                         </div>
                                     <?php else : ?>
@@ -49,26 +48,29 @@
             </div>
         </div>
     </div>
-    <div class="col-6 offset-md-3 offset-2">
-        <div class="teamcol">
-            <div class="teamcolinner ">
-                <?php if ($employee['status'] == "PERMANENT") : ?>
-                    <div class="avatar permanent p-1">
-                        <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid " />
+    <?php if ($employee['name'] == "Larry P. Miranda") : ?>
+        <div class="col-6 offset-md-3 offset-2">
+            <div class="teamcol">
+                <div class="teamcolinner ">
+                    <?php if ($employee['status'] == "PERMANENT") : ?>
+                        <div class="avatar permanent p-1">
+                            <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid " />
+                        </div>
+                    <?php else : ?>
+                        <div class="avatar contract p-1">
+                            <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid " />
+                        </div>
+                    <?php endif; ?>
+                    <div class="member-name">
+                        <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                        <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
                     </div>
-                <?php else : ?>
-                    <div class="avatar contract p-1">
-                        <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid " />
-                    </div>
-                <?php endif; ?>
-                <div class="member-name">
-                    <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                    <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
                 </div>
             </div>
         </div>
-    </div>
 
+    <?php else : ?>
+    <?php endif; ?>
     <div class="container">
         <div class="row justify-content-md-between">
             <!-- loop start -->

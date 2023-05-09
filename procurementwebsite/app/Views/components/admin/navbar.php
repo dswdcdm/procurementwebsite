@@ -11,18 +11,12 @@
                 <button onclick="toggleMenu();">&#9776;</button>
             </li>
             <li class="menu-item hidden"><a href="/admin">HOME</a></li>
-            <li class="menu-item hidden"><a href="/admin/adminproduct">PRODUCTS</a>
+            <li class="menu-item hidden"><a href="<?= site_url('/admin/adminproduct')  ?>">PRODUCTS</a>
             </li>
-            <li class="menu-item hidden"><a href="/admin/userProfile">USERS</a>
+            <li class="menu-item hidden"><a href="<?= site_url('/admin/userProfile')  ?>">USERS</a>
             </li>
             <li class="menu-item hidden"><a href="<?= site_url('auth/logout') ?>">LOG OUT</a>
             </li>
         </ul>
     </div>
-<!-- 
-    <div class="heroe">
-        <h1> Department of Social Welfare and Development (DSWD) </h1>
-        <h2>AS - BGMD</h2>
-    </div> -->
-
 </header>

@@ -3,13 +3,19 @@
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="6000">
-                    <img class="img-fluid" src="<?php echo base_url('assets/images/frontimage.jpg'); ?>" width="100%" height="50%" alt="logo" />
+                    <img class="img-fluid" src="<?php echo base_url('assets/images/imagea.jpg'); ?>" width="100%" height="50%" alt="logo" />
                 </div>
                 <div class="carousel-item" data-bs-interval="4000">
-                    <img class="img-fluid" src="<?php echo base_url('assets/images/frontimage.jpg'); ?>" width="100%" height="100%" alt="logo" />
+                    <img class="img-fluid" src="<?php echo base_url('assets/images/imageb.jpg'); ?>" width="100%" height="100%" alt="logo" />
                 </div>
                 <div class="carousel-item">
-                    <img class="img-fluid" src="<?php echo base_url('assets/images/frontimage.jpg'); ?>" width="100%" height="100%" alt="logo" />
+                    <img class="img-fluid" src="<?php echo base_url('assets/images/imagec.jpg'); ?>" width="100%" height="100%" alt="logo" />
+                </div>
+                <div class="carousel-item">
+                    <img class="img-fluid" src="<?php echo base_url('assets/images/imaged.jpg'); ?>" width="100%" height="100%" alt="logo" />
+                </div>
+                <div class="carousel-item">
+                    <img class="img-fluid" src="<?php echo base_url('assets/images/imagee.jpg'); ?>" width="100%" height="100%" alt="logo" />
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
