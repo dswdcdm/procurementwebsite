@@ -27,12 +27,14 @@
             <div class="accordion-item ">
                 <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                        <strong>Administrative Service - Building and Grounds Management Division </strong>
+                        <strong>Standard Technical Specifications of Commonly Procured Items </strong>
                     </button>
                 </h2>
                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                     <div class="accordion-body">
-                        The Building and Grounds Management Division (BGMD) oversees the implementation of safety mechanisms and ensures its performance through its provision of support services related to construction, rehabilitation, renovation, repair and maintenance o various facilities and infrastructures of the whole Department including its Centers an Institutions.
+                        The General Administration and Support Services Group, through the initiatives of the Administrative Service, have prepared the standard technical specifications of the most commonly procured items of the Central Office.</br>
+                        Pursuant to Republic Act No. 11032, otherwise known as the Ease of Doing (EODB), the Approved Standard Technical Specification can be reproduced b requesting office as an attachment to the Purchase Request should they intend to procure the same items.
+                       
                     </div>
                 </div>
             </div>
@@ -74,13 +76,12 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                        <strong>Standard Technical Specifications of Commonly Procured Items</strong>
+                        <strong>Administrative Service - Building and Grounds Management Division</strong>
                     </button>
                 </h2>
                 <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
                     <div class="accordion-body">
-                        The General Administration and Support Services Group, through the initiatives of the Administrative Service, have prepared the standard technical specifications of the most commonly procured items of the Central Office.</br>
-                        Pursuant to Republic Act No. 11032, otherwise known as the Ease of Doing (EODB), the Approved Standard Technical Specification can be reproduced b requesting office as an attachment to the Purchase Request should they intend to procure the same items.
+                    The Building and Grounds Management Division (BGMD) oversees the implementation of safety mechanisms and ensures its performance through its provision of support services related to construction, rehabilitation, renovation, repair and maintenance o various facilities and infrastructures of the whole Department including its Centers an Institutions.
                     </div>
                 </div>
             </div>
