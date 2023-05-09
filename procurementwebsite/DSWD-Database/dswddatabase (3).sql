@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2023 at 05:14 AM
+-- Generation Time: May 09, 2023 at 05:13 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -48,6 +48,42 @@ CREATE TABLE `employee` (
   `position` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `employee`
+--
+
+INSERT INTO `employee` (`id`, `name`, `about`, `email`, `image`, `date_added`, `position`, `status`) VALUES
+(1, ' Jenny Pearl C. Abedania', '', '', 'https://drive.google.com/file/d/1JgQua34r5GtWgUApD1mRlA3YFkjNumjN/view?usp=share_link', 'current_timestamp()', 'ADMINISTRATIVE OFFICER IV', 'MOA'),
+(2, 'Engr.Aldwin R. Bacay', '', '', 'https://drive.google.com/file/d/1Q5Qid8z4IZmyXywgrEQYbMQbnByjv9kj/view?usp=share_link', 'current_timestamp()', 'ENGINEER II', 'PERMANENT'),
+(3, 'Mayquilito P. Alvena', '', '', 'https://drive.google.com/file/d/1GaFVT0hUdr1vREMDCce9YNLfHNTFZ_So/view?usp=share_link', 'current_timestamp()', 'ADMINISTRATIVE AIDE V (Carpenter II)', 'PERMANENT'),
+(4, 'Danilo O.Bernal', '', '', 'https://drive.google.com/file/d/1ntq7naORbadoU25HR2FRNo8rlPLxEQMU/view?usp=share_link', 'current_timestamp()', 'ADMINISTRATIVE AIDE V (Carpenter II)', 'PERMANENT'),
+(5, 'Patrick V. Caldito', '', '', 'https://drive.google.com/file/d/12gBWprX-vnrPpqyk8UtA2-NU0QwoJMLU/view?usp=share_link', 'current_timestamp()', 'ADMINISTRATIVE ASSISTANT II (Air-Conditioning Technician II)', 'PERMANENT'),
+(6, 'Julien C.De Torres', '', '', 'https://drive.google.com/file/d/1V0N3lOqrS2PHBOQjaxFmX2YTfF5m6qmF/view?usp=share_link', 'current_timestamp()', 'ADMINISTRATIVE AIDE V (Painter II)', 'PERMANENT'),
+(7, 'Engr.Alfredo C. Evangelista II', '', '', 'https://drive.google.com/file/d/11hnMXY4zyd6i3yadNOEJvv5hhEkHiMXE/view?usp=share_link', 'current_timestamp()', 'ENGINEER IIII', 'PERMANENT'),
+(8, 'Engr.Villamor A. Evangelista,JR.', '', '', 'https://drive.google.com/file/d/19XpxE7c8o6ZNBy-MhnkmRM7ya04Ii7Ha/view?usp=share_link', 'current_timestamp()', 'PROJECT MANAGEMENT OFFICER', 'MOA'),
+(9, 'Norman A. Gabales', '', '', 'https://drive.google.com/file/d/1FW8jJqO_4Q16hiFvAK3vvUay-x7L5B9A/view?usp=share_link', 'current_timestamp()', 'ADMINISTRATIVE AIDE IV', 'MOA'),
+(10, 'Carlos P. Garcia', '', '', 'https://drive.google.com/file/d/1Re898TF51sd7G5N9P8COqOs1BugDoplL/view?usp=share_link', 'current_timestamp()', 'CONSTRUCTION AND MAINTENANCE GENERAL FOREMAN', 'PERMANENT'),
+(11, 'RammonCito O.Garcia', '', '', 'https://drive.google.com/file/d/1I8LY-01UsqFKFl2Wly26ZnAZ7z7vZRx6/view?usp=share_link', 'current_timestamp()', 'SENIOR ADMINISTRATIVE ASSISTANT II (Audio-Visual Aids Technician IV)', 'MOA'),
+(12, 'Raymond A. Guitierrez', '', '', 'https://drive.google.com/file/d/1_In8_kusTqZdWcwdeuYU9Sm6BjpjKeqI/view?usp=share_link', 'current_timestamp()', 'ADMINISTRATIVE AIDE IV', 'MOA'),
+(13, 'Jhon Michael De Pedro ', '', '', 'https://drive.google.com/file/d/1om1yXb_0EGSUAW9bNewMjvjIUDqF3Jht/view?usp=share_link', 'current_timestamp()', 'ADMINISTRATIVE OFFICER III', 'PERMANENT'),
+(14, 'Engr. Jymlee P. Pacala', '', '', 'https://drive.google.com/file/d/1krEgPDqQhueRy70Yuq_JGGclxIzTDmT2/view?usp=share_link', 'current_timestamp()', 'PROJECT MANAGEMENT OFFICER', 'MOA'),
+(15, 'Louie Jane R. Francisco', '', '', 'https://drive.google.com/file/d/1ksw6VdFUBdLOq1KeSGHnPjhcStmHTA-K/view?usp=share_link', 'current_timestamp()', 'ADMINISTRATIVE ASSISTANT II (Clerk IV)', 'PERMANENT'),
+(16, 'Engr. Katherine L. Longcanaya', '', '', 'https://drive.google.com/file/d/1gV2Kvi7SUDppGa3ZSYLq2QzJi90pTTv6/view?usp=share_link', 'current_timestamp()', 'PROJECT MANAGEMENT OFFICER', 'MOA'),
+(17, 'Mario P. Macenas', '', '', 'https://drive.google.com/file/d/1M_JJDhsucKaRWyl2px0Ubo6sWj2qFVPB/view?usp=share_link', 'current_timestamp()', 'ADMINISTRATIVE ASSISTANT IV (Carpenter General Foreman)', 'PERMANENT'),
+(18, 'Elsa L. Magat', '', '', 'https://drive.google.com/file/d/1M_JJDhsucKaRWyl2px0Ubo6sWj2qFVPB/view?usp=share_link', 'current_timestamp()', 'ADMINISTRATIVE AIDE V', 'PERMANENT'),
+(19, 'Mark Anthony P.Marcelo', '', '', 'https://drive.google.com/file/d/1oyo_LqZa7M02MRwJ_o9QO_8g9JAEDJT8/view?usp=share_link', 'current_timestamp()', 'ADMINISTRATIVE AIDE IV', 'MOA'),
+(20, 'Marina M. Mediana', '', '', 'https://drive.google.com/file/d/13zwSSAKeTzUSxo1luQz_DMVHKBt9pgNi/view?usp=share_link', 'current_timestamp()', 'ADMINISTRATIVE AIDE IV', 'MOA'),
+(21, 'Larry P. Miranda', '', '', 'https://drive.google.com/file/d/15s51kRvSQIjlOYkVlHKvq_8-jfMgwJ31/view?usp=share_link', 'current_timestamp()', 'ADMINISTRATIVE AIDE V (Mason II)', 'PERMANENT'),
+(22, 'Rodrigo N. Mirande', '', '', 'https://drive.google.com/file/d/1d2EGRwutys8DNRCIMTV5myURpLvT2sUX/view?usp=share_link', 'current_timestamp()', 'ADMINISTRATIVE AIDE V (Plumber II)', 'PERMANENT'),
+(23, 'Ernesto Q. Obrique', '', '', 'https://drive.google.com/file/d/1NqiBLfkmAQF4FisW7APhw_ksMsF7GQU6/view?usp=share_link', 'current_timestamp()', 'ADMINISTRATIVE AIDE V (Plumber II)', 'PERMANENT'),
+(24, 'Silvino G. Pelingon Jr', '', '', 'https://drive.google.com/file/d/1LOBJfmg-FP0dlDDozR4gWBQhDMzDp61m/view?usp=share_link', 'current_timestamp()', 'ADMINISTRATIVE AIDE V (Carpenter II)', 'PERMANENT'),
+(25, 'Maria Theresa M. Reyes', '', '', 'https://drive.google.com/file/d/1gXXjT216RlG3nuM1mKQpkvUoPezF1Jbg/view?usp=share_link', 'current_timestamp()', 'ADMINISTRATIVE ASSISTANT II', 'MOA'),
+(26, 'Edgar B.Saminian ', '', '', 'https://drive.google.com/file/d/1gXXjT216RlG3nuM1mKQpkvUoPezF1Jbg/view?usp=share_link', 'current_timestamp()', '', ''),
+(27, 'Junmar S. Sevilleno', '', '', 'https://drive.google.com/file/d/1Lubt65cC03sLtGvyKLorHeoT0lWqY3i9/view?usp=share_link', 'current_timestamp()', '', ''),
+(28, 'Engr.Julius Ryan B. Tuquero', '', '', 'https://drive.google.com/file/d/1LSRrrwvBGh7YNXxFKzU-hWrdkq2F0ckQ/view?usp=share_link', 'current_timestamp()', '', ''),
+(29, 'Engr. Ronald T. Vegim', '', '', 'https://drive.google.com/file/d/1dsJhdtxYBaX3orb1aipz63GEbGmNIY0z/view?usp=share_link', 'current_timestamp()', '', ''),
+(30, 'AR.Nezhley Anne P.Vivit', 'Architect ||', '', 'https://drive.google.com/file/d/1HfVq8C_KEiIv7CiYyr_vrZwS2rXuuIpA/view?usp=share_link', 'current_timestamp()', '', '');
 
 -- --------------------------------------------------------
 
@@ -165,7 +201,7 @@ ALTER TABLE `downloads`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `producttb`
