@@ -655,7 +655,7 @@ footer .copyrights {
   margin: 0;
 }
 
-.blog-aside .widget-author .avatar {
+.blog-aside .widget-author .item-avatar {
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -787,7 +787,7 @@ footer .copyrights {
   padding-bottom: 20px;
 }
 
-.article .article-title .media .avatar {
+.article .article-title .media .item-avatar {
   width: 45px;
   height: 45px;
   border-radius: 50%;

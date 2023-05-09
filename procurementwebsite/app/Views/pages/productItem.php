@@ -30,7 +30,7 @@
 
                                     <h2><?= $product['name']; ?></h2>
                                     <div class="media">
-                                        <div class="avatar">
+                                        <div class="item-avatar">
                                             <img src="<?php echo base_url('assets/images/logob.png   '); ?>" width="100%" height="60%" alt="logo" />
                                         </div>
                                         <div class="media-body">
@@ -77,7 +77,7 @@
                                 </div>
                                 <div class="widget-body">
                                     <div class="media align-items-center">
-                                        <div class="avatar">
+                                        <div class="item-avatar">
                                             <img src="<?php echo base_url('assets/images/logob.png'); ?>" width="100%" height="60%" alt="logo" />
                                         </div>
                                         <div class="media-body">
