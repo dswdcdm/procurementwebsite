@@ -4,14 +4,14 @@
         <div class="environment">
             <div class="row">
                 <div class="col">
-                    <img class="img-fluid" src="<?php echo base_url('assets/images/dswdlogo.png'); ?>" width="40%" height="60%" alt="logo" />
+                    <img class="img-fluid" src="<?php echo base_url('assets/images/footer.png'); ?>" width="80%" height="60%" alt="logo" />
                 </div>
                 <div class="col">
-                    <p class="text-dark font-weight-bold"> #DSWDMaymalasakit </p>
+                    <p class="text-dark font-weight-bold"> #DSWDBawatBuhayMahalaga</p>
                 </div>
-                <div class="col">
-                    <img class=" img-fluid" src="<?php echo base_url('assets/images/maagap.png'); ?>" width="40%" height="60%" alt="logo" />
-                </div>
+                <!-- <div class="col">
+                    <img class=" img-fluid" src="<?php echo base_url('assets/images/footer.png'); ?>" width="40%" height="60%" alt="logo" />
+                </div> -->
                 <div class="col">
                     <ul class="d-flex gap-2">
                         <li class="text-dark font-weight-bold"><a class="btn btn-primary" style="background-color: #3b5998;" href="https://www.facebook.com/" role="button" target="_blank">FACEBOOK <i class="fab fa-facebook-f"></i></a></li>
