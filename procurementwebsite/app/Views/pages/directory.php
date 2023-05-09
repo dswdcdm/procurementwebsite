@@ -11,7 +11,7 @@
                                 <?php foreach ($employee as $employee) : ?>
                                     <?php if ($employee['id'] == 1) : ?>
                                         <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0 ">
-                                            <div class="bg-image  text-center hover-zoom ripple rounded ripple-surface">
+                                            <div class="bg-image text-center hover-zoom ripple rounded ripple-surface">
                                                 <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="rounded-circle img-fluid " style="width: 180px;" />
                                             </div>
                                         </div>
@@ -52,7 +52,15 @@
     <div class="col-6 offset-md-3 offset-2">
         <div class="teamcol">
             <div class="teamcolinner ">
-                <div class="avatar permanent p-1"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                <?php if ($employee['status'] == "PERMANENT") : ?>
+                    <div class="avatar permanent p-1">
+                        <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid " />
+                    </div>
+                <?php else : ?>
+                    <div class="avatar contract p-1">
+                        <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid " />
+                    </div>
+                <?php endif; ?>
                 <div class="member-name">
                     <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
                     <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
@@ -63,12 +71,24 @@
 
     <div class="container">
         <div class="row justify-content-md-between">
-            <div class="col-12 col-lg-3">
+            <!-- loop start -->
+
+            <div class="col-12 col-lg-3 ">
+                <h5 class="mt-5 text-center text-white bg-dark p-2">PLANNING SECTION</h5>
+                <div class="d-flex" style="height: 10px;">
+                    <div class="vr offset-6"></div>
+                </div>
                 <div class="teamcol ">
                     <div class="teamcolinner ">
-                        <div class="avatar permanent p-1"> 
-                            <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid " />
-                        </div>
+                        <?php if ($employee['status'] == "PERMANENT") : ?>
+                            <div class="avatar permanent p-1">
+                                <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid " />
+                            </div>
+                        <?php else : ?>
+                            <div class="avatar contract p-1">
+                                <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid " />
+                            </div>
+                        <?php endif; ?>
                         <div class="member-name  ">
                             <h2 style="font-size:1rem; "><?= $employee['name']; ?></h2>
                             <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
@@ -80,6 +100,10 @@
                 </div>
             </div>
             <div class="col-12 col-lg-3">
+                <h5 class="mt-5 text-center text-white bg-dark p-2">MAINTENANCE SECTION</h5>
+                <div class="d-flex" style="height: 10px;">
+                    <div class="vr offset-6"></div>
+                </div>
                 <div class="teamcol">
                     <div class="teamcolinner">
                         <div class="avatar permanent p-1"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid" /></div>
@@ -94,6 +118,10 @@
                 </div>
             </div>
             <div class="col-12 col-lg-3">
+                <h5 class="mt-5 text-center text-white bg-dark p-2">ADMIN SUPPORT UNIT</h5>
+                <div class="d-flex" style="height: 10px;">
+                    <div class="vr offset-6"></div>
+                </div>
                 <div class="teamcol">
                     <div class="teamcolinner ">
                         <div class="avatar permanent p-1"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid" /></div>
@@ -107,8 +135,10 @@
                     <div class="vr offset-6"></div>
                 </div>
             </div>
+            <!-- end of loop -->
         </div>
-        <div class="row justify-content-md-evenly gap-4">
+        <div class="row justify-content-md-evenly">
+            <!-- loop start -->
             <div class="col-12 col-lg-3">
                 <div class="teamcol">
                     <div class="teamcolinner">
@@ -131,6 +161,7 @@
                     </div>
                 </div>
             </div>
+            <!-- end of loop -->
         </div>
     </div>
 
