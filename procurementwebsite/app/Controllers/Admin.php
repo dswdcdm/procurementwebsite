@@ -15,7 +15,7 @@ class Admin extends BaseController
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);
         $data = [
-            'title' => 'user Profile',
+            'title' => 'ADMIN',
             'userInfo' => $userInfo
         ];
         $model = new UserModel();

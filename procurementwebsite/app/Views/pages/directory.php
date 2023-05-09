@@ -11,8 +11,8 @@
                                 <?php foreach ($employee as $employee) : ?>
                                     <?php if ($employee['id'] == 1) : ?>
                                         <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0 ">
-                                            <div class="bg-image text-center hover-zoom ripple rounded ripple-surface">
-                                                <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="rounded-circle img-fluid" style="width: 180px;" />
+                                            <div class="bg-image  text-center hover-zoom ripple rounded ripple-surface">
+                                                <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="rounded-circle img-fluid " style="width: 180px;" />
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-lg-6 col-xl-6">
@@ -51,8 +51,8 @@
     </div>
     <div class="col-6 offset-md-3 offset-2">
         <div class="teamcol">
-            <div class="teamcolinner">
-                <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+            <div class="teamcolinner ">
+                <div class="avatar permanent p-1"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
                 <div class="member-name">
                     <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
                     <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
@@ -62,29 +62,15 @@
     </div>
 
     <div class="container">
-        <div class="row justify-content-md-between ">
+        <div class="row justify-content-md-between">
             <div class="col-12 col-lg-3">
-                <div class="teamcol">
-                    <div class="teamcolinner">
-                        <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid" /></div>
-                        <div class="member-name">
-                            <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
-                            <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
-
+                <div class="teamcol ">
+                    <div class="teamcolinner ">
+                        <div class="avatar permanent p-1"> 
+                            <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid " />
                         </div>
-                    </div>
-
-                </div>
-                <div class="d-flex" style="height: 10px;">
-                    <div class="vr offset-6"></div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-3">
-                <div class="teamcol">
-                    <div class="teamcolinner">
-                        <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid" /></div>
-                        <div class="member-name">
-                            <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                        <div class="member-name  ">
+                            <h2 style="font-size:1rem; "><?= $employee['name']; ?></h2>
                             <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
                         </div>
                     </div>
@@ -96,7 +82,21 @@
             <div class="col-12 col-lg-3">
                 <div class="teamcol">
                     <div class="teamcolinner">
-                        <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid" /></div>
+                        <div class="avatar permanent p-1"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid" /></div>
+                        <div class="member-name">
+                            <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
+                            <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex" style="height: 10px;">
+                    <div class="vr offset-6"></div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-3">
+                <div class="teamcol">
+                    <div class="teamcolinner ">
+                        <div class="avatar permanent p-1"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid" /></div>
                         <div class="member-name">
                             <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
                             <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
@@ -108,11 +108,11 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-md-evenly gap-4 ">
+        <div class="row justify-content-md-evenly gap-4">
             <div class="col-12 col-lg-3">
                 <div class="teamcol">
                     <div class="teamcolinner">
-                        <div class="avatar"> <img src="<?php echo base_url('assets/images/vacantimage.png'); ?> " alt="profile" class=" img-fluid" /></div>
+                        <div class="avatar contract p-1"> <img src="<?php echo base_url('assets/images/vacantimage.png'); ?> " alt="profile" class=" img-fluid" /></div>
                         <div class="member-name">
                             <h2 style="font-size:1rem;">VACANT</h2>
                             <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
@@ -123,7 +123,7 @@
             <div class="col-12 col-lg-3">
                 <div class="teamcol">
                     <div class="teamcolinner">
-                        <div class="avatar"> <img src="<?php echo base_url('assets/images/vacantimage.png'); ?> " alt="profile" class="img-fluid" /></div>
+                        <div class="avatar permanent p-1"> <img src="<?php echo base_url('assets/images/vacantimage.png'); ?> " alt="profile" class="img-fluid" /></div>
                         <div class="member-name">
                             <h2 style="font-size:1rem;">VACANT</h2>
                             <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
@@ -245,16 +245,17 @@
             <div class="col-12 col-md-4  div">
 
                 <div class="col-12 col-lg-12 col-xl-4 div offset-xl-2">
-                    <div class="teamcol">
+                    <div class="teamcol ">
                         <div class="teamcolinner">
                             <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>
                             <div class="member-name">
                                 <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
                                 <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
+
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="teamcol">
                         <div class="teamcolinner">
                             <div class="avatar"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class="img-fluid" /></div>

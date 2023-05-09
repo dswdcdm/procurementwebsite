@@ -9,6 +9,16 @@
   outline: none;
 }
 
+
+/* colors */
+.permanent{
+  background-color: #14d6fc;
+}
+.contract{
+  background-color: #ede4a1;
+}
+/* color end */
+
 .hr-red {
   border: 3px solid red;
   width: 75%;

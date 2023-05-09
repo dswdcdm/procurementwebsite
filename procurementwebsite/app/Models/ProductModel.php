@@ -7,4 +7,5 @@ use CodeIgniter\Model;
 class ProductModel extends Model
 {
     protected $table = 'producttb'; // Set the table name
+    
 }

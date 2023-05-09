@@ -41,46 +41,34 @@ class Product extends BaseController
         $request = \Config\Services::request();
         $productId = $request->uri->getSegment(3);
         return view('components/header', $data)
-            . view('components/navbar', $data)
+            . view('components/navbar')
             . view('pages/productitem', $productdata)
             . view('components/footer');
     }
 
 
-    public function productSearch($productId)
+    public function searchProduct($productName)
     {
         $userModel = new \App\Models\UserModel();
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);
-        $data = [
-            'title' => 'Product specs',
-            'userInfo' => $userInfo,
-            'productId' => $productId
-        ];
+        
         $model = new ProductModel();
         $productdata['producttb'] = $model->findAll();
         $request = \Config\Services::request();
-        $productId = $request->uri->getSegment(3);
+        $productName = $request->uri->getSegment(3);
+
+        $data = [
+            'title' => 'Product specs',
+            'userInfo' => $userInfo,
+            'productName' => $productName
+        ];
+        
         return view('components/header', $data)
-            . view('components/navbar', $data)
+            . view('components/navbar')
             . view('pages/productitem', $productdata)
             . view('components/footer');
     }
 
-    public function requestProduct()
-    {
-        $userModel = new \App\Models\UserModel();
-        $loggedUserID = session()->get('loggedUser');
-        $userInfo = $userModel->find($loggedUserID);
-        $data = [
-            'title' => 'Product specs',
-            'userInfo' => $userInfo
-        ];
-        $model = new ProductModel();
-        $productdata['producttb'] = $model->findAll();
-        return view('components/header', $data)
-            . view('components/navbar')
-            . view('pages/requestItem')
-            . view('components/footer');
-    }
+ 
 }
