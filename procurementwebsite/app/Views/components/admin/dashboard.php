@@ -30,7 +30,7 @@
           <div class="card-body">
             <h4 class="card-title">PRODUCTS</h4>
             <p class="card-category">
-              <span class="text-success"><i class="fa fa-download"></i> </span> Products Count
+              <span class="text-success"><i class="fa fa-download"></i> <?php echo $productCount; ?></span> Products Count
             </p>
           </div>
 
@@ -44,7 +44,7 @@
           <div class="card-body">
             <h4 class="card-title"> USERS</h4>
             <p class="card-category">
-              <span class="text-success"><i class="fa fa-download"></i> 100 </span> NO OF USERS
+              <span class="text-success"><i class="fa fa-download"></i> <?php echo $usercount; ?> </span> NO OF USERS
             </p>
           </div>
 

@@ -16,14 +16,21 @@ class Admin extends BaseController
     
         $model = new UserModel();
         $downloadModel = new Downloads();
-        $userdata['users'] = $model->findAll();
-        $downloadData['downloads'] = $downloadModel->findAll();
+        $productModel = new ProductModel();
+
+        $userNumber['usersNumber'] = $model->countRows();
+        $productNumber['productNumber'] = $productModel->countRows();
         
+        $downloadData['downloads'] = $downloadModel->findAll();
+        $userdata['users'] = $model->findAll();
+
         $data = [
             'title' => 'ADMIN',
             'userInfo' => $userInfo,
             'users' =>  $userdata['users'],
-            'downloads'=> $downloadData['downloads']
+            'downloads'=> $downloadData['downloads'],
+            'usercount' => $userNumber['usersNumber'],
+            'productCount' => $productNumber['productNumber']
         ];
         return view('components/admin/header', $data)
             . view('components/admin/navbar')  

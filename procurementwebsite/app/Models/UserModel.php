@@ -6,6 +6,13 @@ use CodeIgniter\Model;
 
 class UserModel extends Model
 {
+    public function countRows()
+    {
+        $query = $this->db->query('SELECT COUNT(*) as count FROM users');
+        $row = $query->getRow();
+    
+        return $row->count;
+    }
     protected $DBGroup          = 'default';
     protected $table            = 'users';
     protected $primaryKey       = 'id';
