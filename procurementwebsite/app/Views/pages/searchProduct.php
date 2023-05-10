@@ -70,7 +70,11 @@
     <?php endforeach; ?>
 
     <?php if ($value == false) : ?>
-        <p>no value</p>
+        <div class="alert alert-danger" role="alert">
+           NO ITEM SEARCH GO TO GSETS FORE MORE INFO
+        </div>
+        <div class="py-4 mx-auto text-center"> <a href="https://gsets.dswd.gov.ph/users/login" target="_blank" class="btn btn-outline-primary ">REQUEST ITEM SPECIFICATION</a></div>
+
     <?php else : ?>
 
     <?php endif; ?><div>
