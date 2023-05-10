@@ -43,6 +43,7 @@ $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
     $routes->get('Product/addProduct', 'Product::addProduct');
     $routes->get('pages', 'Dashboard::index');
     $routes->get('pages/profile', 'Dashboard::profile');
+    $routes->get('pages/updateProfile', 'Dashboard::updateProfile');
     $routes->get('pages/directory', 'Dashboard::directory');
     $routes->add('admin', 'Admin::index');
     $routes->add('admin/userProfile', 'Admin::userProfile');

@@ -5,7 +5,8 @@
                 <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
                     <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item"><a href="/pages">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="/pages/profile">User Profile</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Update User Profile</li>
                     </ol>
                 </nav>
             </div>
@@ -15,34 +16,15 @@
             <div class="col-lg-4">
                 <div class="card mb-4">
                     <div class="card-body text-center">
-
-                    <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " width="60%" height="60%" alt="logo"  class="rounded-circle img-fluid" alt="avatar" style="width: 150px;"/>
+                        <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " width="60%" height="60%" alt="logo" class="rounded-circle img-fluid" alt="avatar" style="width: 150px;" />
                         <p class="text-muted mb-1"><?= $userInfo['email']; ?></p>
                         <p class="text-muted mb-4"><?= $userInfo['address']; ?></p>
                         <div class="d-flex justify-content-center mb-2">
-                        <?= $userInfo['is_admin']; ?>
+                            <?= $userInfo['is_admin']; ?>
                         </div>
                     </div>
                 </div>
-    <!--             <div class="card mb-4 mb-lg-0">
-                    <div class="card-body p-0">
-                        <ul class="list-group list-group-flush rounded-3">
 
-                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                                <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>
-                                <p class="mb-0"><?= ucfirst($userInfo['name']); ?></p>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                                <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
-                                <p class="mb-0"><?= ucfirst($userInfo['name']); ?></p>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
-                                <p class="mb-0"><?= ucfirst($userInfo['name']); ?></p>
-                            </li>
-                        </ul>
-                    </div>
-                </div> -->
             </div>
             <div class="col-lg-8">
                 <div class="card mb-4">
@@ -52,7 +34,9 @@
                                 <p class="mb-0">Full Name</p>
                             </div>
                             <div class="col-sm-9">
-                                <p class="text-muted mb-0"><?= ucfirst($userInfo['name']); ?></p>
+                                <p class="text-muted mb-0">
+                                    <input placeholder="Enter Full Name" name="name" type="text" class="input_field" id="name" value="">
+                                </p>
                             </div>
                         </div>
                         <hr>
@@ -61,7 +45,9 @@
                                 <p class="mb-0">Email</p>
                             </div>
                             <div class="col-sm-9">
-                                <p class="text-muted mb-0"><?= $userInfo['email']; ?></p>
+                                <p class="text-muted mb-0">
+                                    <input placeholder="Enter Email" name="email" type="email" class="input_field" id="email" value="">
+                                </p>
                             </div>
                         </div>
                         <hr>
@@ -70,21 +56,23 @@
                                 <p class="mb-0">Phone</p>
                             </div>
                             <div class="col-sm-9">
-                                <p class="text-muted mb-0"><?= $userInfo['phone']; ?></p>
+                                <p class="text-muted mb-0">
+                                    <input placeholder="Enter Phone" name="Phone" type="text" class="input_field" id="Phone" value="">
+                                </p>
                             </div>
                         </div>
                         <hr>
-                       
+
                         <div class="row">
                             <div class="col-sm-3">
                                 <p class="mb-0">Address</p>
                             </div>
                             <div class="col-sm-9">
-                                <p class="text-muted mb-0"><?= $userInfo['address']; ?></p>
+                                <input placeholder="Enter Address" name="address" type="text" class="input_field" id="address" value="">
                             </div>
                         </div>
                         <div class="d-flex flex-column mt-4">
-                            <a href="/pages/updateProfile" class="btn btn-primary btn-sm" type="button">UPDATE</a>
+                            <a href="/pages/profile" class="btn btn-primary btn-sm" type="button">UPDATE</a>
                         </div>
                     </div>
                 </div>
