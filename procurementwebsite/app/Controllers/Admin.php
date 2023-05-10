@@ -14,15 +14,18 @@ class Admin extends BaseController
         $userModel = new \App\Models\UserModel();
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);
+        
+        $model = new UserModel();
+        $productmodel = new ProductModel();
+        $userdata['users'] = $model->findAll();
+        
         $data = [
             'title' => 'ADMIN',
             'userInfo' => $userInfo
         ];
-        $model = new UserModel();
-        $userdata['users'] = $model->findAll();
         return view('components/admin/header', $data)
             . view('components/admin/navbar')  
-            . view('components/admin/hero')
+            . view('components/admin/hero', $data)
             . view('components/admin/dashboard', $userdata)
             . view('components/admin/footer');
     }

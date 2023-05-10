@@ -46,7 +46,7 @@ class Product extends BaseController
             . view('components/footer');
     }
 
-
+    
     public function searchProduct($productName)
     {
         $userModel = new \App\Models\UserModel();
@@ -70,5 +70,20 @@ class Product extends BaseController
             . view('components/footer');
     }
 
+    public function addProduct()
+    {
+        $userModel = new \App\Models\UserModel();
+        $loggedUserID = session()->get('loggedUser');
+        $userInfo = $userModel->find($loggedUserID);
+        $data = [
+            'title' => 'Product specs',
+            'userInfo' => $userInfo
+        ];
+       
+        return view('components/header', $data)
+            . view('components/navbar')
+            . view('pages/addProduct')
+            . view('components/footer');
+    }
  
 }

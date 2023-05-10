@@ -24,7 +24,7 @@
           <div class="card-body">
             <h4 class="card-title">PRODUCTS</h4>
             <p class="card-category">
-              <span class="text-success"><i class="fa fa-download"></i> 100 </span> Products Count
+              <span class="text-success"><i class="fa fa-download"></i>  </span> Products Count
             </p>
           </div>
         
@@ -36,9 +36,9 @@
             <div class="ct-chart" id="completedTasksChart"></div>
           </div>
           <div class="card-body">
-            <h4 class="card-title"> REQUEST</h4>
+            <h4 class="card-title"> USERS</h4>
             <p class="card-category">
-              <span class="text-success"><i class="fa fa-download"></i> 100 </span> NO OF REQUEST
+              <span class="text-success"><i class="fa fa-download"></i> 100 </span> NO OF USERS
             </p>
           </div>
        
@@ -131,6 +131,7 @@
               </thead>
               <tbody>
                 <?php foreach ($users as $user) : ?>
+ 
                   <tr>
                     <td><?= $user['id']; ?></td>
                     <td><?= $user['name']; ?></td>
@@ -138,7 +139,7 @@
                     <td>
                       <?php if ($user['status'] == "ACTIVE") : ?> <p class="text-success">ACTIVE</p>
                       <?php else : ?>
-                        <p class="text-danger">IN ACTIVE</p> <?php endif; ?>
+                        <p class="text-danger">IN ACTIVE count</p> <?php endif; ?>
                     </td>
                   </tr>
                 <?php endforeach; ?>
