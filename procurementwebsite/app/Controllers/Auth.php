@@ -47,6 +47,18 @@ class Auth extends Controller
                     'required' => 'Full name is Required'
                 ]
             ],
+            'address' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'address is Required'
+                ]
+            ],
+            'phone' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'phone is Required'
+                ]
+            ],
             'email' => [
                 'rules' => 'required|valid_email|is_unique[users.email]',
                 'errors' => [
@@ -85,6 +97,8 @@ class Auth extends Controller
             $name = $_POST['name'];
             $email = $_POST['email'];
             $password = $_POST['password'];
+            $address = $_POST['address'];
+            $phone = $_POST['phone'];
 
             $allowed_domains = array('example.com', 'example2.com');
             $domain = explode('@', $email);
@@ -93,6 +107,8 @@ class Auth extends Controller
             $values = [
                 'name' => $name,
                 'email' => $email,
+                'address'=> $address,
+                'phone'=>$phone,
                 'password' => Hash::make($password)
             ];
 

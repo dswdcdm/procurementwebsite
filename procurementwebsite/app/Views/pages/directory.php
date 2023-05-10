@@ -52,15 +52,12 @@
         <div class="col-6 offset-md-3 offset-2">
             <div class="teamcol">
                 <div class="teamcolinner ">
-                    <?php if ($employee['status'] == "PERMANENT") : ?>
-                        <div class="avatar permanent p-1">
+               
+                 
+                        <div class="avatar ">
                             <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid " />
                         </div>
-                    <?php else : ?>
-                        <div class="avatar contract p-1">
-                            <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid " />
-                        </div>
-                    <?php endif; ?>
+         
                     <div class="member-name">
                         <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
                         <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
@@ -82,15 +79,11 @@
                 </div>
                 <div class="teamcol ">
                     <div class="teamcolinner ">
-                        <?php if ($employee['status'] == "PERMANENT") : ?>
-                            <div class="avatar permanent p-1">
+                      
+                     
+                            <div class="avatar 1">
                                 <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid " />
                             </div>
-                        <?php else : ?>
-                            <div class="avatar contract p-1">
-                                <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid " />
-                            </div>
-                        <?php endif; ?>
                         <div class="member-name  ">
                             <h2 style="font-size:1rem; "><?= $employee['name']; ?></h2>
                             <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
@@ -108,7 +101,7 @@
                 </div>
                 <div class="teamcol">
                     <div class="teamcolinner">
-                        <div class="avatar permanent p-1"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid" /></div>
+                        <div class="avatar "> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid" /></div>
                         <div class="member-name">
                             <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
                             <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
@@ -126,7 +119,7 @@
                 </div>
                 <div class="teamcol">
                     <div class="teamcolinner ">
-                        <div class="avatar permanent p-1"> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid" /></div>
+                        <div class="avatar "> <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " alt="profile" class=" img-fluid" /></div>
                         <div class="member-name">
                             <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
                             <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
@@ -144,7 +137,7 @@
             <div class="col-12 col-lg-3">
                 <div class="teamcol">
                     <div class="teamcolinner">
-                        <div class="avatar contract p-1"> <img src="<?php echo base_url('assets/images/vacantimage.png'); ?> " alt="profile" class=" img-fluid" /></div>
+                        <div class="avatar "> <img src="<?php echo base_url('assets/images/vacantimage.png'); ?> " alt="profile" class=" img-fluid" /></div>
                         <div class="member-name">
                             <h2 style="font-size:1rem;">VACANT</h2>
                             <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
@@ -155,7 +148,7 @@
             <div class="col-12 col-lg-3">
                 <div class="teamcol">
                     <div class="teamcolinner">
-                        <div class="avatar permanent p-1"> <img src="<?php echo base_url('assets/images/vacantimage.png'); ?> " alt="profile" class="img-fluid" /></div>
+                        <div class="avatar "> <img src="<?php echo base_url('assets/images/vacantimage.png'); ?> " alt="profile" class="img-fluid" /></div>
                         <div class="member-name">
                             <h2 style="font-size:1rem;">VACANT</h2>
                             <p style="font-size:0.8em;"><?= $employee['about']; ?></p>

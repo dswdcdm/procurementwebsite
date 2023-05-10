@@ -3,7 +3,7 @@
     <footer>
         <div class="environment">
             <div class="row">
-                <div class="col">
+                <div class="col-12 col-md-5">
                     <img class="img-fluid" src="<?php echo base_url('assets/images/footer.png'); ?>" width="80%" height="60%" alt="logo" />
                 </div>
                 <div class="col">

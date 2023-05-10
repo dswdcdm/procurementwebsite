@@ -57,9 +57,7 @@
 
                         <div class="d-flex flex-column mt-4">
                             <a href="/Product/productItem/<?= $product['id']; ?>" class="btn btn-primary btn-sm" type="button">Details</a>
-                            <button class="btn btn-outline-primary btn-sm mt-2" type="button">
-                                Add Request
-                            </button>
+                          
                         </div>
                     </div>
                 </div>

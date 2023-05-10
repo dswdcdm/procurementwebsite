@@ -18,9 +18,9 @@
 
                     <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " width="60%" height="60%" alt="logo"  class="rounded-circle img-fluid" alt="avatar" style="width: 150px;"/>
                         <p class="text-muted mb-1"><?= $userInfo['email']; ?></p>
-                        <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
+                        <p class="text-muted mb-4"><?= $userInfo['address']; ?></p>
                         <div class="d-flex justify-content-center mb-2">
-                    ADMIN
+                        <?= $userInfo['is_admin']; ?>
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                                 <p class="mb-0">Phone</p>
                             </div>
                             <div class="col-sm-9">
-                                <p class="text-muted mb-0">(097) 234-5678</p>
+                                <p class="text-muted mb-0"><?= $userInfo['phone']; ?></p>
                             </div>
                         </div>
                         <hr>
@@ -88,7 +88,7 @@
                                 <p class="mb-0">Address</p>
                             </div>
                             <div class="col-sm-9">
-                                <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
+                                <p class="text-muted mb-0"><?= $userInfo['address']; ?></p>
                             </div>
                         </div>
                     </div>
