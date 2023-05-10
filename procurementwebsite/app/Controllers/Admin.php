@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Controllers;
-
 use App\Controllers\BaseController;
-use App\Models\EmployeeModel;
+use App\Models\Downloads;
 use App\Models\UserModel;
 use App\Models\ProductModel;
 
@@ -14,19 +13,22 @@ class Admin extends BaseController
         $userModel = new \App\Models\UserModel();
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);
-        
+    
         $model = new UserModel();
-        $productmodel = new ProductModel();
+        $downloadModel = new Downloads();
         $userdata['users'] = $model->findAll();
+        $downloadData['downloads'] = $downloadModel->findAll();
         
         $data = [
             'title' => 'ADMIN',
-            'userInfo' => $userInfo
+            'userInfo' => $userInfo,
+            'users' =>  $userdata['users'],
+            'downloads'=> $downloadData['downloads']
         ];
         return view('components/admin/header', $data)
             . view('components/admin/navbar')  
             . view('components/admin/hero', $data)
-            . view('components/admin/dashboard', $userdata)
+            . view('components/admin/dashboard', $data)
             . view('components/admin/footer');
     }
 
@@ -59,6 +61,7 @@ class Admin extends BaseController
         ];
         $model = new ProductModel();
         $productdata['producttb'] = $model->findAll();
+
         return view('components/admin/header', $data)
             . view('components/admin/navbar')
             . view('components/admin/hero')

@@ -9,11 +9,17 @@
           <div class="card-body">
             <h4 class="card-title">DOWNLOADS</h4>
             <p class="card-category">
-              <span class="text-success"><i class="fa fa-download"></i> 55% </span> TA DOWNLOADS <br/>
-              <span class="text-success"><i class="fa fa-download"></i> 55% </span> MS DOWNLOADS
+              <?php foreach ($downloads as $download) : ?>
+                <?php if ($download['id'] == 1) : ?>
+                  <span class="text-success"><i class="fa fa-download"></i> <?= $download['download_number']; ?></span> TA DOWNLOADS <br />
+                <?php endif;  ?>
+                <?php if ($download['id'] == 2) : ?>
+                  <span class="text-success"><i class="fa fa-download"></i> <?= $download['download_number']; ?> </span> MS DOWNLOADS
+                <?php endif;  ?>
+              <?php endforeach; ?>
             </p>
           </div>
-       
+
         </div>
       </div>
       <div class="col-xl-4 col-lg-12">
@@ -24,10 +30,10 @@
           <div class="card-body">
             <h4 class="card-title">PRODUCTS</h4>
             <p class="card-category">
-              <span class="text-success"><i class="fa fa-download"></i>  </span> Products Count
+              <span class="text-success"><i class="fa fa-download"></i> </span> Products Count
             </p>
           </div>
-        
+
         </div>
       </div>
       <div class="col-xl-4 col-lg-12">
@@ -41,7 +47,7 @@
               <span class="text-success"><i class="fa fa-download"></i> 100 </span> NO OF USERS
             </p>
           </div>
-       
+
         </div>
       </div>
     </div>
@@ -131,7 +137,7 @@
               </thead>
               <tbody>
                 <?php foreach ($users as $user) : ?>
- 
+
                   <tr>
                     <td><?= $user['id']; ?></td>
                     <td><?= $user['name']; ?></td>
