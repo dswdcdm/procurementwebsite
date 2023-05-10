@@ -17,18 +17,8 @@
                     <div class="article-title">
                         <h6>
                        <!--Image-->
-<div>
-    <div class="mb-4 d-flex justify-content-center">
-        <img src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg"
-        alt="example placeholder" style="width: 300px;" />
-    </div>
-    <div class="d-flex justify-content-center">
-        <div class="btn btn-primary btn-rounded">
-            <label class="form-label text-white m-1" for="customFile1">Choose file</label>
-            <input type="file" class="form-control d-none" id="customFile1" />
-        </div>
-    </div>
-</div>
+                       <label for="formFileSm" class="form-label">SELECT IMAGE</label>
+<input class="form-control form-control-sm" id="formFileSm" type="file" />
                             <h6 class="text-dark">
                                 <label for="name">PRODUCT NAME</label>
                                 <div class="input_container">
@@ -51,22 +41,28 @@
                         </h6>
                         <div class="media-body">
                             <label>
-                                <label for="name">PRODUCT PRICE</label>
+                                <h6>
+                                <label for="name" class = "text-dark">PRODUCT PRICE</label>
                                 <div class="input_container">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" fill="currentColor" class="bi bi-tags-fill icon" viewBox="0 0 16 16">
                                         <path d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
                                         <path d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z" />
                                     </svg>
                                     <input placeholder="PRODUCT PRICE" name="productprice" type="number" class="input_field" id="productprice" value="">
-                            </label>
+
+                                </label>
                         </div>
                     </div>
                     <div class="article-content">
-                        <label for="name">PRODUCT STATUS</label>
+                        <h6 class ="text-dark">
+                        <label for="name" class="text-dark">PRODUCT STATUS</label>
+                      
                         <div class="input_container">
 
                             <input placeholder="PRODUCT STATUS" name="productstatus" type="text" class="input_field" id="productstatus" value=""></p>
                         </div>
+                        </h6>
+</h6>
 
                         <div class="send">
 
@@ -103,10 +99,10 @@
                     </div>
                     <div class="widget-body">
                         <div class="nav tag-cloud">
-                        <label class="form-label" for="customFile"><H6>UPLOAD TS </H6</label>
-<input type="file" class="form-control" id="customFile" />
-<label class="form-label" for="customFile"><H6>UPLOAD MS </H6></label>
-<input type="file" class="form-control" id="customFile" />
+                        <label for="formFileSm" class="form-label"><H6>UPLOAD TS</H6></label>
+<input class="form-control form-control-sm" id="formFileSm" type="file" />
+<label for="formFileSm" class="form-label mt-2"><H6>UPLOAD MS</H6></label>
+<input class="form-control form-control-sm" id="formFileSm" type="file" />
                             <!-- <a href="" data-toggle="modal" data-target="#downloadModal">UPLOAD TS</a>
                             <a href="" data-toggle="modal" data-target="#viewModal">UPLOAD MS</a> -->
                             <!-- Modal -->
