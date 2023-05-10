@@ -100,7 +100,7 @@ class Auth extends Controller
             $address = $_POST['address'];
             $phone = $_POST['phone'];
 
-            $allowed_domains = array('example.com', 'example2.com');
+            $allowed_domains = array('gmail.com', 'gmail.com');
             $domain = explode('@', $email);
             $domain = end($domain);
 

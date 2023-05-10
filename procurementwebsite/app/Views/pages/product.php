@@ -3,7 +3,7 @@
         <li class="breadcrumb-item"><a href="/pages">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">Products</li>
     </ol>
-    <form method="get" action="<?= base_url('Product/search'); ?>">
+    <form method="get" action="<?= base_url('Product/searchProduct'); ?>">
         <div class="input-group mt-4">
             <input type="search" name="query" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
             <button type="submit" class="btn btn-outline-primary">search</button>

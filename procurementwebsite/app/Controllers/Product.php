@@ -47,27 +47,27 @@ class Product extends BaseController
     }
 
     
-    public function searchProduct($productName)
+    public function searchProduct()
     {
         $userModel = new \App\Models\UserModel();
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);
         
-        $model = new ProductModel();
-        $productdata['producttb'] = $model->findAll();
-        $request = \Config\Services::request();
-        $productName = $request->uri->getSegment(3);
-
+        $query = $this->request->getVar('query');
         $data = [
             'title' => 'Product specs',
             'userInfo' => $userInfo,
-            'productName' => $productName
+            'query'=> $query 
         ];
-        
+        $model = new ProductModel();
+        $productdata['producttb'] = $model->findAll();
+     
         return view('components/header', $data)
             . view('components/navbar')
-            . view('pages/productitem', $productdata)
+            . view('pages/searchProduct', $productdata)
             . view('components/footer');
+
+
     }
 
     public function addProduct()
