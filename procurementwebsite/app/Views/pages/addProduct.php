@@ -1,5 +1,4 @@
-<section class="page-content">
-    <section class="search-and-user">
+
         <div class="col">
             <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
                 <ol class="breadcrumb mb-0">
@@ -9,7 +8,6 @@
                 </ol>
             </nav>
         </div>
-    </section>
     <div class="blog-single gray-bg">
 
         <div class="container">
@@ -28,31 +26,31 @@
                                     </div>
                                 </h6>
                             </h6>
-                            <h6> 
-                                 <div class="row">
-                                      <div class="col-md-12">
-                                          <div class="form-group">
-                                               <textarea name="message" id="message" placeholder="Product Description*" rows="4" class="form-control"></textarea>
-                                                </div>
-                                 </div>                       
-                                        </div>  
-                            </h6>        
-                                <div class="media-body">
-                                    <label>
-                                        <div class="input_container">
-                                            <input placeholder="PRODUCT PRICE" name="productprice" type="number" class="input_field" id="productprice" value="">
-                                    </label>      
-                                </div>  
+                            <h6>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea name="message" id="message" placeholder="Product Description*" rows="4" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </h6>
+                            <div class="media-body">
+                                <label>
+                                    <div class="input_container">
+                                        <input placeholder="PRODUCT PRICE" name="productprice" type="number" class="input_field" id="productprice" value="">
+                                </label>
+                            </div>
                         </div>
-                        <div class="article-content"> 
-                                <div class="input_container">
-                                    <input placeholder="PRODUCT STATUS" name="productstatus" type="text" class="input_field" id="productstatus" value=""></p>
-                                </div>  
-                                                <div class="send">
-                                                    <button class="px-btn theme w-100 btn btn-primary"><span>ADD ITEM</span> <i class="arrow"></i></button>
-                                                </div>
-                                            </div>
-                    </article>     
+                        <div class="article-content">
+                            <div class="input_container">
+                                <input placeholder="PRODUCT STATUS" name="productstatus" type="text" class="input_field" id="productstatus" value=""></p>
+                            </div>
+                            <div class="send">
+                                <button class="px-btn theme w-100 btn btn-primary"><span>ADD ITEM</span> <i class="arrow"></i></button>
+                            </div>
+                        </div>
+                    </article>
                 </div>
                 <div class="col-lg-4 m-15px-tb blog-aside">
                     <!-- Author -->
@@ -71,8 +69,8 @@
                             </div>
                             <p>
                             <div class="form-group">
-                                               <textarea name="message" id="message" placeholder="Note" rows="4" class="form-control"></textarea>
-                                                </div> 
+                                <textarea name="message" id="message" placeholder="Note" rows="4" class="form-control"></textarea>
+                            </div>
                             </p>
                         </div>
                     </div>
