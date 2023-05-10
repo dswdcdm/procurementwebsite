@@ -2,6 +2,7 @@
     <ol class="breadcrumb mb-0">
         <li class="breadcrumb-item"><a href="/admin">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">Products</li>
+        <li class="breadcrumb-item active" aria-current="page">Update Products</li>
     </ol>
     <form method="get" action="<?= site_url('Product/search'); ?>">
         <div class="input-group mt-4">
@@ -56,7 +57,7 @@
                         <?php endif; ?>
 
                         <div class="d-flex flex-column mt-4">
-                            <a href="" class="btn btn-primary btn-sm" type="button">Update</a>
+                            <a href="/admin/updateproduct" class="btn btn-primary btn-sm" type="button">Update</a>
                            <!--  <button class="btn btn-outline-primary btn-sm mt-2" type="button">
                                 Update
                             </button> -->
