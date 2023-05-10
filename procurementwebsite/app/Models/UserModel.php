@@ -13,6 +13,8 @@ class UserModel extends Model
     
         return $row->count;
     }
+
+
     protected $DBGroup          = 'default';
     protected $table            = 'users';
     protected $primaryKey       = 'id';

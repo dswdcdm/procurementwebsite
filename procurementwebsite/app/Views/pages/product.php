@@ -3,11 +3,12 @@
         <li class="breadcrumb-item"><a href="/pages">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">Products</li>
     </ol>
-    <form method="get" action="<?= base_url('Product/searchProduct'); ?>">
+    <form method="get" action="<?php echo htmlspecialchars(base_url('Product/searchProduct')); ?>" autocomplete="off">
         <div class="input-group mt-4">
-            <input type="search" name="query" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <input type="search" name="query" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon"  required/>
             <button type="submit" class="btn btn-outline-primary">search</button>
         </div>
+      
     </form>
     <div class="py-4 mx-auto text-center"> <a href="https://gsets.dswd.gov.ph/users/login" target="_blank" class="btn btn-outline-primary ">REQUEST ITEM SPECIFICATION</a></div>
 </nav>

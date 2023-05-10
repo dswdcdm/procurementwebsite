@@ -21,13 +21,7 @@
                                     <img src="<?= $product['image']; ?>" width="50%" height="60%" alt="logo" />
                                 </div>
                                 <div class="article-title">
-                                    <h6><a href="#">Product Overview</a> <?php if ($product['status'] == "ACTIVE") : ?>
-                                            <h6 class="text-success"> <?= $product['status']; ?> </h6>
-                                        <?php else : ?>
-                                            <h6 class="text-danger"> <?= $product['status']; ?> </h6>
-                                        <?php endif; ?>
-                                    </h6>
-
+                                    <h6><a href="#">Product Overview</a></h6>
                                     <h2><?= $product['name']; ?></h2>
                                     <div class="media">
                                         <div class="item-avatar">
@@ -35,7 +29,11 @@
                                         </div>
                                         <div class="media-body">
                                             <label> ₱<?= $product['price']; ?> </label>
-                                            <span>26 APRIL 2023 - 26 MAY 2023</span>
+                                            <?php if ($product['status'] == "ACTIVE") : ?>
+                                                <h6 class="text-success"> <?= $product['status']; ?> </h6>
+                                            <?php else : ?>
+                                                <h6 class="text-danger"> <?= $product['status']; ?> </h6>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                 </div>

@@ -11,7 +11,6 @@ class ProductModel extends Model
     {
         $query = $this->db->query('SELECT COUNT(*) as count FROM producttb');
         $row = $query->getRow();
-    
         return $row->count;
     }
     

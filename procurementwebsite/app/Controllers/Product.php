@@ -46,43 +46,36 @@ class Product extends BaseController
             . view('components/footer');
     }
 
-    
+
     public function searchProduct()
     {
         $userModel = new \App\Models\UserModel();
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);
-        
+
         $query = $this->request->getVar('query');
         $data = [
             'title' => 'Product specs',
             'userInfo' => $userInfo,
-            'query'=> $query 
+            'query' => $query
         ];
         $model = new ProductModel();
         $productdata['producttb'] = $model->findAll();
-     
+        
         return view('components/header', $data)
             . view('components/navbar')
             . view('pages/searchProduct', $productdata);
-
-
     }
 
-    public function addProduct()
+    public function downloadfile()
     {
         $userModel = new \App\Models\UserModel();
+        $productModel = new ProductModel();
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);
-        $data = [
-            'title' => 'Product specs',
-            'userInfo' => $userInfo
-        ];
-       
-        return view('components/header', $data)
-            . view('components/navbar')
-            . view('pages/addProduct')
-            . view('components/footer');
+
+        $data = array(
+            'downloadts' =>  $name = $_POST['name']
+        );
     }
- 
 }
