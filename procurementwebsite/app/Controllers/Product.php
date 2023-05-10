@@ -8,7 +8,10 @@ use App\Models\ProductModel;
 
 class Product extends BaseController
 {
-
+    public function __construct()
+    {
+        helper(['url', 'form']);
+    }
 
     public function index()
 
@@ -78,12 +81,23 @@ class Product extends BaseController
         $productModel = new ProductModel();
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);
-
-        
     }
 
     public function saveProduct()
     {
+
+        $validation = $this->validate([
+            'name' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'product name is Required'
+                ]
+            ]
+        ]);
+
+        if (!$validation) {
+            return redirect()->back()->with('fail', 'something went wrong');
+        } else {
         $name = $_POST['name'];
         $descrition = $_POST['description'];
         $price = $_POST['price'];
@@ -105,5 +119,5 @@ class Product extends BaseController
         } else {
             return redirect()->to('/admin/addproduct');
         }
-    }
+    }}
 }
