@@ -24,40 +24,35 @@
                                 <a href="#">Product Overview</a>
                                 <h6 class="text-success">
                                     <div class="input_container">
-                                        <input placeholder="status" name="status" type="text" class="input_field" id="status" value="">
+                                        <input placeholder="PRODUCT NAME" name="NAME" type="text" class="input_field" id="status" value="">
                                     </div>
                                 </h6>
                             </h6>
-
-                            <h2>
-                                <div class="input_container">
-                                <input placeholder="PRODUCT NAME" name="productname" type="text" class="input_field" id="productname" value="">
-                            </h2>
-                            <div class="media">
-                                <div class="item-avatar">
-                                    <img src="<?php echo base_url('assets/images/logob.png   '); ?>" width="100%" height="60%" alt="logo" />
-                                </div>
+                            <h6> 
+                                 <div class="row">
+                                      <div class="col-md-12">
+                                          <div class="form-group">
+                                               <textarea name="message" id="message" placeholder="Product Description*" rows="4" class="form-control"></textarea>
+                                                </div>
+                                 </div>                       
+                                        </div>  
+                            </h6>        
                                 <div class="media-body">
                                     <label>
                                         <div class="input_container">
                                             <input placeholder="PRODUCT PRICE" name="productprice" type="number" class="input_field" id="productprice" value="">
-                                    </label>
-                                    <span>26 APRIL 2023 - 26 MAY 2023</span>
-                                </div>
-                            </div>
+                                    </label>      
+                                </div>  
                         </div>
-                        <div class="article-content">
-                            <p class="font-weight-bold">
-                                <span class="font-weight-bolder text-info">TA</span>
-                            <div class="input_container">
-                                <input placeholder="PRODUCT NAME" name="productname" type="text" class="input_field" id="productname" value="">
-                                </p>
-                                <hr />
-                                <p>
+                        <div class="article-content"> 
                                 <div class="input_container">
-                                    <input placeholder="PRODUCT DESCRIPTION" name="productdescription" type="text" class="input_field" id="productdescription" value=""></p>
-                                </div>
-                    </article>
+                                    <input placeholder="PRODUCT STATUS" name="productstatus" type="text" class="input_field" id="productstatus" value=""></p>
+                                </div>  
+                                                <div class="send">
+                                                    <button class="px-btn theme w-100 btn btn-primary"><span>ADD ITEM</span> <i class="arrow"></i></button>
+                                                </div>
+                                            </div>
+                    </article>     
                 </div>
                 <div class="col-lg-4 m-15px-tb blog-aside">
                     <!-- Author -->
@@ -75,9 +70,9 @@
                                 </div>
                             </div>
                             <p>
-                            <div class="input_container">
-                                <input placeholder="note" name="note" type="text" class="input_field" id="note" value="">
-                            </div>
+                            <div class="form-group">
+                                               <textarea name="message" id="message" placeholder="Note" rows="4" class="form-control"></textarea>
+                                                </div> 
                             </p>
                         </div>
                     </div>
@@ -87,8 +82,8 @@
                         </div>
                         <div class="widget-body">
                             <div class="nav tag-cloud">
-                                <a href="" data-toggle="modal" data-target="#downloadModal">DOWNLOAD FILES</a>
-                                <a href="" data-toggle="modal" data-target="#viewModal">VIEW FILES</a>
+                                <a href="" data-toggle="modal" data-target="#downloadModal">UPLOAD TS</a>
+                                <a href="" data-toggle="modal" data-target="#viewModal">UPLOAD MS</a>
                                 <!-- Modal -->
                                 <div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
