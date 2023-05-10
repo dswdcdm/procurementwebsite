@@ -64,8 +64,7 @@ class Product extends BaseController
      
         return view('components/header', $data)
             . view('components/navbar')
-            . view('pages/searchProduct', $productdata)
-            . view('components/footer');
+            . view('pages/searchProduct', $productdata);
 
 
     }
