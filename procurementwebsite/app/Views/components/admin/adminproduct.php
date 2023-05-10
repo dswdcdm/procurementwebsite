@@ -9,7 +9,7 @@
             <button type="submit" class="btn btn-outline-primary">search</button>
         </div>
     </form>
-    <div class="py-4 mx-auto text-center"> <a href="<?= site_url('Product/addProduct'); ?>" class="btn btn-outline-primary ">Add Item</a></div>
+    <div class="py-4 mx-auto text-center"> <a href="<?= site_url('admin/addproduct'); ?>" class="btn btn-outline-primary ">Add Item</a></div>
 </nav>
 </section>
 <?php foreach ($producttb as $product) : ?>
