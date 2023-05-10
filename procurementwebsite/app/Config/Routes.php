@@ -41,6 +41,7 @@ $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
     $routes->get('Product', 'Product::index');
     $routes->get('Product/productItem/(:num)', 'Product::productItem/$1');
     $routes->get('Product/addProduct', 'Product::addProduct');
+    $routes->get('Product/saveProduct', 'Product::saveProduct');
     $routes->get('Product/searchProduct', 'Product::searchProduct', ['query' => '']);
     $routes->get('pages', 'Dashboard::index');
     $routes->get('pages/profile', 'Dashboard::profile');
