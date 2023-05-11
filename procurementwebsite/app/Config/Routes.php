@@ -51,7 +51,7 @@ $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
     $routes->add('admin/userProfile', 'Admin::userProfile');
     $routes->add('admin/adminproduct', 'Admin::adminproduct');
     $routes->add('admin/addproduct', 'Admin::adminaddproduct');
-    $routes->add('admin/updateproduct', 'Admin::adminupdateproduct');
+    $routes->add('admin/updateproduct/(:num)', 'Admin::adminupdateproduct/$1');
 });
 
 $routes->group('', ['filter' => 'AlreadyLoggedInFilter'], function ($routes) {
