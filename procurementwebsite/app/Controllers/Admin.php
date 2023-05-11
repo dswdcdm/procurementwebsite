@@ -99,4 +99,22 @@ class Admin extends BaseController
             . view('pages/addProduct', $productdata)
             . view('components/footer');
     }
+    public function adminupdateproduct()
+    {
+        $userModel = new \App\Models\UserModel();
+        $loggedUserID = session()->get('loggedUser');
+        $userInfo = $userModel->find($loggedUserID);
+        $data = [
+            'title' => 'UpdateProduct',
+            'userInfo' => $userInfo
+        ];
+        $model = new ProductModel();
+        $productdata['producttb'] = $model->findAll();
+
+        return view('components/admin/header', $data)
+            . view('components/admin/navbar')
+            . view('components/admin/hero')
+            . view('pages/updateProduct', $productdata)
+            . view('components/footer');
+    }
 }
