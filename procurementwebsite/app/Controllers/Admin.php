@@ -120,13 +120,37 @@ class Admin extends BaseController
             . view('pages/updateProduct', $productdata)
             . view('components/footer');
     }
-    public function viewusers()
+    public function viewusers($userid)
     {
         $userModel = new \App\Models\UserModel();
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);
         $data = [
             'title' => 'ViewUser',
+            'userInfo' => $userInfo,
+            'userid'=>$userid
+        ];
+        $model = new ProductModel();
+        $usersmodel = new UserModel();
+        $productdata['producttb'] = $model->findAll();
+        $usersdata['users'] = $usersmodel->findAll();
+        $request = \Config\Services::request();
+        $userid = $request->uri->getSegment(3);
+        
+        return view('components/admin/header', $data)
+            . view('components/admin/navbar')
+            . view('components/admin/hero')
+            . view('pages/viewusers', $usersdata)
+            . view('components/footer');
+    }
+
+    public function updateusers()
+    {
+        $userModel = new \App\Models\UserModel();
+        $loggedUserID = session()->get('loggedUser');
+        $userInfo = $userModel->find($loggedUserID);
+        $data = [
+            'title' => 'UpdateUser',
             'userInfo' => $userInfo
         ];
         $model = new ProductModel();
@@ -135,8 +159,7 @@ class Admin extends BaseController
         return view('components/admin/header', $data)
             . view('components/admin/navbar')
             . view('components/admin/hero')
-            . view('pages/viewusers')
+            . view('pages/updateusers')
             . view('components/footer');
     }
-
 }

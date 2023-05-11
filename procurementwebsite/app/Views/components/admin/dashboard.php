@@ -84,7 +84,7 @@
                         <p class="text-danger">IN ACTIVE count</p> <?php endif; ?>
                     </td>
                     <td><?= $user['date_created']; ?></td>
-                    <td><span class ="d-flex gap-2 "><a href = "admin/ViewUser" class="action-button btn btn-primary">view</a> <button class="btn btn-success">update </button></span>
+                    <td><span class ="d-flex gap-2 "><a href = "admin/ViewUser/<?= $user['id']; ?>" class="action-button btn btn-primary text-light">view</a> <a href = "admin/UpdateUser"class="btn btn-success text-light">update </a></span>
                   
                   </td>
                   </tr>

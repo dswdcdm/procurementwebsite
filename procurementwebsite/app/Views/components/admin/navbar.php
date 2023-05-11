@@ -2,11 +2,6 @@
 
     <div class="menu">
         <ul>
-            <li class="logo">
-                <a href="/pages">
-                    <img src="<?php echo base_url('assets/images/dswdlogo.png'); ?>" width="100%" height="100%" alt="logo" />
-                </a>
-            </li>
             <li class="menu-toggle">
                 <button onclick="toggleMenu();">&#9776;</button>
             </li>
