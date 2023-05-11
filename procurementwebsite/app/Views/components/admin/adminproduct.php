@@ -2,7 +2,7 @@
     <ol class="breadcrumb mb-0">
         <li class="breadcrumb-item"><a href="/admin">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">Products</li>
-        <li class="breadcrumb-item active" aria-current="page">Update Products</li>
+        
     </ol>
     <form method="get" action="<?= site_url('Product/search'); ?>">
         <div class="input-group mt-4">
