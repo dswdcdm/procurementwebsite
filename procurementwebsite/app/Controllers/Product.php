@@ -14,8 +14,6 @@ class Product extends BaseController
     }
 
     public function index()
-
-
     {
 
         $userModel = new \App\Models\UserModel();
@@ -85,7 +83,6 @@ class Product extends BaseController
 
     public function saveProduct()
     {
-
         $validation = $this->validate([
             'name' => [
                 'rules' => 'required',
@@ -103,13 +100,19 @@ class Product extends BaseController
         $price = $_POST['price'];
         $status = $_POST['status'];
         $note = $_POST['note'];
+        $msfile = $_POST['msfile'];
+        $tsfile = $_POST['tsfile'];
+        $image = $_POST['image'];
 
         $values = [
             'name' => $name,
             'descrition' => $descrition,
             'price' => $price,
             'status' => $status,
-            'note' => $note
+            'note' => $note,
+            'ms' => $msfile,
+            'ta' => $tsfile,
+            'image' => $image
         ];
 
         $productModel = new ProductModel();

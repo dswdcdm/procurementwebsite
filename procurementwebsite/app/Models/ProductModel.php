@@ -14,7 +14,7 @@ class ProductModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['name', 'description', 'price','datein','dateout','status','ratings','ta','ms','tasub','note','comments','image','downloadts','downloadms'];
+    protected $allowedFields    = ['name', 'description', 'price','status','note','ms','ta','image'];
 
     // Dates
     protected $useTimestamps = false;
@@ -39,7 +39,7 @@ class ProductModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
-    public function countRows()
+    public function countRows() 
     {
         $query = $this->db->query('SELECT COUNT(*) as count FROM producttb');
         $row = $query->getRow();

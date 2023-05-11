@@ -1,7 +1,6 @@
 <div class="container p-4" id="login">
     <div class="col-lg-6 col-md-12 mb-4 mb-md-0  m-auto">
         <form class="form_container" action="<?php echo htmlspecialchars(site_url('auth/submitRegister'));  ?>" method="POST" autocomplete="off">
-
             <img src="<?php echo base_url('assets/images/logob.png'); ?>" width="50%" height="60%" alt="logo" />
             <?= csrf_field(); ?>
             <?php if (!empty(session()->getFlashdata('fail'))) : ?>
@@ -77,8 +76,9 @@
                 <input placeholder="Confirm Password" name="cpassword" type="password" class="input_field" id="password_field" value="<?= set_value('cpassword'); ?>">
                 <span class="text-danger"><?= isset($validation) ? display_error($validation, 'cpassword') : '' ?></span>
             </div>
+
             <button type="submit" class="sign-in_btn">
-                <span id="Login-button"> Sign Up</span>
+                <span id="Login-button">Sign Up</span>
             </button>
 
             <div class="separator">
@@ -86,7 +86,7 @@
                 <span>Or</span>
                 <hr class="line">
             </div>
-            <button title="Sign In" type="submit" class="sign-in_ggl">
+            <button title="Sign In" class="sign-in_ggl">
                 <span><a href="/auth"> Sign In</a></span>
             </button>
 
