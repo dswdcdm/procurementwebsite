@@ -130,9 +130,7 @@ class Admin extends BaseController
             'userInfo' => $userInfo,
             'userid'=>$userid
         ];
-        $model = new ProductModel();
         $usersmodel = new UserModel();
-        $productdata['producttb'] = $model->findAll();
         $usersdata['users'] = $usersmodel->findAll();
         $request = \Config\Services::request();
         $userid = $request->uri->getSegment(3);
