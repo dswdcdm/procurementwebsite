@@ -8,7 +8,7 @@
     </nav>
 </div>
 <div class="blog-single gray-bg">
-    <form action="<?php echo htmlspecialchars(site_url('Product/saveProduct')); ?>" method="GET" autocomplete="off">
+    <form enctype="multipart/form-data" action="<?php echo htmlspecialchars(site_url('Product/saveProduct')); ?>" method="GET" autocomplete="off">
         <div class="container">
             <div class="row align-items-start">
                 <div class="col-lg-8 m-15px-tb">
@@ -24,7 +24,7 @@
                             <h6>
                                 <!--Image-->
                                 <label for="formFileSm" class="form-label">SELECT IMAGE</label>
-                                <input class="form-control form-control-sm" name="image" id="formFileSm" type="file" required />
+                                <input class="form-control form-control-sm" name="image" id="formFileSm" type="file" required  />
                                 <h6 class="text-dark">
                                     <label for="name">PRODUCT NAME</label>
                                     <div class="input_container">

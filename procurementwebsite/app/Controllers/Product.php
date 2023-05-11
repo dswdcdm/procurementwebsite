@@ -102,9 +102,10 @@ class Product extends BaseController
             $status = $this->request->getVar('status');
             $note = $this->request->getVar('note');
             $msfile = $this->request->getVar('msfile');
-            $tsfile = $this->request->getVar('tsfile');
             $image = $this->request->getVar('image');
+            $file = $this->request->getFile('tsfile');
 
+            $file->move(ROOTPATH . 'public/uploads');
             $values = [
                 'name' => $ucname,
                 'descrition' => $descrition,
@@ -112,8 +113,10 @@ class Product extends BaseController
                 'status' => $status,
                 'note' => $note,
                 'ms' => $msfile,
-                'ta' => $tsfile,
-                'image' => $image
+                'ta' => $file->getName(),
+                'image' => $image,
+                'tafilename' => $file->getName(),
+                'tafilepath' => 'public/uploads/' . $file->getName()
             ];
 
             $productModel = new ProductModel();
