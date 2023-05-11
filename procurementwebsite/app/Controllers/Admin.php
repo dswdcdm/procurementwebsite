@@ -164,27 +164,35 @@ class Admin extends BaseController
     public function saveProduct()
     {
         $files = $this->request->getFiles();
-        if (isset($files['image'])) {
+        if (isset($files['image'],$files['msfile'],$files['tsfile'])) {
             $name = $this->request->getVar('name');
             $descrition = $this->request->getVar('description');
             $price = $this->request->getVar('price');
             $status = $this->request->getVar('status');
             $note = $this->request->getVar('note');
-            $msfile = $this->request->getVar('msfile');
             $image = $this->request->getFile('image');
-            $file = $this->request->getFile('tsfile');
+            $msfile = $this->request->getVar('msfile');
+            $tsfile = $this->request->getFile('tsfile');
 
             $image = $files['image'];
+            $msfile = $files['msfile'];
+            $tsfile = $files['tsfile'];
             $newName = $image->getRandomName();
+            $msfilenewName = $msfile->getRandomName();
+            $tsfilenewName = $msfile->getRandomName();
             $image->move(ROOTPATH . 'public/uploads', $newName);
+            $msfile->move(ROOTPATH . 'public/uploads/files', $msfilenewName);
+            $tsfile->move(ROOTPATH . 'public/uploads/files', $tsfilenewName);
 
             $values = [
                 'name' => $name,
                 'descrition' => $descrition,
-                'price' => $price,
+                'price' => $price,  
                 'status' => $status,
                 'note' => $note,
-                'image' => '/uploads/' . $newName
+                'image' => '/uploads/' . $newName,
+                'ta'=> '/files/' . $tsfilenewName,
+                'ms'=>'/files/' . $msfilenewName
             ];
 
             $productModel = new ProductModel();

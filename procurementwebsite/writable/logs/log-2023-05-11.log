@@ -1690,3 +1690,49 @@ INFO - 2023-05-11 09:13:12 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-05-11 09:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-11 09:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-11 09:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-11 09:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-11 09:15:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-11 09:16:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-11 09:16:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-11 09:16:25 --> mysqli_sql_exception: Column 'ms' cannot be null in D:\xamp\htdocs\procurementwebsite-1\procurementwebsite\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamp\htdocs\procurementwebsite-1\procurementwebsite\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pr...', 0)
+#1 D:\xamp\htdocs\procurementwebsite-1\procurementwebsite\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 D:\xamp\htdocs\procurementwebsite-1\procurementwebsite\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 D:\xamp\htdocs\procurementwebsite-1\procurementwebsite\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 D:\xamp\htdocs\procurementwebsite-1\procurementwebsite\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xamp\htdocs\procurementwebsite-1\procurementwebsite\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\xamp\htdocs\procurementwebsite-1\procurementwebsite\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\xamp\htdocs\procurementwebsite-1\procurementwebsite\app\Controllers\Admin.php(193): CodeIgniter\Model->insert(Array)
+#8 D:\xamp\htdocs\procurementwebsite-1\procurementwebsite\system\CodeIgniter.php(934): App\Controllers\Admin->saveProduct()
+#9 D:\xamp\htdocs\procurementwebsite-1\procurementwebsite\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 D:\xamp\htdocs\procurementwebsite-1\procurementwebsite\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xamp\htdocs\procurementwebsite-1\procurementwebsite\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\xamp\htdocs\procurementwebsite-1\procurementwebsite\system\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\...')
+#13 {main}
+CRITICAL - 2023-05-11 09:16:25 --> Column 'ms' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `producttb` (`name`, `price`, `status`, `note`, `image`, `ta`, `ms`) VALUES (\'De Pedro\', \'232\', \'ACTIVE\', \'NOTES\', \'/uploads/1683796585_c228a622d550f523474d.jpg\', \'C:\\\\xampp\\\\tmp\\\\phpEADD.tmp\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producttb` (`name`, `price`, `status`, `note`, `image`, `ta`, `ms`) VALUES (\'De Pedro\', \'232\', \'ACTIVE\', \'NOTES\', \'/uploads/1683796585_c228a622d550f523474d.jpg\', \'C:\\\\xampp\\\\tmp\\\\phpEADD.tmp\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producttb` (`name`, `price`, `status`, `note`, `image`, `ta`, `ms`) VALUES (\'De Pedro\', \'232\', \'ACTIVE\', \'NOTES\', \'/uploads/1683796585_c228a622d550f523474d.jpg\', \'C:\\\\xampp\\\\tmp\\\\phpEADD.tmp\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producttb` (`name`, `price`, `status`, `note`, `image`, `ta`, `ms`) VALUES (:name:, :price:, :status:, :note:, :image:, :ta:, :ms:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(193): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->saveProduct()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite-1\\procurementwebsite\\public\\index.php')
+INFO - 2023-05-11 09:19:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-11 09:19:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-11 09:20:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-11 09:20:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-11 09:20:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-11 09:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-11 09:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-11 09:21:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-11 09:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-11 09:21:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-11 09:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
