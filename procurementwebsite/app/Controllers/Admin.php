@@ -31,7 +31,7 @@ class Admin extends BaseController
         $userdata['users'] = $model->findAll();
 
         $data = [
-            'title' => 'ADMIN',
+            'title' => 'admin',
             'userInfo' => $userInfo,
             'users' =>  $userdata['users'],
             'downloads' => $downloadData['downloads'],
@@ -120,4 +120,23 @@ class Admin extends BaseController
             . view('pages/updateProduct', $productdata)
             . view('components/footer');
     }
+    public function viewusers()
+    {
+        $userModel = new \App\Models\UserModel();
+        $loggedUserID = session()->get('loggedUser');
+        $userInfo = $userModel->find($loggedUserID);
+        $data = [
+            'title' => 'ViewUser',
+            'userInfo' => $userInfo
+        ];
+        $model = new ProductModel();
+        $productdata['producttb'] = $model->findAll();
+
+        return view('components/admin/header', $data)
+            . view('components/admin/navbar')
+            . view('components/admin/hero')
+            . view('pages/viewusers')
+            . view('components/footer');
+    }
+
 }
