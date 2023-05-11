@@ -86,7 +86,7 @@
                             </div>
                             <hr>
                             <div class="d-flex flex-column mt-4">
-                                <a href="/pages/profile" class="btn btn-primary btn-sm" type="button">UPDATE</a>
+                                <a href="/admin" class="btn btn-primary btn-sm" type="button">UPDATE</a>
                             </div>
                         </div>
                     </div>

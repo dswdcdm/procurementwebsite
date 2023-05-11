@@ -1,4 +1,5 @@
-
+<?php foreach ($users as $user) : ?>
+            <?php if ($user['id'] == $userid) : ?>
     <div class="container py-5">
         <div class="search-and-user">
             <div class="col">
@@ -12,7 +13,7 @@
         </div>
 
         
-            
+      
             <div class="col-lg-8 mx-auto">
             <div class="card mb-4 ">
                     <div class="card-body">
@@ -74,5 +75,10 @@
                  </div>
 
             </div>
+            
         </div>
+        
     </div>
+    <?php endif; ?>
+
+<?php endforeach; ?>
