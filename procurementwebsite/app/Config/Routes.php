@@ -52,6 +52,7 @@ $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
     $routes->add('admin/adminproduct', 'Admin::adminproduct');
     $routes->add('admin/addproduct', 'Admin::adminaddproduct');
     $routes->add('admin/updateproduct/(:num)', 'Admin::adminupdateproduct/$1');
+    $routes->add('admin/saveupdateProduct/(:num)', 'Product::saveupdateProduct/$1');
     $routes->add('admin/ViewUser/(:num)', 'Admin::viewusers/$1');
     $routes->add('admin/UpdateUser', 'Admin::updateusers');
 });

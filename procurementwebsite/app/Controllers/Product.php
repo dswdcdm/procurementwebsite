@@ -128,4 +128,34 @@ class Product extends BaseController
             }
         }
     }
+
+
+    public function saveupdateProduct($productId)
+    {
+        $name = $this->request->getVar('name');
+        $descrition = $this->request->getVar('description');
+        $price = $this->request->getVar('price');
+        $status = $this->request->getVar('status');
+        $note = $this->request->getVar('note');
+        $msfile = $this->request->getVar('msfile');
+        $image = $this->request->getVar('image');
+        $file = $this->request->getFile('tsfile');
+        $values = [
+            'name' => $name,
+            'descrition' => $descrition,
+            'price' => $price,
+            'status' => $status,
+            'note' => $note,
+            'ms' => $msfile,
+            'ta' => $file,
+            'image' => $image
+        ];
+        $productModel = new ProductModel();
+        $query = $productModel->update($productId,$values);
+        if (!$query) {
+            return redirect()->back()->with('fail', 'something went wrong');
+        } else {
+            return redirect()->back()->with('success', 'ITEM ADDED UPDATED');
+        }
+    }
 }
