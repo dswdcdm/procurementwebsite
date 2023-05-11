@@ -96,6 +96,7 @@ class Product extends BaseController
             return redirect()->back()->with('fail', 'something went wrong');
         } else {
             $name = $this->request->getVar('name');
+            $ucname = ucwords($name);
             $descrition = $this->request->getVar('description');
             $price = $this->request->getVar('price');
             $status = $this->request->getVar('status');
@@ -105,7 +106,7 @@ class Product extends BaseController
             $image = $this->request->getVar('image');
 
             $values = [
-                'name' => $name,
+                'name' => $ucname,
                 'descrition' => $descrition,
                 'price' => $price,
                 'status' => $status,
