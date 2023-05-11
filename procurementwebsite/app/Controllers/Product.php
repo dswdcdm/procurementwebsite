@@ -132,14 +132,21 @@ class Product extends BaseController
 
     public function saveupdateProduct($productId)
     {
+        $files = $this->request->getFiles();
+        if (isset($files['image'])) {
         $name = $this->request->getVar('name');
         $descrition = $this->request->getVar('description');
         $price = $this->request->getVar('price');
         $status = $this->request->getVar('status');
         $note = $this->request->getVar('note');
         $msfile = $this->request->getVar('msfile');
-        $image = $this->request->getVar('image');
+        $image = $this->request->getFile('image');
         $file = $this->request->getFile('tsfile');
+
+        $image = $files['image'];
+        $newName = $image->getRandomName();
+        $image->move(ROOTPATH . 'public/uploads', $newName);
+
         $values = [
             'name' => $name,
             'descrition' => $descrition,
@@ -148,14 +155,19 @@ class Product extends BaseController
             'note' => $note,
             'ms' => $msfile,
             'ta' => $file,
-            'image' => $image
+            'image' => '/uploads/' . $newName
         ];
+
         $productModel = new ProductModel();
         $query = $productModel->update($productId,$values);
+
         if (!$query) {
             return redirect()->back()->with('fail', 'something went wrong');
         } else {
             return redirect()->back()->with('success', 'ITEM ADDED UPDATED');
         }
+    }else{
+        return redirect()->back()->with('fail', 'something went wrong');
+    }
     }
 }

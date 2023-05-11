@@ -12,7 +12,7 @@
         <?php foreach ($producttb as $product) : ?>
             <?php if ($product['id'] == $productId) : ?>
            
-                <form action="<?php echo htmlspecialchars(site_url('admin/saveupdateProduct/'.$productId));  ?>" method="POST" autocomplete="off">
+                <form action="<?php echo htmlspecialchars(site_url('admin/saveupdateProduct/'.$productId));  ?>" method="POST" autocomplete="off" enctype="multipart/form-data">
                     <div class="container">
                         <div class="row align-items-start">
                             <div class="col-lg-8 m-15px-tb">
@@ -21,7 +21,7 @@
                                         <h6>
                                             <!--Image-->
                                             <label for="formFileSm" class="form-label">SELECT IMAGE</label>
-                                            <input class="form-control form-control-sm" id="formFileSm" type="file" required />
+                                            <input class="form-control form-control-sm" id="formFileSm" name="image" type="file" required />
                                             <h6 class="text-dark">
                                                 <label for="name">PRODUCT NAME</label>
                                                 <div class="input_container">
