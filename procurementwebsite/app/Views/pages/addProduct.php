@@ -8,7 +8,7 @@
     </nav>
 </div>
 <div class="blog-single gray-bg">
-    <form enctype="multipart/form-data" action="<?php echo htmlspecialchars(site_url('Product/saveProduct')); ?>" method="GET" autocomplete="off">
+    <form enctype="multipart/form-data" action="<?php echo htmlspecialchars(site_url('admin/saveProduct')); ?>" method="POST" autocomplete="off">
         <div class="container">
             <div class="row align-items-start">
                 <div class="col-lg-8 m-15px-tb">

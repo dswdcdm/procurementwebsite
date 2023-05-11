@@ -38,19 +38,23 @@ $routes->add('auth/check', 'Auth::check');
 $routes->add('auth/logout', 'Auth::logout');
 
 $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
+
     $routes->get('Product', 'Product::index');
     $routes->get('Product/productItem/(:num)', 'Product::productItem/$1');
-    $routes->get('Product/addProduct', 'Product::addProduct');
-    $routes->get('Product/saveProduct', 'Product::saveProduct');
+   /*  $routes->get('Product/addProduct', 'Product::addProduct'); */
+    /* $routes->get('Product/saveProduct', 'Product::saveProduct'); */
     $routes->get('Product/searchProduct', 'Product::searchProduct', ['query' => '']);
+
     $routes->get('pages', 'Dashboard::index');
     $routes->get('pages/profile', 'Dashboard::profile');
     $routes->get('pages/updateProfile', 'Dashboard::updateProfile');
     $routes->get('pages/directory', 'Dashboard::directory');
+
     $routes->add('admin', 'Admin::index');
     $routes->add('admin/userProfile', 'Admin::userProfile');
     $routes->add('admin/adminproduct', 'Admin::adminproduct');
     $routes->add('admin/addproduct', 'Admin::adminaddproduct');
+    $routes->post('admin/saveProduct', 'Admin::saveProduct');
     $routes->add('admin/updateproduct/(:num)', 'Admin::adminupdateproduct/$1');
     $routes->add('admin/saveupdateProduct/(:num)', 'Product::saveupdateProduct/$1');
     $routes->add('admin/ViewUser/(:num)', 'Admin::viewusers/$1');

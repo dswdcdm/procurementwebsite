@@ -128,13 +128,13 @@ class Admin extends BaseController
         $data = [
             'title' => 'ViewUser',
             'userInfo' => $userInfo,
-            'userid'=>$userid
+            'userid' => $userid
         ];
         $usersmodel = new UserModel();
         $usersdata['users'] = $usersmodel->findAll();
         $request = \Config\Services::request();
         $userid = $request->uri->getSegment(3);
-        
+
         return view('components/admin/header', $data)
             . view('components/admin/navbar')
             . view('components/admin/hero')
@@ -159,5 +159,44 @@ class Admin extends BaseController
             . view('components/admin/hero')
             . view('pages/updateusers')
             . view('components/footer');
+    }
+
+    public function saveProduct()
+    {
+        $files = $this->request->getFiles();
+        if (isset($files['image'])) {
+            $name = $this->request->getVar('name');
+            $descrition = $this->request->getVar('description');
+            $price = $this->request->getVar('price');
+            $status = $this->request->getVar('status');
+            $note = $this->request->getVar('note');
+            $msfile = $this->request->getVar('msfile');
+            $image = $this->request->getFile('image');
+            $file = $this->request->getFile('tsfile');
+
+            $image = $files['image'];
+            $newName = $image->getRandomName();
+            $image->move(ROOTPATH . 'public/uploads', $newName);
+
+            $values = [
+                'name' => $name,
+                'descrition' => $descrition,
+                'price' => $price,
+                'status' => $status,
+                'note' => $note,
+                'image' => '/uploads/' . $newName
+            ];
+
+            $productModel = new ProductModel();
+            $query = $productModel->insert($values);
+
+            if (!$query) {
+                return redirect()->back()->with('fail', 'something went wrong');
+            } else {
+                return redirect()->back()->with('success', 'ITEM ADDED UPDATED');
+            }
+        } else {
+            return redirect()->back()->with('fail', 'something went wrong');
+        }
     }
 }
