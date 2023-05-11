@@ -10,12 +10,10 @@ class Product extends BaseController
 {
     public function __construct()
     {
-        helper(['url', 'form']);
+        helper(['url', 'form', 'request']);
     }
 
     public function index()
-
-
     {
 
         $userModel = new \App\Models\UserModel();
@@ -85,7 +83,6 @@ class Product extends BaseController
 
     public function saveProduct()
     {
-
         $validation = $this->validate([
             'name' => [
                 'rules' => 'required',
@@ -98,26 +95,34 @@ class Product extends BaseController
         if (!$validation) {
             return redirect()->back()->with('fail', 'something went wrong');
         } else {
-        $name = $_POST['name'];
-        $descrition = $_POST['description'];
-        $price = $_POST['price'];
-        $status = $_POST['status'];
-        $note = $_POST['note'];
+            $name = $this->request->getVar('name');
+            $ucname = ucwords($name);
+            $descrition = $this->request->getVar('description');
+            $price = $this->request->getVar('price');
+            $status = $this->request->getVar('status');
+            $note = $this->request->getVar('note');
+            $msfile = $this->request->getVar('msfile');
+            $tsfile = $this->request->getVar('tsfile');
+            $image = $this->request->getVar('image');
 
-        $values = [
-            'name' => $name,
-            'descrition' => $descrition,
-            'price' => $price,
-            'status' => $status,
-            'note' => $note
-        ];
+            $values = [
+                'name' => $ucname,
+                'descrition' => $descrition,
+                'price' => $price,
+                'status' => $status,
+                'note' => $note,
+                'ms' => $msfile,
+                'ta' => $tsfile,
+                'image' => $image
+            ];
 
-        $productModel = new ProductModel();
-        $query = $productModel->insert($values);
-        if (!$query) {
-            return redirect()->back()->with('fail', 'something went wrong');
-        } else {
-            return redirect()->to('/admin/addproduct');
+            $productModel = new ProductModel();
+            $query = $productModel->insert($values);
+            if (!$query) {
+                return redirect()->back()->with('fail', 'something went wrong');
+            } else {
+                return redirect()->to('/admin/addproduct')->with('success', 'ITEM ADDED SUCCESS');
+            }
         }
-    }}
+    }
 }

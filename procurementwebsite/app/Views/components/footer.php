@@ -42,6 +42,14 @@
                 menuItem.classList.toggle("hidden");
             }
         }
+
+        function capitalizeFirstLetter() {
+    var input = document.getElementById("name");
+    var capitalized = input.value.toLowerCase().replace(/(?:^|\s)\S/g, function(a) {
+        return a.toUpperCase();
+    });
+    input.value = capitalized;
+}
     </script>
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

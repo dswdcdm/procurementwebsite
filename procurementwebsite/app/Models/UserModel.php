@@ -10,10 +10,8 @@ class UserModel extends Model
     {
         $query = $this->db->query('SELECT COUNT(*) as count FROM users');
         $row = $query->getRow();
-    
         return $row->count;
     }
-
 
     protected $DBGroup          = 'default';
     protected $table            = 'users';

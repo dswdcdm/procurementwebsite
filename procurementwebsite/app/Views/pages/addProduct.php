@@ -8,12 +8,11 @@
     </nav>
 </div>
 <div class="blog-single gray-bg">
-    <form action="<?php echo htmlspecialchars(site_url('Product/saveProduct'));?>" method="POST" autocomplete="off">
-        <?= csrf_field(); ?>
-
+    <form action="<?php echo htmlspecialchars(site_url('Product/saveProduct')); ?>" method="GET" autocomplete="off">
         <div class="container">
             <div class="row align-items-start">
                 <div class="col-lg-8 m-15px-tb">
+                    <?= csrf_field(); ?>
                     <?php if (!empty(session()->getFlashdata('fail'))) : ?>
                         <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
                     <?php endif ?>
@@ -25,14 +24,14 @@
                             <h6>
                                 <!--Image-->
                                 <label for="formFileSm" class="form-label">SELECT IMAGE</label>
-                                <input class="form-control form-control-sm" id="formFileSm" type="file" required />
+                                <input class="form-control form-control-sm" name="image" id="formFileSm" type="file" required />
                                 <h6 class="text-dark">
                                     <label for="name">PRODUCT NAME</label>
                                     <div class="input_container">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" fill="currentColor" class="bi bi-archive icon text-success" viewBox="0 0 16 16">
                                             <path d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
                                         </svg>
-                                        <input placeholder="PRODUCT NAME" name="NAME" type="text" class="input_field" id="status" value="<?= set_value('name'); ?>" required>
+                                        <input placeholder="PRODUCT NAME" name="name" type="text" class="input_field" id="name" value="<?= set_value('name'); ?>" required onkeyup="capitalizeFirstLetter()">
                                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'name') : '' ?></span>
                                     </div>
                                 </h6>
@@ -56,7 +55,7 @@
                                                 <path d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
                                                 <path d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z" />
                                             </svg>
-                                            <input placeholder="PRODUCT PRICE" name="price" type="number" class="input_field" id="productprice" value="<?= set_value('price'); ?>" required>
+                                            <input placeholder="PRODUCT PRICE" name="price" type="number" class="input_field" id="price" value="<?= set_value('price'); ?>" required>
 
                                 </label>
                             </div>
@@ -66,7 +65,7 @@
                                 <label for="status" class="text-dark">PRODUCT STATUS</label>
 
                                 <div class="input_container">
-                                    <input placeholder="PRODUCT STATUS" name="status" type="text" class="input_field" id="productstatus" value="<?= set_value('status'); ?>" required></p>
+                                    <input placeholder="PRODUCT STATUS" name="status" type="text" class="input_field" id="status" value="<?= set_value('status'); ?>" required></p>
                                 </div>
                             </h6>
                             </h6>
@@ -93,7 +92,7 @@
                             </div>
                             <p>
                             <div class="form-group">
-                                <textarea name="message" id="message" placeholder="Note" rows="4" class="form-control" required></textarea>
+                                <textarea name="note" id="note" placeholder="Note" rows="4" class="form-control" required></textarea>
                             </div>
                             </p>
                         </div>
@@ -107,11 +106,11 @@
                                 <label for="formFileSm" class="form-label">
                                     <H6>UPLOAD TS</H6>
                                 </label>
-                                <input class="form-control form-control-sm" id="formFileSm" type="file" required />
+                                <input class="form-control form-control-sm" id="formFileSm" name="tsfile" type="file" required />
                                 <label for="formFileSm" class="form-label mt-2">
                                     <H6>UPLOAD MS</H6>
                                 </label>
-                                <input class="form-control form-control-sm" id="formFileSm" type="file" required />
+                                <input class="form-control form-control-sm" id="formFileSm" name="msfile" type="file" required />
                             </div>
                         </div>
                     </div>
