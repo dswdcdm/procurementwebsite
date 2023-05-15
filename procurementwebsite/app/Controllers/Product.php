@@ -97,7 +97,7 @@ class Product extends BaseController
         } else {
             $name = $this->request->getVar('name');
             $ucname = ucwords($name);
-            $descrition = $this->request->getVar('description');
+            $description = $this->request->getVar('description');
             $price = $this->request->getVar('price');
             $status = $this->request->getVar('status');
             $note = $this->request->getVar('note');
@@ -108,7 +108,7 @@ class Product extends BaseController
             $file->move(ROOTPATH . 'public/uploads');
             $values = [
                 'name' => $ucname,
-                'descrition' => $descrition,
+                'description' => $description,
                 'price' => $price,
                 'status' => $status,
                 'note' => $note,
@@ -132,42 +132,58 @@ class Product extends BaseController
 
     public function saveupdateProduct($productId)
     {
+
+
         $files = $this->request->getFiles();
         if (isset($files['image'])) {
-        $name = $this->request->getVar('name');
-        $descrition = $this->request->getVar('description');
-        $price = $this->request->getVar('price');
-        $status = $this->request->getVar('status');
-        $note = $this->request->getVar('note');
-        $msfile = $this->request->getVar('msfile');
-        $image = $this->request->getFile('image');
-        $file = $this->request->getFile('tsfile');
+            $name = $this->request->getVar('name');
+            $description = $this->request->getVar('description');
+            $price = $this->request->getVar('price');
+            $status = $this->request->getVar('status');
+            $note = $this->request->getVar('note');
+            $msfile = $this->request->getVar('msfile');
+            $image = $this->request->getFile('image');
+            $file = $this->request->getFile('tsfile');
 
-        $image = $files['image'];
-        $newName = $image->getRandomName();
-        $image->move(ROOTPATH . 'public/uploads', $newName);
+            if (isset($_FILES['image'])) {
+                if ($_FILES['image']['error'] == 0) {
+                    $image = $this->request->getVar('text_image');
+                } else {
+                    $image = $this->request->getFile('image');
+                }
+            } else {
+                if ($_FILES['image']['error'] == 0) {
+                    $image = $this->request->getVar('text_image');
+                } else {
+                    $image = $this->request->getFile('image');
+                }
+            }
 
-        $values = [
-            'name' => $name,
-            'descrition' => $descrition,
-            'price' => $price,
-            'status' => $status,
-            'note' => $note,
-            'ms' => $msfile,
-            'ta' => $file,
-            'image' => '/uploads/' . $newName
-        ];
+            $image = $files['image'];
+            $newName = $image->getRandomName();
+            $image->move(ROOTPATH . 'public/uploads', $newName);
 
-        $productModel = new ProductModel();
-        $query = $productModel->update($productId,$values);
+            $values = [
+                'name' => $name,
+                'description' => $description,
+                'price' => $price,
+                'status' => $status,
+                'note' => $note,
+                'ms' => $msfile,
+                'ta' => $file,
+                'image' => '/uploads/' . $newName
+            ];
 
-        if (!$query) {
-            return redirect()->back()->with('fail', 'something went wrong');
+            $productModel = new ProductModel();
+            $query = $productModel->update($productId, $values);
+
+            if (!$query) {
+                return redirect()->back()->with('fail', 'something went wrong');
+            } else {
+                return redirect()->back()->with('success', 'ITEM ADDED UPDATED');
+            }
         } else {
-            return redirect()->back()->with('success', 'ITEM ADDED UPDATED');
+            return redirect()->back()->with('fail', 'something went wrong');
         }
-    }else{
-        return redirect()->back()->with('fail', 'something went wrong');
-    }
     }
 }
