@@ -95,47 +95,9 @@ class Product extends BaseController
         if (!$validation) {
             return redirect()->back()->with('fail', 'something went wrong');
         } else {
-            $name = $this->request->getVar('name');
-            $ucname = ucwords($name);
-            $description = $this->request->getVar('description');
-            $price = $this->request->getVar('price');
-            $status = $this->request->getVar('status');
-            $note = $this->request->getVar('note');
-            $msfile = $this->request->getVar('msfile');
-            $image = $this->request->getVar('image');
-            $file = $this->request->getFile('tsfile');
 
-            $file->move(ROOTPATH . 'public/uploads');
-            $values = [
-                'name' => $ucname,
-                'description' => $description,
-                'price' => $price,
-                'status' => $status,
-                'note' => $note,
-                'ms' => $msfile,
-                'ta' => $file->getName(),
-                'image' => $image,
-                'tafilename' => $file->getName(),
-                'tafilepath' => 'public/uploads/' . $file->getName()
-            ];
+            $files = $this->request->getFiles();
 
-            $productModel = new ProductModel();
-            $query = $productModel->insert($values);
-            if (!$query) {
-                return redirect()->back()->with('fail', 'something went wrong');
-            } else {
-                return redirect()->to('/admin/addproduct')->with('success', 'ITEM ADDED SUCCESS');
-            }
-        }
-    }
-
-
-    public function saveupdateProduct($productId)
-    {
-
-
-        $files = $this->request->getFiles();
-        if (isset($files['image'])) {
             $name = $this->request->getVar('name');
             $description = $this->request->getVar('description');
             $price = $this->request->getVar('price');
@@ -144,20 +106,6 @@ class Product extends BaseController
             $msfile = $this->request->getVar('msfile');
             $image = $this->request->getFile('image');
             $file = $this->request->getFile('tsfile');
-
-            if (isset($_FILES['image'])) {
-                if ($_FILES['image']['error'] == 0) {
-                    $image = $this->request->getVar('text_image');
-                } else {
-                    $image = $this->request->getFile('image');
-                }
-            } else {
-                if ($_FILES['image']['error'] == 0) {
-                    $image = $this->request->getVar('text_image');
-                } else {
-                    $image = $this->request->getFile('image');
-                }
-            }
 
             $image = $files['image'];
             $newName = $image->getRandomName();
@@ -171,19 +119,95 @@ class Product extends BaseController
                 'note' => $note,
                 'ms' => $msfile,
                 'ta' => $file,
-                'image' => '/uploads/' . $newName
+                'image' => '/uploads/' . $newName,
+                'imagename' =>  $newName
             ];
 
             $productModel = new ProductModel();
-            $query = $productModel->update($productId, $values);
+            $query = $productModel->insert($values);
 
             if (!$query) {
                 return redirect()->back()->with('fail', 'something went wrong');
             } else {
                 return redirect()->back()->with('success', 'ITEM ADDED UPDATED');
             }
-        } else {
-            return redirect()->back()->with('fail', 'something went wrong');
         }
+    }
+
+
+    public function saveupdateProduct($productId)
+    {
+        if ($_FILES['image']['size'] == 0) {
+           
+        $files = $this->request->getFiles();
+
+        $name = $this->request->getVar('name');
+        $description = $this->request->getVar('description');
+        $price = $this->request->getVar('price');
+        $status = $this->request->getVar('status');
+        $note = $this->request->getVar('note');
+        $msfile = $this->request->getVar('msfile');
+        $image = $this->request->getVar('hidden_image_name');
+        $file = $this->request->getFile('tsfile');
+
+        $values = [
+            'name' => $name,
+            'description' => $description,
+            'price' => $price,
+            'status' => $status,
+            'note' => $note,
+            'ms' => $msfile,
+            'ta' => $file,
+            'image' => '/uploads/' . $image,
+            'imagename' =>  $image
+        ];
+
+        $productModel = new ProductModel();
+        $query = $productModel->update($productId, $values);
+
+        if (!$query) {
+            return redirect()->back()->with('fail', 'something went wrong');
+        } else {
+            return redirect()->back()->with('success', 'ITEM ADDED UPDATED');
+        }
+        } else {
+          
+        $files = $this->request->getFiles();
+
+        $name = $this->request->getVar('name');
+        $description = $this->request->getVar('description');
+        $price = $this->request->getVar('price');
+        $status = $this->request->getVar('status');
+        $note = $this->request->getVar('note');
+        $msfile = $this->request->getVar('msfile');
+        $image = $this->request->getFile('image');
+        $file = $this->request->getFile('tsfile');
+
+        $image = $files['image'];
+        $newName = $image->getRandomName();
+        $image->move(ROOTPATH . 'public/uploads', $newName);
+
+        $values = [
+            'name' => $name,
+            'description' => $description,
+            'price' => $price,
+            'status' => $status,
+            'note' => $note,
+            'ms' => $msfile,
+            'ta' => $file,
+            'image' => '/uploads/' . $newName,
+            'imagename' =>  $newName
+        ];
+
+        $productModel = new ProductModel();
+        $query = $productModel->update($productId, $values);
+
+        if (!$query) {
+            return redirect()->back()->with('fail', 'something went wrong');
+        } else {
+            return redirect()->back()->with('success', 'ITEM ADDED UPDATED');
+        }
+        }
+
     }
 }

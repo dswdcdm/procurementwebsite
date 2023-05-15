@@ -20,10 +20,10 @@
                                 <div class="article-title">
                                     <h6>
                                         <!--Image-->
-                                        <img src="<?= $product['image']; ?>" width="100%" height="60%" alt="logo" /><br />
-                                        <label for="formFileSm" class="form-label mt-2">SELECT IMAGE</label>
+                                        <img src="<?= $product['image']; ?>" width="30%" height="60%" alt="logo" /><br />
+                                        <label for="formFileSm" class="form-label mt-2">SELECT IMAGE IF YOU WANT TO UPDATE</label>    
                                         <input class="form-control form-control-sm" id="formFileSm" name="image" type="file" />
-                                        <input type="text" name="text_image" id="text_image" value="<?php echo $product['image']; ?>">
+                                        <input type="text" name="hidden_image_name" class="d-none" id="hidden_image_name" value="<?= $product['imagename']; ?>" />
                                         <h6 class="text-dark">
                                             <label for="name">PRODUCT NAME</label>
                                             <div class="input_container">
