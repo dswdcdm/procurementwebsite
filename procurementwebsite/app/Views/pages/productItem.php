@@ -47,23 +47,39 @@
                             </article>
 
                             <?php if ($product['status'] == "ACTIVE") : ?>
-                                <div class="contact-form article-comment">
-                                    <h4> Leave a comment</h4>
-                                    <form id="contact-form" method="POST">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <textarea name="message" id="message" placeholder="Your message *" rows="4" class="form-control"></textarea>
+                                <h2>Comments</h2>
+
+                                <?php foreach ($comments  as $comment) : ?>
+                                    <div class="shadow p-2 mt-3 mb-2">
+                                        <p><strong><?= $comment['name'] ?> <br /></strong><?= $comment['text'] ?> <br />
+                                            <span><?= $comment['created_at'] ?></span>
+                                        </p>
+                                    </div>
+                                <?php endforeach; ?>
+
+                                <form action="/post/submitComment/<?= $product['id']; ?>" method="POST">
+
+                                    <input type="hidden" name="name" value="<?= $userInfo['name']; ?>">
+                                    <input type="hidden" name="user_id" value="<?= $userInfo['id']; ?>">
+                                    <div class="contact-form article-comment">
+                                        <h4> Leave a comment</h4>
+                                        <form id="contact-form" method="POST">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <textarea name="text" id="text" placeholder="Your message *" rows="4" class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="send">
+                                                        <button type="submit" class="px-btn theme w-100 btn btn-primary"><span>Submit</span> <i class="arrow"></i></button>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-12">
-                                                <div class="send">
-                                                    <button class="px-btn theme w-100 btn btn-primary"><span>Submit</span> <i class="arrow"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
+                                        </form>
+                                    </div>
+                                </form>
+
                             <?php else : ?>
                             <?php endif; ?>
                         </div>

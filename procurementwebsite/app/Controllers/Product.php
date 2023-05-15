@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\CommentModel;
 use App\Models\ProductModel;
 
 
@@ -37,15 +38,25 @@ class Product extends BaseController
         $userModel = new \App\Models\UserModel();
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);
+
+        $model = new ProductModel();
+        $commentModel = new CommentModel();
+        $productdata['producttb'] = $model->findAll();
+        $productComment['comments'] = $commentModel->findAll();
+
+        $request = \Config\Services::request();
+        $productId = $request->uri->getSegment(3);
+
+        $comments = $commentModel->where('post_id', $productId)->findAll();
         $data = [
             'title' => 'Product specs',
             'userInfo' => $userInfo,
-            'productId' => $productId
+            'productId' => $productId,
+            'productComments' => $productComment,
+            'post' => $productId,
+            'comments' => $comments
         ];
-        $model = new ProductModel();
-        $productdata['producttb'] = $model->findAll();
-        $request = \Config\Services::request();
-        $productId = $request->uri->getSegment(3);
+
         return view('components/header', $data)
             . view('components/navbar')
             . view('pages/productitem', $productdata)
@@ -137,81 +148,80 @@ class Product extends BaseController
 
     public function saveupdateProduct($productId)
     {
-        if ($_FILES['image']['size'] == 0 ) {
-           
-        $files = $this->request->getFiles();
+        if ($_FILES['image']['size'] == 0) {
 
-        $name = $this->request->getVar('name');
-        $description = $this->request->getVar('description');
-        $price = $this->request->getVar('price');
-        $status = $this->request->getVar('status');
-        $note = $this->request->getVar('note');
-        $image = $this->request->getVar('hidden_image_name');
-        $file = $this->request->getFile('tsfile');
-        $msfile = $this->request->getFile('msfile');
+            $files = $this->request->getFiles();
 
-        $values = [
-            'name' => $name,
-            'description' => $description,
-            'price' => $price,
-            'status' => $status,
-            'note' => $note,
-            'ms' => $msfile,
-            'ta' => $file,
-            'image' => '/uploads/' . $image,
-            'imagename' =>  $image
-        ];
+            $name = $this->request->getVar('name');
+            $description = $this->request->getVar('description');
+            $price = $this->request->getVar('price');
+            $status = $this->request->getVar('status');
+            $note = $this->request->getVar('note');
+            $image = $this->request->getVar('hidden_image_name');
+            $file = $this->request->getFile('tsfile');
+            $msfile = $this->request->getFile('msfile');
 
-        $productModel = new ProductModel();
-        $query = $productModel->update($productId, $values);
+            $values = [
+                'name' => $name,
+                'description' => $description,
+                'price' => $price,
+                'status' => $status,
+                'note' => $note,
+                'ms' => $msfile,
+                'ta' => $file,
+                'image' => '/uploads/' . $image,
+                'imagename' =>  $image
+            ];
 
-        if (!$query) {
-            return redirect()->back()->with('fail', 'something went wrong');
-        } else {
-            return redirect()->back()->with('success', 'ITEM ADDED UPDATED');
-        }
-        }else if($_FILES['tsfile']['size'] == 0){
-                
-        $files = $this->request->getFiles();
+            $productModel = new ProductModel();
+            $query = $productModel->update($productId, $values);
 
-        $name = $this->request->getVar('name');
-        $description = $this->request->getVar('description');
-        $price = $this->request->getVar('price');
-        $status = $this->request->getVar('status');
-        $note = $this->request->getVar('note');
-        $image = $this->request->getFile('hidden_image_name');
-        $tsfile = $this->request->getFile('tsfile');
-        $msfile = $this->request->getFile('hidden_image_tsfile');
+            if (!$query) {
+                return redirect()->back()->with('fail', 'something went wrong');
+            } else {
+                return redirect()->back()->with('success', 'ITEM ADDED UPDATED');
+            }
+        } else if ($_FILES['tsfile']['size'] == 0) {
 
-        $tsfile = $files['tsfile'];
+            $files = $this->request->getFiles();
 
-        $tsfileNewname = $tsfile->getRandomName();
-        $tsfile->move(ROOTPATH . 'public/uploads/tsfile', $tsfileNewname);
+            $name = $this->request->getVar('name');
+            $description = $this->request->getVar('description');
+            $price = $this->request->getVar('price');
+            $status = $this->request->getVar('status');
+            $note = $this->request->getVar('note');
+            $image = $this->request->getFile('hidden_image_name');
+            $tsfile = $this->request->getFile('tsfile');
+            $msfile = $this->request->getFile('hidden_image_tsfile');
 
-        $values = [
-            'name' => $name,
-            'description' => $description,
-            'price' => $price,
-            'status' => $status,
-            'note' => $note,
-            'ms' => '/uploads/msfile/' .$msfile,
-            'ta' => '/uploads/tsfile/' .$tsfileNewname,
-            'msfilename' => $msfile,
-            'tsfilename' => $tsfileNewname,
-            'image' => '/uploads/' . $image,
-            'imagename' =>  $image
-        ];
+            $tsfile = $files['tsfile'];
 
-        $productModel = new ProductModel();
-        $query = $productModel->update($productId, $values);
+            $tsfileNewname = $tsfile->getRandomName();
+            $tsfile->move(ROOTPATH . 'public/uploads/tsfile', $tsfileNewname);
 
-        if (!$query) {
-            return redirect()->back()->with('fail', 'something went wrong');
-        } else {
-            return redirect()->back()->with('success', 'ITEM ADDED UPDATED');
-        }
+            $values = [
+                'name' => $name,
+                'description' => $description,
+                'price' => $price,
+                'status' => $status,
+                'note' => $note,
+                'ms' => '/uploads/msfile/' . $msfile,
+                'ta' => '/uploads/tsfile/' . $tsfileNewname,
+                'msfilename' => $msfile,
+                'tsfilename' => $tsfileNewname,
+                'image' => '/uploads/' . $image,
+                'imagename' =>  $image
+            ];
 
-        }else if($_FILES['msfile']['size'] == 0){
+            $productModel = new ProductModel();
+            $query = $productModel->update($productId, $values);
+
+            if (!$query) {
+                return redirect()->back()->with('fail', 'something went wrong');
+            } else {
+                return redirect()->back()->with('success', 'ITEM ADDED UPDATED');
+            }
+        } else if ($_FILES['msfile']['size'] == 0) {
             $files = $this->request->getFiles();
 
             $name = $this->request->getVar('name');
@@ -222,82 +232,119 @@ class Product extends BaseController
             $image = $this->request->getFile('hidden_image_name');
             $tsfile = $this->request->getFile('hidden_image_tsfile');
             $msfile = $this->request->getFile('msfile');
-    
+
             $msfile = $files['msfile'];
-    
+
             $msfileNewname = $tsfile->getRandomName();
             $msfile->move(ROOTPATH . 'public/uploads/tsfile', $msfileNewname);
-    
+
             $values = [
                 'name' => $name,
                 'description' => $description,
                 'price' => $price,
                 'status' => $status,
                 'note' => $note,
-                'ms' => '/uploads/msfile/' .$msfileNewname,
-                'ta' => '/uploads/tsfile/' .$tsfile,
+                'ms' => '/uploads/msfile/' . $msfileNewname,
+                'ta' => '/uploads/tsfile/' . $tsfile,
                 'msfilename' => $msfileNewname,
                 'tsfilename' => $tsfile,
                 'image' => '/uploads/' . $image,
                 'imagename' =>  $image
             ];
-    
+
             $productModel = new ProductModel();
             $query = $productModel->update($productId, $values);
-    
+
             if (!$query) {
                 return redirect()->back()->with('fail', 'something went wrong');
             } else {
                 return redirect()->back()->with('success', 'ITEM ADDED UPDATED');
             }
-    
         } else {
-          
-        $files = $this->request->getFiles();
 
-        $name = $this->request->getVar('name');
-        $description = $this->request->getVar('description');
-        $price = $this->request->getVar('price');
-        $status = $this->request->getVar('status');
-        $note = $this->request->getVar('note');
-        $image = $this->request->getFile('image');
-        $tsfile = $this->request->getFile('tsfile');
-        $msfile = $this->request->getFile('msfile');
+            $files = $this->request->getFiles();
 
-        $image = $files['image'];
-        $tsfile = $files['tsfile'];
-        $msfile = $files['msfile'];
+            $name = $this->request->getVar('name');
+            $description = $this->request->getVar('description');
+            $price = $this->request->getVar('price');
+            $status = $this->request->getVar('status');
+            $note = $this->request->getVar('note');
+            $image = $this->request->getFile('image');
+            $tsfile = $this->request->getFile('tsfile');
+            $msfile = $this->request->getFile('msfile');
 
-        $newName = $image->getRandomName();
-        $tsfileNewname = $tsfile->getRandomName();
-        $msfileNewname = $msfile->getRandomName();
-        $image->move(ROOTPATH . 'public/uploads', $newName);
-        $tsfile->move(ROOTPATH . 'public/uploads/tsfile', $tsfileNewname);
-        $msfile->move(ROOTPATH . 'public/uploads/msfile', $msfileNewname);
+            $image = $files['image'];
+            $tsfile = $files['tsfile'];
+            $msfile = $files['msfile'];
 
-        $values = [
-            'name' => $name,
-            'description' => $description,
-            'price' => $price,
-            'status' => $status,
-            'note' => $note,
-            'ms' => '/uploads/msfile/' .$msfileNewname,
-            'ta' => '/uploads/tsfile/' .$tsfileNewname,
-            'msfilename' => $msfileNewname,
-            'tsfilename' => $tsfileNewname,
-            'image' => '/uploads/' . $newName,
-            'imagename' =>  $newName
-        ];
+            $newName = $image->getRandomName();
+            $tsfileNewname = $tsfile->getRandomName();
+            $msfileNewname = $msfile->getRandomName();
+            $image->move(ROOTPATH . 'public/uploads', $newName);
+            $tsfile->move(ROOTPATH . 'public/uploads/tsfile', $tsfileNewname);
+            $msfile->move(ROOTPATH . 'public/uploads/msfile', $msfileNewname);
 
-        $productModel = new ProductModel();
-        $query = $productModel->update($productId, $values);
+            $values = [
+                'name' => $name,
+                'description' => $description,
+                'price' => $price,
+                'status' => $status,
+                'note' => $note,
+                'ms' => '/uploads/msfile/' . $msfileNewname,
+                'ta' => '/uploads/tsfile/' . $tsfileNewname,
+                'msfilename' => $msfileNewname,
+                'tsfilename' => $tsfileNewname,
+                'image' => '/uploads/' . $newName,
+                'imagename' =>  $newName
+            ];
 
-        if (!$query) {
+            $productModel = new ProductModel();
+            $query = $productModel->update($productId, $values);
+
+            if (!$query) {
+                return redirect()->back()->with('fail', 'something went wrong');
+            } else {
+                return redirect()->back()->with('success', 'ITEM ADDED UPDATED');
+            }
+        }
+    }
+
+
+    public function submitComment($productId)
+    {
+        $validation = $this->validate([
+            'name' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'product name is Required'
+                ]
+            ]
+        ]);
+
+        if (!$validation) {
             return redirect()->back()->with('fail', 'something went wrong');
         } else {
-            return redirect()->back()->with('success', 'ITEM ADDED UPDATED');
-        }
-        }
 
+
+            $name = $this->request->getVar('name');
+            $user_id = $this->request->getVar('user_id');
+            $text = $this->request->getVar('text');
+
+            $values = [
+                'name' => $name,
+                'user_id' => $user_id,
+                'post_id' => $productId,
+                'text' => $text,
+            ];
+
+            $productComment = new CommentModel();
+            $query = $productComment->insert($values);
+
+            if (!$query) {
+                return redirect()->back()->with('fail', 'something went wrong');
+            } else {
+                return redirect()->back()->with('success', 'comment success');
+            }
+        }
     }
 }

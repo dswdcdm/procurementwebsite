@@ -1,3 +1,6 @@
+<?php foreach ($users as $user) : ?>
+    <?php if ($user['id'] == $userid) : ?>
+
 <section style="background-color: #eee;">
     <form action="<?php echo htmlspecialchars(site_url('auth/submitRegister'));  ?>" method="POST" autocomplete="off">
         <?= csrf_field(); ?>
@@ -31,7 +34,7 @@
                                 </div>
                                 <div class="col-sm-9">
                                     <p class="text-muted mb-0">
-                                        <input placeholder="Name" name="name" type="text" class="input_field" id="name" value="">
+                                        <input placeholder="Name" name="name" type="text" class="input_field w-50 " id="name" disabled = "disabled" value="<?= $user['name']; ?>">
                                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'name') : '' ?></span>
                                     </p>
                                 </div>
@@ -43,7 +46,7 @@
                                 </div>
                                 <div class="col-sm-9">
                                     <p class="text-muted mb-0">
-                                        <input placeholder="Email" name="email" type="email" class="input_field" id="email" value="">
+                                        <input placeholder="Email" name="email" type="email" class="input_field w-50" id="email" disabled = "disabled" value="<?= $user['email']; ?>">
                                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'email') : '' ?></span>
                                     </p>
                                 </div>
@@ -55,7 +58,11 @@
                                 </div>
                                 <div class="col-sm-9">
                                     <p class="text-muted mb-0">
-                                        <input placeholder="Position" name="Phone" type="text" class="input_field" id="Phone" value="">
+                                    <select name="Position" id="status" type = "text" class="w-50" value="<?= $user['is_admin']; ?>">
+                                        <option value="value1">Admin</option>
+                                        <option value="value2">Not_admin</option>
+                                    </select>
+                                        
                                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'Phone') : '' ?></span>
                                     </p>
                                 </div>
@@ -67,7 +74,11 @@
                                     <p class="mb-0">Status</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <input placeholder="Status" name="address" type="text" class="input_field" id="address" value="">
+                                    <select name="status" id="status"   type = "text" class="w-50">
+                                        <option value="value1">ACTIVE</option>
+                                        <option value="value2">INACTIVE</option>
+                                    </select>
+                                    
                                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'address  ') : '' ?></span>
                                     </p>
                                 </div>
@@ -79,7 +90,7 @@
                                     <p class="mb-0">Date Registered</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <input placeholder="Date" name="address" type="text" class="input_field" id="address" value="">
+                                    <input placeholder="Date" name="date" type="text" class="input_field w-50" id="address" disabled = "disabled" value="<?= $user['date_created']; ?>">
                                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'address  ') : '' ?></span>
                                     </p>
                                 </div>
@@ -98,3 +109,5 @@
     </div>
     </form>
 </section>
+<?php endif; ?>
+<?php endforeach; ?>
