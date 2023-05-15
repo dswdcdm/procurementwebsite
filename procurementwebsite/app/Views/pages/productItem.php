@@ -94,10 +94,10 @@
 
                                         <?php if ($product['status'] == "ACTIVE") : ?>
                                             <a href="<?= $product['ta']; ?>" data-toggle="modal" data-target="#downloadModal">DOWNLOAD FILES</a>
-                                            <a href="<?= $product['ta']; ?>" data-toggle="modal" data-target="#viewModal">VIEW FILES</a>
+                                            <a href="<?= $product['ms']; ?>" data-toggle="modal" data-target="#viewModal">VIEW FILES</a>
                                         <?php else : ?>
                                             <a href="<?= $product['ta']; ?>" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">SPECIFICATION TA</a>
-                                            <a href="<?= $product['ta']; ?>" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">MARKET SCANNING</a>
+                                            <a href="<?= $product['ms']; ?>" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">MARKET SCANNING</a>
                                         <?php endif; ?>
 
                                         <!-- Modal -->
@@ -111,8 +111,8 @@
                                                     </div>
 
                                                     <div class="modal-footer">
-                                                        <a href="<?= $product['ta']; ?>" target="_blank" class="btn btn-secondary">DOWNLOAD SPECIFICATION TA</a>
-                                                        <a href="<?= $product['ta']; ?>" target="_blank" class="btn btn-secondary">DOWNLOAD MARKET SCANNING</a>
+                                                        <a href="path/to/<?= $product['ta']; ?>" target="_blank" class="btn btn-secondary">DOWNLOAD SPECIFICATION TA</a>
+                                                        <a href="path/to/<?= $product['ms']; ?>" target="_blank" class="btn btn-secondary">DOWNLOAD MARKET SCANNING</a>
                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
                                                     </div>
                                                 </div>
@@ -132,7 +132,7 @@
 
                                                     <div class="modal-footer">
                                                         <a href="<?= $product['ta']; ?>" target="_blank" class="btn btn-secondary">VIEW SPECIFICATION TA</a>
-                                                        <a href="<?= $product['ta']; ?>" target="_blank" class="btn btn-secondary">VIEW MARKET SCANNING</a>
+                                                        <a href="<?= $product['ms']; ?>" target="_blank" class="btn btn-secondary">VIEW MARKET SCANNING</a>
                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
                                                     </div>
                                                 </div>
