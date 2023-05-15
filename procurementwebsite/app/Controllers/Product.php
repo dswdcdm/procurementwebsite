@@ -137,7 +137,7 @@ class Product extends BaseController
 
     public function saveupdateProduct($productId)
     {
-        if ($_FILES['image']['size'] == 0) {
+        if ($_FILES['image']['size'] == 0 ) {
            
         $files = $this->request->getFiles();
 
@@ -146,9 +146,9 @@ class Product extends BaseController
         $price = $this->request->getVar('price');
         $status = $this->request->getVar('status');
         $note = $this->request->getVar('note');
-        $msfile = $this->request->getVar('msfile');
         $image = $this->request->getVar('hidden_image_name');
         $file = $this->request->getFile('tsfile');
+        $msfile = $this->request->getFile('msfile');
 
         $values = [
             'name' => $name,
@@ -170,6 +170,87 @@ class Product extends BaseController
         } else {
             return redirect()->back()->with('success', 'ITEM ADDED UPDATED');
         }
+        }else if($_FILES['tsfile']['size'] == 0){
+                
+        $files = $this->request->getFiles();
+
+        $name = $this->request->getVar('name');
+        $description = $this->request->getVar('description');
+        $price = $this->request->getVar('price');
+        $status = $this->request->getVar('status');
+        $note = $this->request->getVar('note');
+        $image = $this->request->getFile('hidden_image_name');
+        $tsfile = $this->request->getFile('tsfile');
+        $msfile = $this->request->getFile('hidden_image_tsfile');
+
+        $tsfile = $files['tsfile'];
+
+        $tsfileNewname = $tsfile->getRandomName();
+        $tsfile->move(ROOTPATH . 'public/uploads/tsfile', $tsfileNewname);
+
+        $values = [
+            'name' => $name,
+            'description' => $description,
+            'price' => $price,
+            'status' => $status,
+            'note' => $note,
+            'ms' => '/uploads/msfile/' .$msfile,
+            'ta' => '/uploads/tsfile/' .$tsfileNewname,
+            'msfilename' => $msfile,
+            'tsfilename' => $tsfileNewname,
+            'image' => '/uploads/' . $image,
+            'imagename' =>  $image
+        ];
+
+        $productModel = new ProductModel();
+        $query = $productModel->update($productId, $values);
+
+        if (!$query) {
+            return redirect()->back()->with('fail', 'something went wrong');
+        } else {
+            return redirect()->back()->with('success', 'ITEM ADDED UPDATED');
+        }
+
+        }else if($_FILES['msfile']['size'] == 0){
+            $files = $this->request->getFiles();
+
+            $name = $this->request->getVar('name');
+            $description = $this->request->getVar('description');
+            $price = $this->request->getVar('price');
+            $status = $this->request->getVar('status');
+            $note = $this->request->getVar('note');
+            $image = $this->request->getFile('hidden_image_name');
+            $tsfile = $this->request->getFile('hidden_image_tsfile');
+            $msfile = $this->request->getFile('msfile');
+    
+            $msfile = $files['msfile'];
+    
+            $msfileNewname = $tsfile->getRandomName();
+            $msfile->move(ROOTPATH . 'public/uploads/tsfile', $msfileNewname);
+    
+            $values = [
+                'name' => $name,
+                'description' => $description,
+                'price' => $price,
+                'status' => $status,
+                'note' => $note,
+                'ms' => '/uploads/msfile/' .$msfileNewname,
+                'ta' => '/uploads/tsfile/' .$tsfile,
+                'msfilename' => $msfileNewname,
+                'tsfilename' => $tsfile,
+                'image' => '/uploads/' . $image,
+                'imagename' =>  $image
+            ];
+    
+            $productModel = new ProductModel();
+            $query = $productModel->update($productId, $values);
+    
+            if (!$query) {
+                return redirect()->back()->with('fail', 'something went wrong');
+            } else {
+                return redirect()->back()->with('success', 'ITEM ADDED UPDATED');
+            }
+    
         } else {
           
         $files = $this->request->getFiles();
@@ -179,13 +260,20 @@ class Product extends BaseController
         $price = $this->request->getVar('price');
         $status = $this->request->getVar('status');
         $note = $this->request->getVar('note');
-        $msfile = $this->request->getVar('msfile');
         $image = $this->request->getFile('image');
-        $file = $this->request->getFile('tsfile');
+        $tsfile = $this->request->getFile('tsfile');
+        $msfile = $this->request->getFile('msfile');
 
         $image = $files['image'];
+        $tsfile = $files['tsfile'];
+        $msfile = $files['msfile'];
+
         $newName = $image->getRandomName();
+        $tsfileNewname = $tsfile->getRandomName();
+        $msfileNewname = $msfile->getRandomName();
         $image->move(ROOTPATH . 'public/uploads', $newName);
+        $tsfile->move(ROOTPATH . 'public/uploads/tsfile', $tsfileNewname);
+        $msfile->move(ROOTPATH . 'public/uploads/msfile', $msfileNewname);
 
         $values = [
             'name' => $name,
@@ -193,8 +281,10 @@ class Product extends BaseController
             'price' => $price,
             'status' => $status,
             'note' => $note,
-            'ms' => $msfile,
-            'ta' => $file,
+            'ms' => '/uploads/msfile/' .$msfileNewname,
+            'ta' => '/uploads/tsfile/' .$tsfileNewname,
+            'msfilename' => $msfileNewname,
+            'tsfilename' => $tsfileNewname,
             'image' => '/uploads/' . $newName,
             'imagename' =>  $newName
         ];

@@ -103,11 +103,13 @@
                                         <label for="formFileSm" class="form-label">
                                             <H6>UPLOAD TS</H6>
                                         </label>
-                                        <input class="form-control form-control-sm" id="formFileSm" type="file" required />
+                                        <input class="form-control form-control-sm" name="tsfile" id="formFileSm" type="file"  />
+                                        <input class="d-none" name="hidden_image_tsfile" id="formFileSm" type="file" value="<?= $product['tsfilename']; ?>"/>
                                         <label for="formFileSm" class="form-label mt-2">
                                             <H6>UPLOAD MS</H6>
                                         </label>
-                                        <input class="form-control form-control-sm" id="formFileSm" type="file" required />
+                                        <input class="form-control form-control-sm " name="msfile" id="formFileSm" type="file"  />
+                                        <input class="d-none" name="hidden_image_tsfile" id="formFileSm" type="text" value="<?= $product['msfilename']; ?>" />
                                     </div>
                                 </div>
                             </div>
