@@ -142,22 +142,25 @@ class Admin extends BaseController
             . view('components/footer');
     }
 
-    public function updateusers()
+    public function updateusers($userid)
     {
         $userModel = new \App\Models\UserModel();
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);
         $data = [
-            'title' => 'UpdateUser',
-            'userInfo' => $userInfo
+            'title' => 'UpdateUsers',
+            'userInfo' => $userInfo,
+            'userid' => $userid
         ];
-        $model = new ProductModel();
-        $productdata['producttb'] = $model->findAll();
+        $usersmodel = new UserModel();
+        $usersdata['users'] = $usersmodel->findAll();
+        $request = \Config\Services::request();
+        $userid = $request->uri->getSegment(3);
 
         return view('components/admin/header', $data)
             . view('components/admin/navbar')
             . view('components/admin/hero')
-            . view('pages/updateusers')
+            . view('pages/updateusers', $usersdata)
             . view('components/footer');
     }
 
@@ -207,4 +210,5 @@ class Admin extends BaseController
             return redirect()->back()->with('fail', 'something went wrong');
         }
     }
+   
 }
