@@ -25,11 +25,13 @@
                     <div class="card mb-4">
                         <div class="card-body text-center">
                             <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " width="60%" height="60%" alt="logo" class="rounded-circle img-fluid" alt="avatar" style="width: 150px;" />
+                           
                             <p class="text-muted mb-1"><?= $userInfo['email']; ?></p>
                             <p class="text-muted mb-4"><?= $userInfo['address']; ?></p>
                             <div class="d-flex justify-content-center mb-2">
                                 <?= $userInfo['is_admin']; ?>
                             </div>
+                            <input class="form-control form-control-sm w-20" id="formFileSm" type="file" required />
                         </div>
                     </div>
 
