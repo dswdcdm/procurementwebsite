@@ -66,6 +66,7 @@
 
                         <div class="d-flex flex-column mt-4">
                             <a href="/admin/updateproduct/<?= $product['id']; ?>" class="btn btn-primary btn-sm" type="button">Update</a>
+                            <a href="/Product/productItem/<?= $product['id']; ?>" class="btn btn-primary btn-sm mt-2" type="button">View</a>
                            <!--  <button class="btn btn-outline-primary btn-sm mt-2" type="button">
                                 Update
                             </button> -->
