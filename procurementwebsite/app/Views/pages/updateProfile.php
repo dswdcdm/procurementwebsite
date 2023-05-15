@@ -24,7 +24,7 @@
                 <div class="col-lg-4">
                     <div class="card mb-4">
                         <div class="card-body text-center">
-                            <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " width="60%" height="60%" alt="logo" class="rounded-circle img-fluid" alt="avatar" style="width: 150px;" />
+                            <img src="<?php echo base_url('uploads/user.png'); ?> " width="60%" height="60%" alt="logo" class="rounded-circle img-fluid" alt="avatar" style="width: 150px;" />
                            
                             <p class="text-muted mb-1"><?= $userInfo['email']; ?></p>
                             <p class="text-muted mb-4"><?= $userInfo['address']; ?></p>
