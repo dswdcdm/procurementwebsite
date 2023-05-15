@@ -73,7 +73,7 @@
                                
                                 <div class="feature-content">
                                     <h5>Administrative Service - Office of the Director</h5>
-                                    <p>Atty. Karina Antonette A. Agudo, CESE Director IV VOIP: 10006 Direct line: (02) 8931-8116 Email: admin@dswd.gov.ph</p>
+                                    <p>Atty. Karina Antonette A. Agudo, CESE Director IV Email: admin@dswd.gov.ph</p>
                                 </div>
                             </div>
                         </div>
@@ -84,7 +84,7 @@
                                
                                 <div class="feature-content">
                                     <h5>Administrative Service - Building and Grounds Management Division</h5>
-                                    <p>Engr. Alfredo C. Evangelista, II Engineer III and Officer-In-Charge VOIP No. 10005 Direct Line: (02) 8442-7856 Email: acevangelista@dswd.gov.ph</p>
+                                    <p>Engr. Alfredo C. Evangelista, II Engineer III and Officer-In-Charge Email: acevangelista@dswd.gov.ph</p>
                                 </div>
                             </div>
                         </div>
@@ -94,8 +94,8 @@
                             <div class="feature-box-1">
                                 
                                 <div class="feature-content">
-                                    <h5>AS - BGMD Technical and Administrative Personnel</h5>
-                                    <p>VOIP No. 10006 and 10030 Direct Line: (02) 8442-7856 Email: bgmd_grp@dswd.gov.ph</p>
+                                    <h5>Administrative Service - Building and Grounds Management Division Planning Section</h5>
+                                    <p>Engr. Aldwin R. Bacay Engineer III Section Head Email: Aldwinbacay@dswd.gov.ph</p>
                                 </div>
                             </div>
                         </div>
@@ -105,8 +105,8 @@
                             <div class="feature-box-1">
                                 
                                 <div class="feature-content">
-                                    <h5>Testing for Perfection</h5>
-                                    <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+                                    <h5>Administrative Service - Building and Grounds Management Division Maintenance Section</h5>
+                                    <p> Carlos P. Garcia  Construction And Maintenance Section Head Email: Carlosgarcia@dswd.gov.ph</p>
                                 </div>
                             </div>
                         </div>
@@ -116,8 +116,8 @@
                             <div class="feature-box-1">
                               
                                 <div class="feature-content">
-                                    <h5>Advanced Options</h5>
-                                    <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+                                    <h5>Administrative Service - Building and Grounds Management Division Admin Support Unit Section</h5>
+                                    <p>John Michael De Pedro Administrative Officer III Section Head Email: jmldepedro@dswd.gov.ph</p>
                                 </div>
                             </div>
                         </div>
