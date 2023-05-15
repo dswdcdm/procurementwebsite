@@ -25,11 +25,13 @@
                     <div class="card mb-4">
                         <div class="card-body text-center">
                             <img src="<?php echo base_url('assets/images/pic.jpg'); ?> " width="60%" height="60%" alt="logo" class="rounded-circle img-fluid" alt="avatar" style="width: 150px;" />
+                           
                             <p class="text-muted mb-1"><?= $userInfo['email']; ?></p>
                             <p class="text-muted mb-4"><?= $userInfo['address']; ?></p>
                             <div class="d-flex justify-content-center mb-2">
                                 <?= $userInfo['is_admin']; ?>
                             </div>
+                            <input class="form-control form-control-sm w-20" id="formFileSm" type="file" required />
                         </div>
                     </div>
 
@@ -44,7 +46,7 @@
                                 </div>
                                 <div class="col-sm-9">
                                     <p class="text-muted mb-0">
-                                        <input placeholder="Enter Full Name" name="name" type="text" class="input_field" id="name" value="">
+                                        <input placeholder="Enter Full Name" name="name" type="text" class="input_field" id="name" value="<?= $userInfo['name']; ?>">
                                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'name') : '' ?></span>
                                     </p>
                                 </div>
@@ -56,7 +58,7 @@
                                 </div>
                                 <div class="col-sm-9">
                                     <p class="text-muted mb-0">
-                                        <input placeholder="Enter Email" name="email" type="email" class="input_field" id="email" value="">
+                                        <input placeholder="Enter Email" name="email" type="email" class="input_field" id="email" value="<?= $userInfo['email']; ?>">
                                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'email') : '' ?></span>
                                     </p>
                                 </div>
@@ -68,7 +70,7 @@
                                 </div>
                                 <div class="col-sm-9">
                                     <p class="text-muted mb-0">
-                                        <input placeholder="Enter Phone" name="Phone" type="text" class="input_field" id="Phone" value="">
+                                        <input placeholder="Enter Phone" name="Phone" type="text" class="input_field" id="Phone" value="<?= $userInfo['phone']; ?>">
                                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'Phone') : '' ?></span>
                                     </p>
                                 </div>
@@ -80,7 +82,7 @@
                                     <p class="mb-0">Address</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <input placeholder="Enter Address" name="address" type="text" class="input_field" id="address" value="">
+                                    <input placeholder="Enter Address" name="address" type="text" class="input_field" id="address" value="<?= $userInfo['address']; ?>">
                                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'address  ') : '' ?></span>
                                     </p>
                                 </div>
