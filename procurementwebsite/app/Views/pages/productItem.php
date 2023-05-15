@@ -51,10 +51,26 @@
 
                                 <?php foreach ($comments  as $comment) : ?>
                                     <div class="shadow p-2 mt-3 mb-2">
-                                        <p><strong><?= $comment['name'] ?> <br /></strong><?= $comment['text'] ?> <br />
-                                            <span><?= $comment['created_at'] ?></span>
+                                        <p>
+                                            <strong ><?= $comment['text'] ?> </p> <p></strong>author : <?= $comment['name'] ?> <br />
+                                            <small>date time commented : <?= $comment['created_at'] ?></small>
                                         </p>
+                                        <?php if ($comment['user_id'] == $userInfo['id']) : ?>
+                                            <div class="d-flex gap-2">
+                                                <form method="POST" class=" " action="<?= site_url('comment/delete/' . $comment['id']) ?>">
+                                                    <button type="submit" class="btn btn-primary w-10">Delete</button>
+
+                                                </form>
+                                                <form method="POST" class=  " action="<?= site_url('comment/delete/' . $comment['id']) ?>">
+                                                    <button type="submit" class="btn btn-primary w-10  ">Update</button>
+
+                                                </form>
+
+                                            </div>
+
+                                        <?php endif; ?>
                                     </div>
+
                                 <?php endforeach; ?>
 
                                 <form action="/post/submitComment/<?= $product['id']; ?>" method="POST">
@@ -67,7 +83,7 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <textarea name="text" id="text" placeholder="Your message *" rows="4" class="form-control"></textarea>
+                                                        <textarea name="text" id="text" placeholder="Your message *" rows="4" class="form-control" required></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
