@@ -28,7 +28,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-6">
+                  <!--   <div class="col-md-6 col-lg-6 col-xl-6">
                         <h5><?= $product['name']; ?></h5>
                         <div class="d-flex flex-row">
 
@@ -44,7 +44,7 @@
                         <div class="mt-1 mb-0 text-muted small">
                             <span> <?= $product['description']; ?></span>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
                         <div class="d-flex flex-row align-items-center mb-1">
                             <h4 class="mb-1 me-1">₱ <?= $product['price']; ?></h4>
