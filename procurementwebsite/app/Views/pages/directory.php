@@ -407,7 +407,7 @@
                 <div class="col-12 col-lg-12 col-xl-4 div">
                     <div class="teamcol">
                         <div class="teamcolinner">
-                            <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/francisco.jpg'); ?> " alt="profile" class="img-fluid" /></div>
                             <div class="member-name">
                                 <h2 style="font-size:1rem;">LOUIE JANE R.FRANCISCO</h2>
                                 <p style="font-size:0.8em;">Administrative Assistant II</p>
@@ -434,7 +434,7 @@
                     </div>
                     <div class="teamcol">
                         <div class="teamcolinner">
-                            <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/reyes.jpg'); ?> " alt="profile" class="img-fluid" /></div>
                             <div class="member-name">
                                 <h2 style="font-size:1rem;">MARIATHERESA M. REYES</h2>
                                 <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
