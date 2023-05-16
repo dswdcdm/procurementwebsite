@@ -26,12 +26,12 @@
                                         </div>
                                         <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
                                             <div class="d-flex flex-row align-items-center mb-1">
-                                                <h4 class="mb-1 me-1"> <?= $employee['name']; ?></h4>
+                                                <h4 class="mb-1 me-1"> <!-- <?= $employee['name']; ?> --></h4>
                                             </div>
                                             <?php if ($employee['status'] == "PERMANENT") : ?>
-                                                <h6 class="text-success"> <?= $employee['status']; ?> </h6>
+                                                <h6 class="text-success"> <!-- <?= $employee['status']; ?> --> </h6>
                                             <?php else : ?>
-                                                <h6 class="text-danger"> <?= $employee['status']; ?> </h6>
+                                                <h6 class="text-danger"> <!-- <?= $employee['status']; ?> --> </h6>
                                             <?php endif; ?>
 
                                             <div class="d-flex flex-column mt-4">
