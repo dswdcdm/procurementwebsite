@@ -273,7 +273,7 @@
                 <div class="col-12 col-lg-12 col-xl-4 div offset-xl-2">
                     <div class="teamcol ">
                         <div class="teamcolinner">
-                            <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/miranda.png'); ?> " alt="profile" class="img-fluid" /></div>
                             <div class="member-name">
                                 <h2 style="font-size:1rem;">LARRY P .MIRANDA</h2>
                                 <p style="font-size:0.8em;">Administrative Aide V (Mason II)</p>
@@ -284,7 +284,7 @@
 
                     <div class="teamcol">
                         <div class="teamcolinner">
-                            <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/santor.png'); ?> " alt="profile" class="img-fluid" /></div>
                             <div class="member-name">
                                 <h2 style="font-size:1rem;">DENNIS C .SANTOR</h2>
                                 <p style="font-size:0.8em;">Administrative Aide VI(Labor Foreman)</p>
@@ -293,7 +293,7 @@
                     </div>
                     <div class="teamcol">
                         <div class="teamcolinner">
-                            <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/detorres.png'); ?> " alt="profile" class="img-fluid" /></div>
                             <div class="member-name">
                                 <h2 style="font-size:1rem;">JULIEN C. DE TORRES</h2>
                                 <p style="font-size:0.8em;">Administrative Aide V(Painter II)</p>
@@ -302,7 +302,7 @@
                     </div>
                     <div class="teamcol">
                         <div class="teamcolinner">
-                            <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/marcelo.png'); ?> " alt="profile" class="img-fluid" /></div>
                             <div class="member-name">
                                 <h2 style="font-size:1rem;">MARK ANTHONY P. MARCELO</h2>
                                 <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
@@ -311,7 +311,7 @@
                     </div>
                     <div class="teamcol">
                         <div class="teamcolinner">
-                            <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/pelingon.png'); ?> " alt="profile" class="img-fluid" /></div>
                             <div class="member-name">
                                 <h2 style="font-size:1rem;">SILVINO G .PELINGON JR</h2>
                                 <p style="font-size:0.8em;">Administrative Aide V (Carpentry II)</p>
@@ -320,7 +320,7 @@
                     </div>
                     <div class="teamcol">
                         <div class="teamcolinner">
-                            <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/marcenas.png'); ?> " alt="profile" class="img-fluid" /></div>
                             <div class="member-name">
                                 <h2 style="font-size:1rem;">MARIO P .MACENAS</h2>
                                 <p style="font-size:0.8em;">Administrative Assistant IV(Carpentry)</p>
@@ -329,7 +329,7 @@
                     </div>
                     <div class="teamcol">
                         <div class="teamcolinner">
-                            <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/caldito.png'); ?> " alt="profile" class="img-fluid" /></div>
                             <div class="member-name">
                                 <h2 style="font-size:1rem;">PATRICK V .CALDITO</h2>
                                 <p style="font-size:0.8em;">Administrative Assistant II(Air-Conditioning)</p>
@@ -338,7 +338,7 @@
                     </div>
                     <div class="teamcol">
                         <div class="teamcolinner">
-                            <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/saminian.png'); ?> " alt="profile" class="img-fluid" /></div>
                             <div class="member-name">
                                 <h2 style="font-size:1rem;">EDGAR B .SAMINIAN</h2>
                                 <p style="font-size:0.8em;">Administrative Aide IV</p>
@@ -347,7 +347,7 @@
                     </div>
                     <div class="teamcol">
                         <div class="teamcolinner">
-                            <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/Sevilleno.png'); ?> " alt="profile" class="img-fluid" /></div>
                             <div class="member-name">
                                 <h2 style="font-size:1rem;">JUNMAR S .SEVILLENO</h2>
                                 <p style="font-size:0.8em;">Administrative Aide IV(Electrician I)</p>
@@ -356,7 +356,7 @@
                     </div>
                     <div class="teamcol">
                         <div class="teamcolinner">
-                            <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/gutierrez1.png'); ?> " alt="profile" class="img-fluid" /></div>
                             <div class="member-name">
                                 <h2 style="font-size:1rem;">RAYMOND A .GUTIERREZ</h2>
                                 <p style="font-size:0.8em;">Administrative Aide IV</p>
@@ -365,7 +365,7 @@
                     </div>
                     <div class="teamcol">
                         <div class="teamcolinner">
-                            <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/obrique.jpg'); ?> " alt="profile" class="img-fluid" /></div>
                             <div class="member-name">
                                 <h2 style="font-size:1rem;">ERNESTO Q .OBRIQUE</h2>
                                 <p style="font-size:0.8em;">Administrative Aide V(Plumber II)</p>
@@ -374,7 +374,7 @@
                     </div>
                     <div class="teamcol">
                         <div class="teamcolinner">
-                            <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/mirande.jpg'); ?> " alt="profile" class="img-fluid" /></div>
                             <div class="member-name">
                                 <h2 style="font-size:1rem;">RODRIGO N.MIRANDE</h2>
                                 <p style="font-size:0.8em;">Administrative Aide V(Plumber II)</p>
@@ -383,7 +383,7 @@
                     </div>
                     <div class="teamcol">
                         <div class="teamcolinner">
-                            <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/bernal.png'); ?> " alt="profile" class="img-fluid" /></div>
                             <div class="member-name">
                                 <h2 style="font-size:1rem;">DANILO J .BERNAL</h2>
                                 <p style="font-size:0.8em;">Administrative Aide V(Carpentry II)</p>
@@ -392,7 +392,7 @@
                     </div>
                     <div class="teamcol">
                         <div class="teamcolinner">
-                            <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/alvena.png'); ?> " alt="profile" class="img-fluid" /></div>
                             <div class="member-name">
                                 <h2 style="font-size:1rem;">MAYQUILITO P .ALVENA</h2>
                                 <p style="font-size:0.8em;">Administrative Aide V(Carpentry II)></p>
