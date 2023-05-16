@@ -194,7 +194,7 @@
                         </div>
                         <div class="teamcol">
                             <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                                <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/longcanaya.png'); ?> " alt="profile" class="img-fluid" /></div>
                                 <div class="member-name">
                                     <h2 style="font-size:1rem;">ENGR.KATHERINE L.LONGCANAYA</h2>
                                     <p style="font-size:0.8em;"> Project Management</p>
@@ -203,7 +203,7 @@
                         </div>
                         <div class="teamcol">
                             <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                                <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/vegim.png'); ?> " alt="profile" class="img-fluid" /></div>
                                 <div class="member-name">
                                     <h2 style="font-size:1rem;">ENGR. RONALD T.VEGIM</h2>
                                     <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
@@ -221,7 +221,7 @@
                         </div>
                         <div class="teamcol">
                             <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                                <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/garciachito.png'); ?> " alt="profile" class="img-fluid" /></div>
                                 <div class="member-name">
                                     <h2 style="font-size:1rem;">RAMONCITO O.GARCIA</h2>
                                     <p style="font-size:0.8em;">Senior Admin.Assistant II(Audio-Visual Aids Technician IV)</p>
@@ -230,7 +230,7 @@
                         </div>
                         <div class="teamcol">
                             <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                                <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/jymlee.png'); ?> " alt="profile" class="img-fluid" /></div>
                                 <div class="member-name">
                                     <h2 style="font-size:1rem;">ENGR. JYMLEE P. PACALA</h2>
                                     <p style="font-size:0.8em;">Project Management Officer</p>
@@ -239,7 +239,7 @@
                         </div>
                         <div class="teamcol">
                             <div class="teamcolinner">
-                                <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
+                                <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/evangelistavill.jpg'); ?> " alt="profile" class="img-fluid" /></div>
                                 <div class="member-name">
                                     <h2 style="font-size:1rem;">ENGR.VILLAMOR A .EVANGELISTA,JR.</h2>
                                     <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
@@ -407,7 +407,7 @@
                 <div class="col-12 col-lg-12 col-xl-4 div">
                     <div class="teamcol">
                         <div class="teamcolinner">
-                            <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/francisco.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
                             <div class="member-name">
                                 <h2 style="font-size:1rem;">LOUIE JANE R.FRANCISCO</h2>
                                 <p style="font-size:0.8em;">Administrative Assistant II</p>
@@ -434,7 +434,7 @@
                     </div>
                     <div class="teamcol">
                         <div class="teamcolinner">
-                            <div class="avatar"> <img src="<?php echo base_url('uploads/profileimage/reyes.jpg'); ?> " alt="profile" class="img-fluid" /></div>
+                            <div class="avatar"> <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class="img-fluid" /></div>
                             <div class="member-name">
                                 <h2 style="font-size:1rem;">MARIATHERESA M. REYES</h2>
                                 <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
