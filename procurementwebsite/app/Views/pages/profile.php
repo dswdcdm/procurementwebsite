@@ -1,5 +1,7 @@
 <section style="background-color: #eee;">
     <div class="container py-5">
+
+
         <div class="row">
             <div class="col">
                 <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
@@ -73,5 +75,48 @@
 
             </div>
         </div>
+            <div class="cart text-decoration-none" id=" ">
+            <div class=" menu shadow  w-100">
+            <ul class="d-flex mb-3 text-decoration-none gap-5 align-items-center" >
+        
+                <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault">
+                <li class="menu-item hidden  p-2"><span>Product</span></li>
+                <li class="menu-item hidden me-auto p-2"><span>Description</span></li>
+                <li class="menu-item hidden p-2 "><span>Unit Price</span></li>
+                <li class="menu-item hidden p-2 "><span>Quantity</span></li>
+                <li class="menu-item hidden p-2 "><span>Action</span></li>
+                
+                </li>
+            </ul>
+        </div>
+
+        <div class="cart text-decoration-none mt-2" id=" ">
+            <div class=" menu shadow  w-100">
+            <ul class="d-flex mb-3 text-decoration-none gap-5 align-items-center" >
+        
+                <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault">
+                <li class="menu-item hidden  p-2"><img src="<?php echo base_url('uploads/user.png'); ?> " width="10%" height="10%" alt="logo"  class="rounded-circle img-fluid" alt="avatar" style="width: 70px;"/></li>
+                <li class ="menu-item hidden me-auto p-2"><p>lorem ipsum dolor sw\wawdasd</p></li>
+                
+                <li class="menu-item hidden p-2 "><span>P 140.00</span></li>
+                <li class="menu-item hidden p-2 "><span>Quantity</span></li>
+                <li class="menu-item hidden p-2 "><span>Action</span></li>
+                
+                </li>
+            </ul>
+        </div>
+               <!--  <h3><p class="text-center">Cart</p></h3>
+            <div class="d-flex flex-row mb-3 gap-2"> 
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+    Product
+  </label>
+  <span>Unit Price</span>
+  <span>Quantity</span>
+  <span>Action</span>   
+
+            </div>
+            </div> -->
+
     </div>
 </section>
