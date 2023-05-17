@@ -31,6 +31,21 @@
 
 
     <script>
+        // Get references to the checkboxes
+        const masterCheckbox = document.getElementById('masterCheckbox');
+        const checkboxes = document.querySelectorAll('.checkbox');
+
+        // Attach an event listener to the master checkbox
+        masterCheckbox.addEventListener('click', function() {
+            const isChecked = masterCheckbox.checked;
+
+            // Update the state of the other checkboxes
+            checkboxes.forEach(function(checkbox) {
+                checkbox.checked = isChecked;
+            });
+        });
+    </script>
+    <script>
         $(document).ready(function() {
             $('[data-toggle="tooltip"]').tooltip();
         });

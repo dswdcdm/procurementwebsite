@@ -134,7 +134,6 @@
                                             </form>
                                         <?php else : ?>
                                             <a href="<?= $product['ta']; ?>" class="btn btn-primary" target="_blank">VIEW TS FILES</a>
-
                                         <?php endif; ?>
                                     </div>
                                 </div>

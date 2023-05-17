@@ -80,7 +80,7 @@
             <div class=" menu shadow  w-100">
                 <ul class="d-flex mb-3 text-decoration-none gap-5 align-items-center">
 
-                    <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault">
+                    <input class="form-check-input  " type="checkbox" value="" id="masterCheckbox">
                     <li class="menu-item hidden  p-2"><span>Product</span></li>
                     <li class="menu-item hidden me-auto p-2"><span>Description</span></li>
                     <li class="menu-item hidden p-2 "><span>Unit Price</span></li>
@@ -97,8 +97,8 @@
                         <?php if ($cartitem['user_id'] == $userInfo['id']) : ?>
                             <ul class="d-flex mb-3 text-decoration-none gap-5 align-items-center">
 
-                                <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault">
-                                <li class="menu-item hidden  p-2"><img src="<?= $cartitem['item_image']; ?> " width="10%" height="10%" alt="logo" class="rounded-circle img-fluid" alt="avatar" style="width: 70px;" /></li>
+                                <input class="form-check-input checkbox" type="checkbox"  id="flexCheckDefault">
+                                <li class="menu-item hidden p-2"><img src="<?= $cartitem['item_image']; ?> " width="10%" height="10%" alt="logo" class="rounded-circle img-fluid" alt="avatar" style="width: 70px;" /></li>
                                 <li class="menu-item hidden me-auto p-2">
                                     <p> <?= $cartitem['item_name']; ?></p>
                                 </li>
