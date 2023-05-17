@@ -107,7 +107,7 @@
 
                                 <li class="menu-item hidden p-2 "><span>₱ <?php $cartPrice = floatVal($cartitem['item_price']);
                                                                             echo $cartPrice; ?></span></li>
-                                <li class="menu-item hidden p-2 "><button class="btn btn-primary btn-sm mr-2">-</button> <input class="text-align-center" id ="input-quantity"value="<?= $cartitem['quantity']; ?>"><button class="btn btn-primary btn-sm mr-2 ml-2">+</button></li>
+                                <li class="menu-item hidden p-2 "><button class="btn btn-primary btn-sm mr-2">-</button> <input class="align-middle " id ="input-quantity"value="<?= $cartitem['quantity']; ?>"><button class="btn btn-primary btn-sm mr-2 ml-2">+</button></li>
                                 <li class="menu-item hidden p-2 "><span>₱ <?= $totalPrice; ?></span></li>
                                 <li class="menu-item hidden p-2 "><span>
                                         <form method="POST" class="" action="<?= site_url('itemcart/delete/' . $cartitem['id']) ?>">

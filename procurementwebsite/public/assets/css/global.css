@@ -37,10 +37,10 @@ hr {
 .soc-icon {
   border: none;
 }
-/*   .div{
-    border: 1px solid hotpink;
-  }
- */
+  /* div{
+    border: 1px solid rgb(255, 105, 105);
+  } */
+
 /* directory css */
 .teamWrapper {
   margin-top: 50px;
