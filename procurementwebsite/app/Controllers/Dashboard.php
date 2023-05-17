@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\CartModel;
 use App\Models\EmployeeModel;
 use App\Models\UserModel;
 
@@ -32,10 +33,16 @@ class Dashboard extends BaseController
         $userModel = new \App\Models\UserModel();
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);
+        
+        $CartModel = new CartModel();
+        $cartData['cart'] = $CartModel->findAll();
+
         $data = [
             'title' => 'Profile',
-            'userInfo' => $userInfo
-        ];
+            'userInfo' => $userInfo,
+            'cartData' => $cartData['cart']
+        ]; 
+        
         return view('components/header', $data)
             . view('components/navbar')
             . view('components/hero')

@@ -18,15 +18,15 @@
                 <div class="card mb-4">
                     <div class="card-body text-center">
 
-                    <img src="<?php echo base_url('uploads/user.png'); ?> " width="60%" height="60%" alt="logo"  class="rounded-circle img-fluid" alt="avatar" style="width: 150px;"/>
+                        <img src="<?php echo base_url('uploads/user.png'); ?> " width="60%" height="60%" alt="logo" class="rounded-circle img-fluid" alt="avatar" style="width: 150px;" />
                         <p class="text-muted mb-1"><?= $userInfo['email']; ?></p>
                         <p class="text-muted mb-4"><?= $userInfo['address']; ?></p>
                         <div class="d-flex justify-content-center mb-2">
-                        <?= $userInfo['is_admin']; ?>
+                            <?= $userInfo['is_admin']; ?>
                         </div>
                     </div>
                 </div>
-   
+
             </div>
             <div class="col-lg-8">
                 <div class="card mb-4">
@@ -58,7 +58,7 @@
                             </div>
                         </div>
                         <hr>
-                       
+
                         <div class="row">
                             <div class="col-sm-3">
                                 <p class="mb-0">Address</p>
@@ -73,6 +73,17 @@
                     </div>
                 </div>
 
+                <?php foreach ($cartData as $cartitem) : ?>
+                    <?php if ($cartitem['user_id'] == $userInfo['id']) : ?>
+                        <?= $cartitem['id']; ?>
+                        <?= $cartitem['item_id']; ?>
+                        <?= $cartitem['date_created']; ?>
+                        <?= $cartitem['quantity']; ?>
+                        <?= $cartitem['user_id']; ?>
+                        <?= $cartitem['user_name']; ?> <br/>
+                    <?php else : ?>
+                    <?php endif; ?>
+                <?php endforeach; ?>
             </div>
         </div>
             <div class="cart text-decoration-none" id=" ">
