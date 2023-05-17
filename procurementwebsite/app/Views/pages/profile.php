@@ -73,11 +73,11 @@
 
                 <?php foreach ($cartData as $cartitem) : ?>
                     <?php if ($cartitem['user_id'] == $userInfo['id']) : ?>
-                        <?= $cartitem['id']; ?>
+                        <img src="   <?= $cartitem['item_image']; ?>" width="60%" height="60%" alt="logo" class="img-fluid" alt="avatar" style="width: 50px;" />
                         <?= $cartitem['item_id']; ?>
-                        <?= $cartitem['date_created']; ?>
+                     
+                        <?= $cartitem['item_name']; ?>
                         <?= $cartitem['quantity']; ?>
-                        <?= $cartitem['user_id']; ?>
                         <?= $cartitem['user_name']; ?> <br/>
                     <?php else : ?>
                     <?php endif; ?>

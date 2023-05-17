@@ -59,24 +59,19 @@
                                         </p>
                                         <?php if ($comment['user_id'] == $userInfo['id']) : ?>
                                             <div class="d-flex gap-2">
-                                                <form method="POST" class=" " action="<?= site_url('comment/delete/' . $comment['id']) ?>">
+                                                <form method="POST" class="" action="<?= site_url('comment/delete/' . $comment['id']) ?>">
                                                     <button type="submit" class="btn btn-primary w-10">Delete</button>
-
                                                 </form>
                                                 <form method="POST" class=" action=" <?= site_url('comment/delete/' . $comment['id']) ?>">
                                                     <button type="submit" class="btn btn-primary w-10  ">Update</button>
-
                                                 </form>
-
                                             </div>
-
                                         <?php endif; ?>
                                     </div>
 
                                 <?php endforeach; ?>
 
                                 <form action="/post/submitComment/<?= $product['id']; ?>" method="POST">
-
                                     <input type="hidden" name="name" value="<?= $userInfo['name']; ?>">
                                     <input type="hidden" name="user_id" value="<?= $userInfo['id']; ?>">
                                     <div class="contact-form article-comment">
@@ -97,7 +92,6 @@
                                         </form>
                                     </div>
                                 </form>
-
                             <?php else : ?>
                             <?php endif; ?>
                         </div>
@@ -123,16 +117,23 @@
                                 <div class="widget-title">
                                     <h3>ACTION</h3>
                                 </div>
-                               
+
 
                                 <div class="widget-body">
                                     <div class="nav tag-cloud">
                                         <?php if ($product['status'] == "ACTIVE") : ?>
                                             <a href="<?= $product['ta']; ?>" target="_blank">VIEW TS AND MS FILES</a>
-                                            <a href="<?= $product['ms']; ?>" data-toggle="modal" data-target="#viewModal">ADD TO CART</a>
+                                            <form action="/Product/addToCart/" method="POST" autocomplete="off" enctype="multipart/form-data">
+                                                <input type="hidden" name="product_id" value="<?= $product['id'];?>">
+                                                <input type="hidden" name="user_id" value="<?= $userInfo['id'];?>">
+                                                <input type="hidden" name="user_name" value="<?= $userInfo['name'];?>">
+                                                <input type="hidden" name="item_name" value="<?= $product['name'];?>">
+                                                <input type="text" class="d-none" name="item_image" value="<?= $product['image'];?>" />
+                                                <button type="submit" class="btn btn-primary" >ADD TO CART</button>
+                                            </form>
                                         <?php else : ?>
                                             <a href="<?= $product['ta']; ?>" class="btn btn-primary" target="_blank">VIEW TS FILES</a>
-                                            <a href="<?= $product['ms']; ?>" class="btn btn-primary disabled ">ADD TO CART</a>
+
                                         <?php endif; ?>
                                     </div>
                                 </div>

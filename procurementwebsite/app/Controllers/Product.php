@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\CartModel;
 use App\Models\CommentModel;
 use App\Models\ProductModel;
 
@@ -363,6 +364,33 @@ class Product extends BaseController
             return redirect()->back();
         } else {
             return redirect()->back()->with('error', 'Unable to delete comment.');
+        }
+    }
+
+
+    public function addToCart()
+    {
+        $product_id = $this->request->getVar('product_id');
+        $user_id = $this->request->getVar('user_id');
+        $user_name = $this->request->getVar('user_name');
+        $item_name = $this->request->getVar('item_name');
+        $item_image = $this->request->getVar('item_image');
+
+        $values = [
+            'item_id' => $product_id,
+            'user_id' => $user_id,
+            'user_name' => $user_name,
+            'item_name' => $item_name,
+            'item_image' => $item_image
+        ];
+
+        $CartModel = new CartModel();
+        $query = $CartModel->insert($values);
+
+        if (!$query) {
+            return redirect()->back()->with('fail', 'something went wrong');
+        } else {
+            return redirect()->back()->with('success', 'comment success');
         }
     }
 }
