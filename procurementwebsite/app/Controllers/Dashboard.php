@@ -37,12 +37,20 @@ class Dashboard extends BaseController
         $CartModel = new CartModel();
         $cartData['cart'] = $CartModel->findAll();
 
+      
+
+        $CartModel = new CartModel();
+        $cartItems = $CartModel->findAll(); 
+        $totalPrice = 0;
+        foreach ($cartItems as $item) {
+            $totalPrice += $item['item_price'] * $item['quantity'];
+        }
         $data = [
             'title' => 'Profile',
             'userInfo' => $userInfo,
-            'cartData' => $cartData['cart']
+            'cartData' => $cartData['cart'],
+            'totalPrice' => $totalPrice
         ]; 
-        
         return view('components/header', $data)
             . view('components/navbar')
             . view('components/hero')

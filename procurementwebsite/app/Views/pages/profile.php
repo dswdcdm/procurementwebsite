@@ -85,6 +85,7 @@
                     <li class="menu-item hidden me-auto p-2"><span>Description</span></li>
                     <li class="menu-item hidden p-2 "><span>Unit Price</span></li>
                     <li class="menu-item hidden p-2 "><span>Quantity</span></li>
+                    <li class="menu-item hidden p-2 "><span>Total</span></li>
                     <li class="menu-item hidden p-2 "><span>Action</span></li>
 
                     </li>
@@ -107,6 +108,7 @@
                                 <li class="menu-item hidden p-2 "><span>₱ <?php $cartPrice = floatVal($cartitem['item_price']);
                                                                             echo $cartPrice; ?></span></li>
                                 <li class="menu-item hidden p-2 "><span><?= $cartitem['quantity']; ?></span></li>
+                                <li class="menu-item hidden p-2 "><span> <?= $totalPrice; ?></span></li>
                                 <li class="menu-item hidden p-2 "><span>
                                         <form method="POST" class="" action="<?= site_url('itemcart/delete/' . $cartitem['id']) ?>">
                                             <button type="submit" class="btn btn-danger btn-sm">DELETE</button>
@@ -126,7 +128,7 @@
                         <li class="menu-item hidden  p-2"><span>SELECT ALL</span></li>
                         <li class="menu-item hidden me-auto p-2"><button class="btn btn-danger btn-sm">Delete</button></li>
                         <li class="menu-item hidden p-2 "><span>Total :</span></li>
-                        <li class="menu-item hidden p-2 "><span>₱ 100 </span></li>
+                        <li class="menu-item hidden p-2 "><span>₱ <?= $totalPrice; ?> </span></li>
                         <li class="menu-item hidden p-2 "><button class="btn btn-info btn-sm">PROCEED</button></li>
 
                         </li>

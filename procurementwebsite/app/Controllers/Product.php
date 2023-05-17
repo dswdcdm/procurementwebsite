@@ -404,8 +404,12 @@ class Product extends BaseController
         ];
 
         $CartModel = new CartModel();
+        $cartItems = $CartModel->findAll(); 
+        $totalPrice = 0;
         $query = $CartModel->insert($values);
-
+        foreach ($cartItems as $item) {
+            $totalPrice += $item['item_price'] * $item['quantity'];
+        }
         if (!$query) {
             return redirect()->back()->with('fail', 'something went wrong');
         } else {
