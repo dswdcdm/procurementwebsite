@@ -42,6 +42,6 @@ class CommentModel extends Model
 
     public function getCommentsForPost($post_id)
     {
-        return $this->where('post_id', $post_id)->orderBy('created_at', 'asc')->findAll();
+        return $this->where('id', $post_id)->orderBy('created_at', 'asc')->findAll();
     }
 }

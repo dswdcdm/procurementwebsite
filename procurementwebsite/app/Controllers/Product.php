@@ -349,6 +349,25 @@ class Product extends BaseController
         }
     }
 
+    
+
+    public function deleteCart($id)
+    {
+        $userModel = new \App\Models\UserModel();
+        $loggedUserID = session()->get('loggedUser');
+        $userInfo = $userModel->find($loggedUserID);
+
+        $CartModel = new CartModel();
+        $cartItem = $CartModel->find($id);
+
+        if ($cartItem && $cartItem['user_id'] == $userInfo['id']) {
+            $CartModel->delete($id);
+            return redirect()->back();
+        } else {
+            return redirect()->back()->with('error', 'Unable to delete comment.');
+        }
+    }
+
 
     public function delete($id)
     {

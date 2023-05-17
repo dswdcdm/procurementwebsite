@@ -39,4 +39,8 @@ class CartModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+    public function getCommentsForPost($post_id)
+    {
+        return $this->where('item_id', $post_id)->orderBy('created_at', 'asc')->findAll();
+    }
 }

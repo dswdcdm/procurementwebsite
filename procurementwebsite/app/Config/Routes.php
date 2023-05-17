@@ -50,8 +50,9 @@ $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
     $routes->get('pages/directory', 'Dashboard::directory');
     $routes->post('post/submitComment/(:num)', 'Product::submitComment/$1');
     $routes->post('comment/delete/(:num)', 'Product::delete/$1');    
+    $routes->post('itemcart/delete/(:num)', 'Product::deleteCart/$1');    
     $routes->post('Product/addToCart/', 'Product::addToCart/');
-
+   
     $routes->add('admin', 'Admin::index');
     $routes->add('admin/userProfile', 'Admin::userProfile');
     $routes->add('admin/adminproduct', 'Admin::adminproduct');
