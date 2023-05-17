@@ -78,7 +78,7 @@
         </div>
         <div class="cart text-decoration-none" id=" ">
             <div class=" menu shadow  w-100">
-                <ul class="d-flex mb-3 text-decoration-none gap-5 align-items-center">
+                <ul class="d-flex mb-3 text-decoration-none gap-5 align-items-center fw-bold">
 
 
                     <li class="menu-item hidden  p-2"><span>Product</span></li>
@@ -97,7 +97,7 @@
                     <?php foreach ($cartData as $cartitem) : ?>
                         <?php if ($cartitem['user_id'] == $userInfo['id']) : ?>
 
-                            <ul class="d-flex mb-3 text-decoration-none gap-5 align-items-center">
+                            <ul class="d-flex mb-2 text-decoration-none gap-5 align-items-center">
 
                                 <input class="form-check-input checkbox" type="checkbox" id="flexCheckDefault">
                                 <li class="menu-item hidden p-2"><img src="<?= $cartitem['item_image']; ?> " width="10%" height="10%" alt="logo" class="rounded-circle img-fluid" alt="avatar" style="width: 70px;" /></li>
@@ -107,8 +107,8 @@
 
                                 <li class="menu-item hidden p-2 "><span>₱ <?php $cartPrice = floatVal($cartitem['item_price']);
                                                                             echo $cartPrice; ?></span></li>
-                                <li class="menu-item hidden p-2 "><span><?= $cartitem['quantity']; ?></span></li>
-                                <li class="menu-item hidden p-2 "><span> <?= $totalPrice; ?></span></li>
+                                <li class="menu-item hidden p-2 "><button class="btn btn-primary btn-sm mr-2">-</button> <input class="align-middle " id ="input-quantity"value="<?= $cartitem['quantity']; ?>"><button class="btn btn-primary btn-sm mr-2 ml-2">+</button></li>
+                                <li class="menu-item hidden p-2 "><span>₱ <?= $totalPrice; ?></span></li>
                                 <li class="menu-item hidden p-2 "><span>
                                         <form method="POST" class="" action="<?= site_url('itemcart/delete/' . $cartitem['id']) ?>">
                                             <button type="submit" class="btn btn-danger btn-sm">DELETE</button>
