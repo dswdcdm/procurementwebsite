@@ -8,7 +8,6 @@
             <input type="search" name="query" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon"  required/>
             <button type="submit" class="btn btn-outline-primary">search</button>
         </div>
-      
     </form>
     <div class="py-4 mx-auto text-center"> <a href="https://gsets.dswd.gov.ph/users/login" target="_blank" class="btn btn-outline-primary ">REQUEST ITEM SPECIFICATION</a></div>
 </nav>
@@ -35,16 +34,26 @@
                             <div class="text-danger mb-1 me-2">
                                 <?php
                                 /*  for ($i = 1; $i <= $product['ratings']; $i++) { */
-                                echo '  <i class="fa fa-download"></i> DOWNLOADS';
+                                echo '  <i class="fa fa-download"></i> TS DOWNLOADS';
                                 /*   } */
                                 ?>
                             </div>
-                            <span class="font-weight-bold"><?= $product['ratings']; ?></span>
+                            <span class="font-weight-bold"><?= $product['downloadts']; ?> &nbsp; </span>
+                            <div class="text-danger mb-1 me-2">
+                                <?php
+                                /*  for ($i = 1; $i <= $product['ratings']; $i++) { */
+                                echo '  <i class="fa fa-download"></i> MS DOWNLOADS';
+                                /*   } */
+                                ?>
+                            </div>
+                            <span class="font-weight-bold"><?= $product['downloadms']; ?></span>
                         </div>
                         <div class="mt-1 mb-0 text-muted small">
                             <span> <?= $product['description']; ?></span>
                         </div>
                     </div>
+
+
                     <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
                         <div class="d-flex flex-row align-items-center mb-1">
                             <h4 class="mb-1 me-1">₱ <?= $product['price']; ?></h4>
@@ -55,10 +64,8 @@
                         <?php else : ?>
                             <h6 class="text-danger"> <?= $product['status']; ?> </h6>
                         <?php endif; ?>
-
                         <div class="d-flex flex-column mt-4">
                             <a href="/Product/productItem/<?= $product['id']; ?>" class="btn btn-primary btn-sm" type="button">Details</a>
-                          
                         </div>
                     </div>
                 </div>

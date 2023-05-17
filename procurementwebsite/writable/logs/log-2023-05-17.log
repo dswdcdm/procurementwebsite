@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INFO - 2023-05-17 01:44:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-17 01:44:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-17 01:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -155,3 +156,72 @@ INFO - 2023-05-17 02:53:41 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-05-17 02:54:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-17 02:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-17 02:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+INFO - 2023-05-17 01:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 01:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-17 01:05:21 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dswddatabase', 3306, '', 0)
+#1 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\Validation\StrictRules\Rules.php(147): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\Validation\Validation.php(312): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('rawr@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rawr@gmail.com', Array, Array)
+#7 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\app\Controllers\Auth.php(133): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\CodeIgniter.php(934): App\Controllers\Auth->check()
+#10 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\Validation\StrictRules\Rules.php(147): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\Validation\Validation.php(312): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('rawr@gmail.com', 'email', Array, NULL, 'email')
+#5 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rawr@gmail.com', Array, Array)
+#6 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\app\Controllers\Auth.php(133): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\CodeIgniter.php(934): App\Controllers\Auth->check()
+#9 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\procurementwebsite\procurementwebsite\procurementwebsite\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-17 01:05:21 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(147): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(312): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('rawr@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rawr@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Auth.php(133): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->check()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\procurementwebsite\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-05-17 01:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 01:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 01:40:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 01:40:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 01:40:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 01:40:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 01:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 01:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 01:42:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 01:42:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 01:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 01:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 01:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> 949fb229d1897f9fc6e259ee343b4c7434a44960
