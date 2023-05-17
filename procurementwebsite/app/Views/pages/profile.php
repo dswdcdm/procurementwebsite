@@ -73,50 +73,47 @@
                     </div>
                 </div>
 
-                <?php foreach ($cartData as $cartitem) : ?>
-                    <?php if ($cartitem['user_id'] == $userInfo['id']) : ?>
-                        <img src="   <?= $cartitem['item_image']; ?>" width="60%" height="60%" alt="logo" class="img-fluid" alt="avatar" style="width: 50px;" />
-                        <?= $cartitem['item_id']; ?>
-                     
-                        <?= $cartitem['item_name']; ?>
-                        <?= $cartitem['quantity']; ?>
-                        <?= $cartitem['user_name']; ?> <br/>
-                    <?php else : ?>
-                    <?php endif; ?>
-                <?php endforeach; ?>
+
             </div>
         </div>
-            <div class="cart text-decoration-none" id=" ">
+        <div class="cart text-decoration-none" id=" ">
             <div class=" menu shadow  w-100">
-            <ul class="d-flex mb-3 text-decoration-none gap-5 align-items-center" >
-        
-                <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault">
-                <li class="menu-item hidden  p-2"><span>Product</span></li>
-                <li class="menu-item hidden me-auto p-2"><span>Description</span></li>
-                <li class="menu-item hidden p-2 "><span>Unit Price</span></li>
-                <li class="menu-item hidden p-2 "><span>Quantity</span></li>
-                <li class="menu-item hidden p-2 "><span>Action</span></li>
-                
-                </li>
-            </ul>
-        </div>
+                <ul class="d-flex mb-3 text-decoration-none gap-5 align-items-center">
 
-        <div class="cart text-decoration-none mt-2" id=" ">
-            <div class=" menu shadow  w-100">
-            <ul class="d-flex mb-3 text-decoration-none gap-5 align-items-center" >
-        
-                <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault">
-                <li class="menu-item hidden  p-2"><img src="<?php echo base_url('uploads/user.png'); ?> " width="10%" height="10%" alt="logo"  class="rounded-circle img-fluid" alt="avatar" style="width: 70px;"/></li>
-                <li class ="menu-item hidden me-auto p-2"><p>lorem ipsum dolor sw\wawdasd</p></li>
-                
-                <li class="menu-item hidden p-2 "><span>P 140.00</span></li>
-                <li class="menu-item hidden p-2 "><span>Quantity</span></li>
-                <li class="menu-item hidden p-2 "><span>Action</span></li>
-                
-                </li>
-            </ul>
-        </div>
-               <!--  <h3><p class="text-center">Cart</p></h3>
+                    <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault">
+                    <li class="menu-item hidden  p-2"><span>Product</span></li>
+                    <li class="menu-item hidden me-auto p-2"><span>Description</span></li>
+                    <li class="menu-item hidden p-2 "><span>Unit Price</span></li>
+                    <li class="menu-item hidden p-2 "><span>Quantity</span></li>
+                    <li class="menu-item hidden p-2 "><span>Action</span></li>
+
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cart text-decoration-none mt-2" id=" ">
+                <div class=" menu shadow  w-100">
+                    <?php foreach ($cartData as $cartitem) : ?>
+                        <?php if ($cartitem['user_id'] == $userInfo['id']) : ?>
+                            <ul class="d-flex mb-3 text-decoration-none gap-5 align-items-center">
+
+                                <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault">
+                                <li class="menu-item hidden  p-2"><img src="<?= $cartitem['item_image']; ?> " width="10%" height="10%" alt="logo" class="rounded-circle img-fluid" alt="avatar" style="width: 70px;" /></li>
+                                <li class="menu-item hidden me-auto p-2">
+                                    <p> <?= $cartitem['item_name']; ?></p>
+                                </li>
+
+                                <li class="menu-item hidden p-2 "><span>₱ <?= $cartitem['item_price']; ?></span></li>
+                                <li class="menu-item hidden p-2 "><span><?= $cartitem['quantity']; ?></span></li>
+                                <li class="menu-item hidden p-2 "><span>Action</span></li>
+
+                                </li>
+                            </ul>
+                        <?php else : ?>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </div>
+                <!--  <h3><p class="text-center">Cart</p></h3>
             <div class="d-flex flex-row mb-3 gap-2"> 
             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
             <label class="form-check-label" for="flexCheckDefault">
@@ -129,5 +126,5 @@
             </div>
             </div> -->
 
-    </div>
+            </div>
 </section>
