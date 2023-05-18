@@ -210,5 +210,39 @@ class Admin extends BaseController
             return redirect()->back()->with('fail', 'something went wrong');
         }
     }
+    public function updateprofile($userid)
+    {
+        $files = $this->request->getFiles();
+        if (isset($files['image'])) {
+            $name = $this->request->getVar('name');
+            $phone = $this->request->getVar('Phone');
+            $address = $this->request->getVar('address');
+            $image = $this->request->getFile('image');
+           
+            $image = $files['image'];     
+            $newName = $image->getRandomName();
+            $image->move(ROOTPATH . 'public/uploads', $newName);
+        
+
+            $values = [
+                'name' => $name,
+                'phone' => $phone,
+                'address' => $address,  
+                'image' => '/uploads/' . $newName
+                
+            ];
+
+            $usermodel = new UserModel();
+            $query = $usermodel->update($userid,$values);
+
+            if (!$query) {
+                return redirect()->back()->with('fail', 'something went wrong');
+            } else {
+                return redirect()->back()->with('success', 'PROFILE UPDATED ');
+            }
+        } else {
+            return redirect()->back()->with('fail', 'something went wrong');
+        }
+    }
    
 }
