@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\CommentModel;
 use App\Models\Downloads;
 use App\Models\UserModel;
 use App\Models\ProductModel;
@@ -281,6 +282,37 @@ class Admin extends BaseController
         return view('components/admin/header', $data)
             . view('components/admin/navbar')
             . view('components/admin/adminsearchproduct', $productdata);
+    }
+
+
+    public function adminproductItem($productId)
+    {
+        $userModel = new \App\Models\UserModel();
+        $loggedUserID = session()->get('loggedUser');
+        $userInfo = $userModel->find($loggedUserID);
+
+        $model = new ProductModel();
+        $commentModel = new CommentModel();
+        $productdata['producttb'] = $model->findAll();
+        $productComment['comments'] = $commentModel->findAll();
+
+        $request = \Config\Services::request();
+        $productId = $request->uri->getSegment(3);
+
+        $comments = $commentModel->where('post_id', $productId)->findAll();
+        $data = [
+            'title' => 'Product specs',
+            'userInfo' => $userInfo,
+            'productId' => $productId,
+            'productComments' => $productComment,
+            'post' => $productId,
+            'comments' => $comments
+        ];
+
+        return view('components/admin/header', $data)
+            . view('components/admin/navbar')
+            . view('components/admin/adminproductitem', $productdata)
+            . view('components/footer');
     }
    
 }

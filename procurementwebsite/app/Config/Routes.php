@@ -40,7 +40,9 @@ $routes->add('auth/logout', 'Auth::logout');
 $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
 
     $routes->get('Product', 'Product::index');
+
     $routes->get('Product/productItem/(:num)', 'Product::productItem/$1');
+    $routes->get('admin/adminproductItem/(:num)', 'Admin::adminproductItem/$1');
 
     $routes->get('Product/searchProduct', 'Product::searchProduct', ['query' => '']);
     $routes->get('admin/adminsearchProduct', 'Admin::adminsearchProduct', ['query' => '']);
