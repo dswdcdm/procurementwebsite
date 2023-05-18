@@ -80,7 +80,7 @@
                 </ul>
             </div>
 
-            <form method="POST" action="<?php echo htmlspecialchars(base_url('pages/proceed/').$userInfo['id']); ?>" autocomplete="off">
+            <form method="POST" action="<?php echo htmlspecialchars(base_url('pages/proceed/') . $userInfo['id']); ?>" autocomplete="off">
                 <div class="cart text-decoration-none mt-2" id=" ">
                     <div class=" menu shadow  w-100">
                         <?php foreach ($cartData as $cartitem) : ?>
@@ -117,20 +117,14 @@
                                                     </div>
                                                 </div>
 
-
                                                 <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
                                                     <div class="d-flex flex-row align-items-center mb-1">
-
-
                                                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                                             <?= $cartitem['quantity']; ?>
                                                         </span>
                                                         <h4 class="mb-1 me-1">₱ <?= $cartitem['item_price']; ?></h4>
-
-
                                                     </div>
 
-                                                    <!--    <h6 class="text-danger">   <?= $cartitem['quantity']; ?>  </h6> -->
                                                     <form method="POST" class="" action="<?= site_url('itemcart/delete/' . $cartitem['id']) ?>">
                                                         <div class="d-flex flex-column mt-4">
                                                             <button type="submit" class="btn btn-danger btn-sm">DELETE</button>
@@ -154,7 +148,7 @@
                             <li class="menu-item hidden  p-2"><span>SELECT ALL</span></li>
                             <li class="menu-item hidden me-auto p-2"><button class="btn btn-danger btn-sm">Delete</button></li>
                             <li class="menu-item hidden p-2 "><span>Total :</span></li>
-                            <li class="menu-item hidden p-2 "><span>₱ 100 </span></li>
+                            <li class="menu-item hidden p-2 "><span>₱ <?= floatVal($totalPrice); ?> </span></li>
                             <li class="menu-item hidden p-2 "><button type="submit" class="btn btn-info btn-sm">PROCEED</button></li>
 
                             </li>

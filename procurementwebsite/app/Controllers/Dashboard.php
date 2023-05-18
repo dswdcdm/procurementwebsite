@@ -117,8 +117,24 @@ class Dashboard extends BaseController
     }
 
 
-    public function generatePDF()
+    public function generatePDF($userid)
     {
+
+        $CartModel = new CartModel();
+        $cartData['cart'] = $CartModel->findAll();
+        $cartItems = $CartModel->findAll(); 
+        $totalPrice = 0;
+        foreach ($cartItems as $item) {
+            $totalPrice += $item['item_price'] * $item['quantity'];
+        }
+       
+        $data = [
+            'title' => 'Profile',
+            'cartData' => $cartData['cart'],
+            'totalPrice' => $totalPrice
+        ]; 
+
+
         // Create new PDF instance
         $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8');
 
@@ -134,13 +150,13 @@ class Dashboard extends BaseController
 
         // Set some content in the PDF
         $pdf->SetFont('helvetica', '', 12);
-        $pdf->Cell(0, 10, 'This is a printable PDF generated using CodeIgniter 4 and TCPDF.', 0, 1);
+        $pdf->Cell(0, 10, 'This is a printable  PDF generated using CodeIgniter 4 and TCPDF.', 0, 1);
         $pdf->Cell(0, 10, 'SAMPLE BABABLABLABDADHAKDADADHAHDAHDAHDHASKJSAHDSAHDSAHKJDSADHSKSL.', 0, 1);
         $pdf->SetFont('helvetica', '', 12);
         $pdf->Cell(0, 10, 'SAMPLE LINE AJDLASDSJAJLK.', 0, 1);    
         $pdf->SetFont('helvetica', '', 12);
 
         // Output the PDF as a download
-        $pdf->Output('printable_pdf.pdf', 'D');
+        $pdf->Output('technicalSpecification.pdf', 'D');
     }
 }
