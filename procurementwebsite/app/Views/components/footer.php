@@ -18,8 +18,6 @@
                         <li class="text-dark font-weight-bold"> <a class="btn btn-primary" style="background-color: #ac2bac;" href="#!" role="button" target="_blank">INSTAGRAM <i class="fab fa-instagram"></i></a></li>
                         <li class="text-dark font-weight-bold"> <a class="btn btn-primary" style="background-color: #ed302f;" href="#!" role="button" target="_blank">YOUTUBE <i class="fab fa-youtube"></i></a></li>
                     </ul>
-
-
                 </div>
             </div>
         </div>
@@ -31,6 +29,7 @@
 
 
     <script>
+      
         // Get references to the checkboxes
         const masterCheckbox = document.getElementById('masterCheckbox');
         const checkboxes = document.querySelectorAll('.checkbox');

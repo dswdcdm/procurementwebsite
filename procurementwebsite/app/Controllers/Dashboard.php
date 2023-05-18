@@ -46,18 +46,12 @@ class Dashboard extends BaseController
         foreach ($cartItems as $item) {
             $totalPrice += $item['item_price'] * $item['quantity'];
         }
-
-        $overAllPrice = 0;
-        foreach ($productPrices as $product) {
-            $overAllPrice += $totalPrice;
-        }
-
+       
         $data = [
             'title' => 'Profile',
             'userInfo' => $userInfo,
             'cartData' => $cartData['cart'],
-            'totalPrice' => $totalPrice,
-            'overAllPrice' => $overAllPrice
+            'totalPrice' => $totalPrice
         ]; 
         return view('components/header', $data)
             . view('components/navbar')
