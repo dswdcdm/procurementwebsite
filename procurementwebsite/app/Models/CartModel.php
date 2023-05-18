@@ -51,4 +51,7 @@ class CartModel extends Model
         $query = $builder->get();
         return $query->getResultArray();
     }
+
+
+    
 }

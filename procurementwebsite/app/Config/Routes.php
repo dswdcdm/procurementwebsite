@@ -41,11 +41,10 @@ $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
 
     $routes->get('Product', 'Product::index');
     $routes->get('Product/productItem/(:num)', 'Product::productItem/$1');
-
     $routes->get('Product/searchProduct', 'Product::searchProduct', ['query' => '']);
-
     $routes->get('pages', 'Dashboard::index');
     $routes->get('pages/profile', 'Dashboard::profile');
+    $routes->post('pages/proceed/(:num)', 'Dashboard::generatePDF/$1');
     $routes->get('pages/updateProfile', 'Dashboard::updateProfile');
     $routes->get('pages/directory', 'Dashboard::directory');
     $routes->post('post/submitComment/(:num)', 'Product::submitComment/$1');
@@ -66,7 +65,6 @@ $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
 });
 
 $routes->group('', ['filter' => 'AlreadyLoggedInFilter'], function ($routes) {
-
     $routes->get('/', 'Home::index');
     $routes->add('auth', 'Auth::index');
     $routes->add('auth/register', 'Auth::register');

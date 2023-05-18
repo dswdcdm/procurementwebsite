@@ -45,4 +45,7 @@ class ProductModel extends Model
         $row = $query->getRow();
         return $row->count;
     }
+
+
+    
 }
