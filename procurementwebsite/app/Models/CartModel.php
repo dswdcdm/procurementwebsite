@@ -43,4 +43,12 @@ class CartModel extends Model
     {
         return $this->where('item_id', $post_id)->orderBy('created_at', 'asc')->findAll();
     }
+
+    public function getAllProductPrices()
+    {
+        $builder = $this->db->table($this->table);
+        $builder->select('item_price');
+        $query = $builder->get();
+        return $query->getResultArray();
+    }
 }

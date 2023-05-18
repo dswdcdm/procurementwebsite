@@ -1204,6 +1204,94 @@ INFO - 2023-05-17 08:03:18 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-05-17 08:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-17 08:05:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-17 08:06:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
+INFO - 2023-05-17 08:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 08:54:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-17 08:54:09 --> Call to undefined method App\Models\CartModel::getAllProductPrices
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Dashboard.php(44): CodeIgniter\Model->__call('getAllProductPrices', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard->profile()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-05-17 08:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-17 08:56:50 --> mysqli_sql_exception: Unknown column 'price' in 'field list' in D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `price`\n...', 0)
+#1 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `price`\n...')
+#2 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `price`\n...')
+#3 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `price`\n...', Array, false)
+#4 D:\xamp\htdocs\procurementwebsite\procurementwebsite\app\Models\CartModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xamp\htdocs\procurementwebsite\procurementwebsite\app\Controllers\Dashboard.php(44): App\Models\CartModel->getAllProductPrices()
+#6 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\CodeIgniter.php(934): App\Controllers\Dashboard->profile()
+#7 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xamp\htdocs\procurementwebsite\procurementwebsite\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\...')
+#11 {main}
+CRITICAL - 2023-05-17 08:56:50 --> Unknown column 'price' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `price`
+FROM `cart`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `price`
+FROM `cart`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `price`
+FROM `cart`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `price`
+FROM `cart`', [], false)
+ 5 APPPATH\Models\CartModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Dashboard.php(44): App\Models\CartModel->getAllProductPrices()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard->profile()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-05-17 08:56:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-17 08:56:57 --> Undefined array key "price"
+in APPPATH\Controllers\Dashboard.php on line 52.
+ 1 APPPATH\Controllers\Dashboard.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "price"', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Controllers\\Dashboard.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard->profile()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-05-17 08:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-17 08:57:29 --> Undefined array key "price"
+in APPPATH\Controllers\Dashboard.php on line 52.
+ 1 APPPATH\Controllers\Dashboard.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "price"', 'D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Controllers\\Dashboard.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard->profile()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-05-17 08:57:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 08:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 08:58:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-17 08:58:47 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Dashboard.php on line 53.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Controllers\\Dashboard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dashboard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Dashboard', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-05-17 08:58:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 08:59:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-17 08:59:34 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Dashboard.php on line 53.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\app\\Controllers\\Dashboard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dashboard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Dashboard', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\procurementwebsite\\procurementwebsite\\public\\index.php')
+INFO - 2023-05-17 08:59:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
 INFO - 2023-05-17 08:13:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-17 08:13:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-17 08:13:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -1276,3 +1364,4 @@ INFO - 2023-05-17 08:42:51 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-05-17 08:44:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-17 08:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-17 08:45:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> dc6eca11c9484e96bbd4849d0307a82eef2c6913

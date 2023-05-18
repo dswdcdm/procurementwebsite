@@ -128,7 +128,7 @@
                         <li class="menu-item hidden  p-2"><span>SELECT ALL</span></li>
                         <li class="menu-item hidden me-auto p-2"><button class="btn btn-danger btn-sm">Delete</button></li>
                         <li class="menu-item hidden p-2 "><span>Total :</span></li>
-                        <li class="menu-item hidden p-2 "><span>₱ <?= $totalPrice; ?> </span></li>
+                        <li class="menu-item hidden p-2 "><span>₱ <?= $overAllPrice; ?> </span></li>
                         <li class="menu-item hidden p-2 "><button class="btn btn-info btn-sm">PROCEED</button></li>
 
                         </li>
