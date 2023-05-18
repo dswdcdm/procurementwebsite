@@ -60,10 +60,10 @@
                                         <?php if ($comment['user_id'] == $userInfo['id']) : ?>
                                             <div class="d-flex gap-2">
                                                 <form method="POST" class="" action="<?= site_url('comment/delete/' . $comment['id']) ?>">
-                                                    <button type="submit" class="btn btn-primary w-10">Delete</button>
+                                                    <button type="submit" class="btn btn-primary w-10 btn-sm">Delete</button>
                                                 </form>
                                                 <form method="POST" class=" action=" <?= site_url('comment/delete/' . $comment['id']) ?>">
-                                                    <button type="submit" class="btn btn-primary w-10  ">Update</button>
+                                                    <button type="submit" class="btn btn-primary w-10 btn-sm ">Update</button>
                                                 </form>
                                             </div>
                                         <?php endif; ?>
@@ -122,7 +122,7 @@
                                 <div class="widget-body">
                                     <div class="nav tag-cloud">
                                         <?php if ($product['status'] == "ACTIVE") : ?>
-                                            <a href="<?= $product['ta']; ?>" target="_blank">VIEW TS AND MS FILES</a>
+                                            <a href="<?= $product['ta']; ?>" target="_blank" class = "btn btn-primary">VIEW TS AND MS FILES</a>
                                             <form action="/Product/addToCart/" method="POST" autocomplete="off" enctype="multipart/form-data">
                                                 <input type="hidden" name="product_id" value="<?= $product['id'];?>">
                                                 <input type="hidden" name="user_id" value="<?= $userInfo['id'];?>">
