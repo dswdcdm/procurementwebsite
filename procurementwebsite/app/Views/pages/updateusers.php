@@ -57,7 +57,8 @@
                                 </div>
                                 <div class="col-sm-9">
                                     <p class="text-muted mb-0">
-                                    <select name="Position" id="position" type = "text" class="w-50" value="<?= $user['is_admin']; ?>">
+                                    <select name="Position"  id="position" type = "text" class="w-50" value="<?= $user['is_admin']; ?>">
+                                        <option value="ADMIN"><?= $user['is_admin']; ?></option>
                                         <option value="ADMIN">ADMIN</option>
                                         <option value="USER">USER</option>
                                     </select>
@@ -74,6 +75,7 @@
                                 </div>
                                 <div class="col-sm-9">
                                     <select name="status" id="status"   type = "text" class="w-50" value="<?= $user['status']; ?>">
+                                    <option value="ACTIVE"><?= $user['status']; ?></option>
                                         <option value="ACTIVE">ACTIVE</option>
                                         <option value="INACTIVE">IN ACTIVE</option>
                                     </select>
