@@ -25,7 +25,7 @@
                                     <h2><?= $product['name']; ?></h2>
                                     <div class="media">
                                         <div class="item-avatar">
-                                            <img src="<?php echo base_url('assets/images/logob.png   '); ?>" width="100%" height="60%" alt="logo" />
+                                            <img src="<?php echo base_url('assets/images/logob.png'); ?>" width="100%" height="60%" alt="logo" />
                                         </div>
                                         <div class="media-body">
                                             <label> ₱<?= $product['price']; ?> </label>
@@ -128,9 +128,10 @@
                                                 <input type="hidden" name="user_id" value="<?= $userInfo['id'];?>">
                                                 <input type="hidden" name="user_name" value="<?= $userInfo['name'];?>">
                                                 <input type="hidden" name="item_name" value="<?= $product['name'];?>">
-                                                <input type="hidden" name="item_price" value="<?php floatVal($product['price']); ?>">
+                                                <input type="hidden" name="item_price" value="<?= floatVal($product['price']); ?>">
                                                 <input type="text" class="d-none" name="item_image" value="<?= $product['image'];?>" />
-                                                <button type="submit" class="btn btn-primary" >ADD TO CART</button>
+                                                <input type="text" class="d-none" name="item_description" value="<?= $product['description']; ?>" />
+                                                <button type="submit" class="btn btn-primary  btn-sm" >ADD TO CART</button>
                                             </form>
                                         <?php else : ?>
                                             <a href="<?= $product['ta']; ?>" class="btn btn-primary" target="_blank">VIEW TS FILES</a>

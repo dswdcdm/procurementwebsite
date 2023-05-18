@@ -78,17 +78,10 @@
         </div>
         <div class="cart text-decoration-none" id=" ">
             <div class=" menu shadow  w-100">
-                <ul class="d-flex mb-3 text-decoration-none gap-5 align-items-center fw-bold">
+                <ul class="d-flex mb-3 text-decoration-none gap-5 align-items-center justify-content-between fw-bold">
 
-
-                    <li class="menu-item hidden  p-2"><span>Product</span></li>
-                    <li class="menu-item hidden me-auto p-2"><span>Description</span></li>
-                    <li class="menu-item hidden p-2 "><span>Unit Price</span></li>
-                    <li class="menu-item hidden p-2 "><span>Quantity</span></li>
-                    <li class="menu-item hidden p-2 "><span>Total</span></li>
-                    <li class="menu-item hidden p-2 "><span>Action</span></li>
-
-                    </li>
+                    <li class="menu-item mt-2"><span>CART</span></li>
+                    <li class="menu-item text-dark mt-2"><span class="text-dark"><?= $userInfo['name']; ?></span></li>
                 </ul>
             </div>
 
@@ -97,7 +90,7 @@
                     <?php foreach ($cartData as $cartitem) : ?>
                         <?php if ($cartitem['user_id'] == $userInfo['id']) : ?>
 
-                            <ul class="d-flex mb-2 text-decoration-none gap-5 align-items-center">
+                            <!--  <ul class="d-flex mb-2 text-decoration-none gap-5 align-items-center">
 
                                 <input class="form-check-input checkbox" type="checkbox" id="flexCheckDefault">
                                 <li class="menu-item hidden p-2"><img src="<?= $cartitem['item_image']; ?> " width="10%" height="10%" alt="logo" class="rounded-circle img-fluid" alt="avatar" style="width: 70px;" /></li>
@@ -105,9 +98,9 @@
                                     <p> <?= $cartitem['item_name']; ?></p>
                                 </li>
 
-                                <li class="menu-item hidden p-2 "><span>₱ <?php $cartPrice = floatVal($cartitem['item_price']);
+                                <li class="menu-item hidden p-2 "><span>₱<?php $cartPrice = floatVal($cartitem['item_price']);
                                                                             echo $cartPrice; ?></span></li>
-                                <li class="menu-item hidden p-2 "><button class="btn btn-primary btn-sm mr-2">-</button> <input class="align-middle " id ="input-quantity"value="<?= $cartitem['quantity']; ?>"><button class="btn btn-primary btn-sm mr-2 ml-2">+</button></li>
+                                <li class="menu-item hidden p-2 "><button class="btn btn-primary btn-sm mr-1" id="deccrementButton">-</button> <span class="align-middle " id="input-quantity" ><?php echo $cartitem['quantity']; ?></span><button class="btn btn-primary btn-sm mr-2 ml-2">+</button></li>
                                 <li class="menu-item hidden p-2 "><span>₱ <?= $totalPrice; ?></span></li>
                                 <li class="menu-item hidden p-2 "><span>
                                         <form method="POST" class="" action="<?= site_url('itemcart/delete/' . $cartitem['id']) ?>">
@@ -116,7 +109,62 @@
                                     </span></li>
 
                                 </li>
-                            </ul>
+                            </ul> -->
+
+                            <div class="col-12 col-md-12  ">
+                                <div class="card shadow-0 border rounded-3">
+                                    <div class="card-body">
+                                        <div class="row">
+                                    
+                                            <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0 ">
+                                                
+                                                <div class="bg-image hover-zoom ripple rounded ripple-surface">
+                                                    
+                                                    <img src="<?= $cartitem['item_image']; ?>" width="50%" height="60%" alt="logo" />
+                                                    <a href="#">
+                                                        <div class="hover-overlay">
+                                                            <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-6 col-xl-6">
+                                                <h5></h5>
+                                                <div class="d-flex flex-row">
+
+                                                    <div class="text-dark mb-1 me-2">
+                                                    <input class="form-check-input checkbox " type="checkbox" id="flexCheckDefault">        &#xe242;
+                                                    </div>
+                                                    <span class="font-weight-bold"> <?= $cartitem['item_name']; ?> </span>
+
+                         
+                                                </div>
+                                                <div class="mt-1 mb-0 text-muted small">
+                                                    <span><?= $cartitem['date_created']; ?> <br/><?= $cartitem['item_description']; ?>  </span>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                                                <div class="d-flex flex-row align-items-center mb-1">
+                                                    <h4 class="mb-1 me-1">₱ <?= $cartitem['item_price']; ?></h4>
+                                                    
+                                                    <!-- <span class="text-danger"><s>₱ 4,010</s></span> -->
+                                                </div>
+
+                                                <h6 class="text-danger">     </h6>
+                                                <form method="POST" class="" action="<?= site_url('itemcart/delete/' . $cartitem['id']) ?>">
+                                                    <div class="d-flex flex-column mt-4">
+                                                        <button type="submit" class="btn btn-danger btn-sm">DELETE</button>
+                                                    </div>
+                                                </form>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         <?php else : ?>
                         <?php endif; ?>
                     <?php endforeach; ?>
@@ -128,7 +176,7 @@
                         <li class="menu-item hidden  p-2"><span>SELECT ALL</span></li>
                         <li class="menu-item hidden me-auto p-2"><button class="btn btn-danger btn-sm">Delete</button></li>
                         <li class="menu-item hidden p-2 "><span>Total :</span></li>
-                        <li class="menu-item hidden p-2 "><span>₱ <?= $overAllPrice; ?> </span></li>
+                        <li class="menu-item hidden p-2 "><span>₱ 100 </span></li>
                         <li class="menu-item hidden p-2 "><button class="btn btn-info btn-sm">PROCEED</button></li>
 
                         </li>
