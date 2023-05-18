@@ -78,17 +78,10 @@
         </div>
         <div class="cart text-decoration-none" id=" ">
             <div class=" menu shadow  w-100">
-                <ul class="d-flex mb-3 text-decoration-none gap-5 align-items-center fw-bold">
+                <ul class="d-flex mb-3 text-decoration-none gap-5 align-items-center justify-content-between fw-bold">
 
-
-                    <li class="menu-item hidden  p-2"><span>Product</span></li>
-                    <li class="menu-item hidden me-auto p-2"><span>Description</span></li>
-                    <li class="menu-item hidden p-2 "><span>Unit Price</span></li>
-                    <li class="menu-item hidden p-2 "><span>Quantity</span></li>
-                    <li class="menu-item hidden p-2 "><span>Total</span></li>
-                    <li class="menu-item hidden p-2 "><span>Action</span></li>
-
-                    </li>
+                    <li class="menu-item mt-2"><span>CART</span></li>
+                    <li class="menu-item text-dark mt-2"><span class="text-dark"><?= $userInfo['name']; ?></span></li>
                 </ul>
             </div>
 
