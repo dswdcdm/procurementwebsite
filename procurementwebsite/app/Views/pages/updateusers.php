@@ -2,7 +2,7 @@
     <?php if ($user['id'] == $userid) : ?>
 
 <section style="background-color: #eee;">
-    <form action="<?php echo htmlspecialchars(site_url('auth/submitRegister'));  ?>" method="POST" autocomplete="off">
+    <form action="<?php echo htmlspecialchars(site_url('admin/adminUpdateUsers/'.$userInfo['id']));  ?>" method="POST" autocomplete="off" enctype="multipart/form-data" >
         <?= csrf_field(); ?>
         <?php if (!empty(session()->getFlashdata('fail'))) : ?>
             <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
@@ -23,8 +23,7 @@
             </div>
 
             <div class="row">
-                
-
+               
                 <div class="col-lg-8 mx-auto">
                     <div class="card mb-4">
                         <div class="card-body ">
@@ -58,12 +57,12 @@
                                 </div>
                                 <div class="col-sm-9">
                                     <p class="text-muted mb-0">
-                                    <select name="Position" id="status" type = "text" class="w-50" value="<?= $user['is_admin']; ?>">
+                                    <select name="Position" id="position" type = "text" class="w-50" value="<?= $user['is_admin']; ?>">
                                         <option value="value1">Admin</option>
                                         <option value="value2">Not_admin</option>
                                     </select>
                                         
-                                        <span class="text-danger"><?= isset($validation) ? display_error($validation, 'Phone') : '' ?></span>
+                                        <span class="text-danger"><?= isset($validation) ? display_error($validation, 'is_admin') : '' ?></span>
                                     </p>
                                 </div>
                             </div>
@@ -74,12 +73,12 @@
                                     <p class="mb-0">Status</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <select name="status" id="status"   type = "text" class="w-50">
+                                    <select name="status" id="status"   type = "text" class="w-50" value="<?= $user['status']; ?>">
                                         <option value="value1">ACTIVE</option>
                                         <option value="value2">INACTIVE</option>
                                     </select>
                                     
-                                        <span class="text-danger"><?= isset($validation) ? display_error($validation, 'address  ') : '' ?></span>
+                                        <span class="text-danger"><?= isset($validation) ? display_error($validation, 'status  ') : '' ?></span>
                                     </p>
                                 </div>
                             </div>
@@ -90,14 +89,14 @@
                                     <p class="mb-0">Date Registered</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <input placeholder="Date" name="date" type="text" class="input_field w-50" id="address" disabled = "disabled" value="<?= $user['date_created']; ?>">
-                                        <span class="text-danger"><?= isset($validation) ? display_error($validation, 'address  ') : '' ?></span>
+                                    <input placeholder="Date" name="date" type="text" class="input_field w-50" id="date" disabled = "disabled" value="<?= $user['date_created']; ?>">
+                                        <span class="text-danger"><?= isset($validation) ? display_error($validation, 'date_created  ') : '' ?></span>
                                     </p>
                                 </div>
                             </div>
                             <hr>
                             <div class="d-flex flex-column mt-4">
-                                <a href="/admin" class="btn btn-primary btn-sm" type="button">UPDATE</a>
+                                <button class="btn btn-primary btn-sm" type="submit">UPDATE</button>
                             </div>
                         </div>
                     </div>

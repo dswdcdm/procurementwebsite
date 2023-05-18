@@ -4,9 +4,9 @@
         <li class="breadcrumb-item active" aria-current="page">Products</li>
         
     </ol>
-    <form method="get" action="<?= site_url('Product/search'); ?>">
+    <form method="get" action="<?= site_url('admin/adminsearchProduct'); ?>">
         <div class="input-group mt-4">
-            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <input type="search" name= "query" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
             <button type="submit" class="btn btn-outline-primary">search</button>
         </div>
     </form>
@@ -71,7 +71,7 @@
 
                         <div class="d-flex flex-column mt-4">
                             <a href="/admin/updateproduct/<?= $product['id']; ?>" class="btn btn-primary btn-sm" type="button">Update</a>
-                            <a href="/Product/productItem/<?= $product['id']; ?>" class="btn btn-primary btn-sm mt-2" type="button">View</a>
+                            <a href="/admin/adminproductItem/<?= $product['id']; ?>" class="btn btn-primary btn-sm mt-2" type="button">View</a>
                            <!--  <button class="btn btn-outline-primary btn-sm mt-2" type="button">
                                 Update
                             </button> -->

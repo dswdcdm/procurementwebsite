@@ -3,8 +3,8 @@
         <div class="col">
             <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="/pages">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page"><a href="/Product">Products</a></li>
+                    <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a href="/admin/adminproduct">Products</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Products Item</li>
                 </ol>
             </nav>
@@ -122,8 +122,8 @@
                                 <div class="widget-body">
                                     <div class="nav tag-cloud">
                                         <?php if ($product['status'] == "ACTIVE") : ?>
-                                            <a href="<?= $product['ta']; ?>" target="_blank" class = "btn btn-primary">VIEW TS AND MS FILES</a>
-                                            <form action="/Product/addToCart/" method="POST" autocomplete="off" enctype="multipart/form-data">
+                                            <a href="<?= $product['ta']; ?>" target="_blank" class="btn btn-primary">VIEW TS AND MS FILES</a>
+                                            <!-- <form action="/Product/addToCart/" method="POST" autocomplete="off" enctype="multipart/form-data">
                                                 <input type="hidden" name="product_id" value="<?= $product['id'];?>">
                                                 <input type="hidden" name="user_id" value="<?= $userInfo['id'];?>">
                                                 <input type="hidden" name="user_name" value="<?= $userInfo['name'];?>">
@@ -132,7 +132,7 @@
                                                 <input type="text" class="d-none" name="item_image" value="<?= $product['image'];?>" />
                                                 <input type="text" class="d-none" name="item_description" value="<?= $product['description']; ?>" />
                                                 <button type="submit" class="btn btn-primary  btn-sm" >ADD TO CART</button>
-                                            </form>
+                                            </form> -->
                                         <?php else : ?>
                                             <a href="<?= $product['ta']; ?>" class="btn btn-primary" target="_blank">VIEW TS FILES</a>
                                         <?php endif; ?>
