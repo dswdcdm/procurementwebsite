@@ -394,13 +394,17 @@ class Product extends BaseController
         $user_name = $this->request->getVar('user_name');
         $item_name = $this->request->getVar('item_name');
         $item_image = $this->request->getVar('item_image');
+        $item_description = $this->request->getVar('item_description');
+        $item_price = $this->request->getVar('item_price');
 
         $values = [
             'item_id' => $product_id,
             'user_id' => $user_id,
             'user_name' => $user_name,
             'item_name' => $item_name,
-            'item_image' => $item_image
+            'item_image' => $item_image,
+            'item_price' => (float) $item_price,
+            'item_description' => $item_description 
         ];
 
         $CartModel = new CartModel();

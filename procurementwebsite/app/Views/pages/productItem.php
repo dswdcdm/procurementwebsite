@@ -128,7 +128,7 @@
                                                 <input type="hidden" name="user_id" value="<?= $userInfo['id'];?>">
                                                 <input type="hidden" name="user_name" value="<?= $userInfo['name'];?>">
                                                 <input type="hidden" name="item_name" value="<?= $product['name'];?>">
-                                                <input type="hidden" name="item_price" value="<?php floatVal($product['price']); ?>">
+                                                <input type="hidden" name="item_price" value="<?= floatVal($product['price']); ?>">
                                                 <input type="text" class="d-none" name="item_image" value="<?= $product['image'];?>" />
                                                 <input type="text" class="d-none" name="item_description" value="<?= $product['description']; ?>" />
                                                 <button type="submit" class="btn btn-primary  btn-sm" >ADD TO CART</button>

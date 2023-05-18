@@ -140,14 +140,14 @@
                                                 <div class="d-flex flex-row">
 
                                                     <div class="text-dark mb-1 me-2">
-                                                    <input class="form-check-input checkbox " type="checkbox" id="flexCheckDefault">        &#xe242;<?= $cartitem['item_price']; ?>
+                                                    <input class="form-check-input checkbox " type="checkbox" id="flexCheckDefault">        &#xe242;
                                                     </div>
                                                     <span class="font-weight-bold"> <?= $cartitem['item_name']; ?> </span>
 
-                                                    <span class="font-weight-bold">DOWNLOADS</span>
+                         
                                                 </div>
                                                 <div class="mt-1 mb-0 text-muted small">
-                                                    <span><?= $cartitem['item_name']; ?> <br/><?= $cartitem['item_description']; ?>  </span>
+                                                    <span><?= $cartitem['date_created']; ?> <br/><?= $cartitem['item_description']; ?>  </span>
                                                 </div>
                                             </div>
 
