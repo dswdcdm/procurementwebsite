@@ -43,6 +43,7 @@ $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
     $routes->get('Product/productItem/(:num)', 'Product::productItem/$1');
 
     $routes->get('Product/searchProduct', 'Product::searchProduct', ['query' => '']);
+    $routes->get('admin/adminsearchProduct', 'Admin::adminsearchProduct', ['query' => '']);
 
     $routes->get('pages', 'Dashboard::index');
     $routes->get('pages/profile', 'Dashboard::profile');
@@ -63,6 +64,8 @@ $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
     $routes->add('admin/saveupdateProduct/(:num)', 'Product::saveupdateProduct/$1');
     $routes->add('admin/ViewUser/(:num)', 'Admin::viewusers/$1');
     $routes->add('admin/UpdateUsers/(:num)', 'Admin::updateusers/$1');
+
+    $routes->post('admin/adminUpdateUsers/(:num)', 'Admin::adminupdateusers/$1');
 });
 
 $routes->group('', ['filter' => 'AlreadyLoggedInFilter'], function ($routes) {

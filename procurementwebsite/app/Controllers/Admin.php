@@ -244,5 +244,43 @@ class Admin extends BaseController
             return redirect()->back()->with('fail', 'something went wrong');
         }
     }
+    public function adminupdateusers($userid)
+    {
+        
+            $position = $this->request->getVar('Position');
+            $status = $this->request->getVar('status');
+            $values = [
+                'is_admin' => $position,
+                'status' => $status,  
+            ];
+            $usermodel = new UserModel();
+            $query = $usermodel->update($userid,$values);
+
+            if (!$query) {
+                return redirect()->back()->with('fail', 'something went wrong');
+            } else {
+                return redirect()->back()->with('success', 'USER UPDATED ');
+            }
+       
+    }
+    public function adminsearchProduct()
+    {
+        $userModel = new \App\Models\UserModel();
+        $loggedUserID = session()->get('loggedUser');
+        $userInfo = $userModel->find($loggedUserID);
+
+        $query = $this->request->getVar('query');
+        $data = [
+            'title' => 'Product specs',
+            'userInfo' => $userInfo,
+            'query' => $query
+        ];
+        $model = new ProductModel();
+        $productdata['producttb'] = $model->findAll();
+
+        return view('components/admin/header', $data)
+            . view('components/admin/navbar')
+            . view('components/admin/adminsearchproduct', $productdata);
+    }
    
 }
