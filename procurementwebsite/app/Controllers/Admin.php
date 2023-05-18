@@ -168,7 +168,7 @@ class Admin extends BaseController
     public function saveProduct()
     {
         $files = $this->request->getFiles();
-        if (isset($files['image'],$files['msfile'],$files['tsfile'])) {
+        if (isset($files['image'], $files['msfile'], $files['tsfile'])) {
             $name = $this->request->getVar('name');
             $descrition = $this->request->getVar('description');
             $price = $this->request->getVar('price');
@@ -191,12 +191,12 @@ class Admin extends BaseController
             $values = [
                 'name' => $name,
                 'descrition' => $descrition,
-                'price' => $price,  
+                'price' => $price,
                 'status' => $status,
                 'note' => $note,
                 'image' => '/uploads/' . $newName,
-                'ta'=> '/files/' . $tsfilenewName,
-                'ms'=>'/files/' . $msfilenewName
+                'ta' => '/files/' . $tsfilenewName,
+                'ms' => '/files/' . $msfilenewName
             ];
 
             $productModel = new ProductModel();
@@ -219,22 +219,22 @@ class Admin extends BaseController
             $phone = $this->request->getVar('Phone');
             $address = $this->request->getVar('address');
             $image = $this->request->getFile('image');
-           
-            $image = $files['image'];     
+
+            $image = $files['image'];
             $newName = $image->getRandomName();
             $image->move(ROOTPATH . 'public/uploads', $newName);
-        
+
 
             $values = [
                 'name' => $name,
                 'phone' => $phone,
-                'address' => $address,  
+                'address' => $address,
                 'image' => '/uploads/' . $newName
-                
+
             ];
 
             $usermodel = new UserModel();
-            $query = $usermodel->update($userid,$values);
+            $query = $usermodel->update($userid, $values);
 
             if (!$query) {
                 return redirect()->back()->with('fail', 'something went wrong');
@@ -247,22 +247,21 @@ class Admin extends BaseController
     }
     public function adminupdateusers($userid)
     {
-        
-            $position = $this->request->getVar('Position');
-            $status = $this->request->getVar('status');
-            $values = [
-                'is_admin' => $position,
-                'status' => $status,  
-            ];
-            $usermodel = new UserModel();
-            $query = $usermodel->update($userid,$values);
 
-            if (!$query) {
-                return redirect()->back()->with('fail', 'something went wrong');
-            } else {
-                return redirect()->back()->with('success', 'USER UPDATED ');
-            }
-       
+        $position = $this->request->getVar('Position');
+        $status = $this->request->getVar('status');
+        $values = [
+            'is_admin' => $position,
+            'status' => $status,
+        ];
+        $usermodel = new UserModel();
+        $query = $usermodel->update($userid, $values);
+
+        if (!$query) {
+            return redirect()->back()->with('fail', 'something went wrong');
+        } else {
+            return redirect()->back()->with('success', 'USER UPDATED ');
+        }
     }
     public function adminsearchProduct()
     {
@@ -314,5 +313,4 @@ class Admin extends BaseController
             . view('components/admin/adminproductitem', $productdata)
             . view('components/footer');
     }
-   
 }

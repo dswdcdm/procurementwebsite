@@ -58,8 +58,8 @@
                                 <div class="col-sm-9">
                                     <p class="text-muted mb-0">
                                     <select name="Position" id="position" type = "text" class="w-50" value="<?= $user['is_admin']; ?>">
-                                        <option value="value1">Admin</option>
-                                        <option value="value2">Not_admin</option>
+                                        <option value="ADMIN">ADMIN</option>
+                                        <option value="USER">USER</option>
                                     </select>
                                         
                                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'is_admin') : '' ?></span>
@@ -74,8 +74,8 @@
                                 </div>
                                 <div class="col-sm-9">
                                     <select name="status" id="status"   type = "text" class="w-50" value="<?= $user['status']; ?>">
-                                        <option value="value1">ACTIVE</option>
-                                        <option value="value2">INACTIVE</option>
+                                        <option value="ACTIVE">ACTIVE</option>
+                                        <option value="INACTIVE">IN ACTIVE</option>
                                     </select>
                                     
                                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'status  ') : '' ?></span>
