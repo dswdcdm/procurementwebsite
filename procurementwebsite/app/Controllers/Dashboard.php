@@ -127,14 +127,15 @@ class Dashboard extends BaseController
         foreach ($cartItems as $item) {
             $totalPrice += $item['item_price'] * $item['quantity'];
         }
+
+        $cartData =  $cartData['cart'];
        
         $data = [
             'title' => 'Profile',
-            'cartData' => $cartData['cart'],
             'totalPrice' => $totalPrice
         ]; 
 
-
+      
         // Create new PDF instance
         $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8');
 
@@ -151,9 +152,16 @@ class Dashboard extends BaseController
         // Set some content in the PDF
         $pdf->SetFont('helvetica', '', 12);
         $pdf->Cell(0, 10, 'This is a printable  PDF generated using CodeIgniter 4 and TCPDF.', 0, 1);
-        $pdf->Cell(0, 10, 'SAMPLE BABABLABLABDADHAKDADADHAHDAHDAHDHASKJSAHDSAHDSAHKJDSADHSKSL.', 0, 1);
+        $pdf->Cell(0, 10, 'DATE.', 0, 1);
+        $pdf->Cell(0, 10, 'DATE.', 0, 1);
+        $pdf->Cell(0, 10, 'DATE.', 0, 1);
+        foreach ($cartData as $cartitem) {
+            if ($cartitem['user_id'] == $userid) {
+                $pdf->Cell(0,10,$cartitem['quantity'] . '---------'.'1'. '---------' . $cartitem['item_name'] . '---------'. $cartitem['item_price'].'---------' . $cartitem['item_price'] * $cartitem['quantity']   ,0,1);
+            }
+        }
         $pdf->SetFont('helvetica', '', 12);
-        $pdf->Cell(0, 10, 'SAMPLE LINE AJDLASDSJAJLK.', 0, 1);    
+        $pdf->Cell(0, 10, 'GRAND TOTAL .' . $totalPrice , 0, 1);    
         $pdf->SetFont('helvetica', '', 12);
 
         // Output the PDF as a download
