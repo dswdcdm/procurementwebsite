@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\CartModel;
 use App\Models\EmployeeModel;
-use App\Models\UserModel;
+use App\Models\ProductModel;
 use TCPDF;
 
 class Dashboard extends BaseController
@@ -167,5 +167,23 @@ class Dashboard extends BaseController
 
         // Output the PDF as a download
         $pdf->Output('technicalSpecification.pdf', 'D');
+    }
+
+
+    public function delete_items()
+    {
+        $selectedItems = $this->request->getPost('selected_items');
+        
+        if (!empty($selectedItems)) {
+
+            $ProductModel = new ProductModel();
+            foreach ($selectedItems as $itemId) {
+                $ProductModel->where('id', $itemId)->delete();
+            }
+            
+            echo 'Selected items deleted successfully.';
+        } else {
+            echo 'No items selected.';
+        }
     }
 }

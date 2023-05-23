@@ -118,20 +118,20 @@
                                     <h3>ACTION</h3>
                                 </div>
 
-
                                 <div class="widget-body">
                                     <div class="nav tag-cloud">
                                         <?php if ($product['status'] == "ACTIVE") : ?>
-                                            <a href="<?= $product['ta']; ?>" target="_blank" class = "btn btn-primary">VIEW TS AND MS FILES</a>
+                                            <a href="<?= $product['ta']; ?>" target="_blank" class="btn btn-primary">VIEW TS AND MS FILES</a>
                                             <form action="/Product/addToCart/" method="POST" autocomplete="off" enctype="multipart/form-data">
-                                                <input type="hidden" name="product_id" value="<?= $product['id'];?>">
-                                                <input type="hidden" name="user_id" value="<?= $userInfo['id'];?>">
-                                                <input type="hidden" name="user_name" value="<?= $userInfo['name'];?>">
-                                                <input type="hidden" name="item_name" value="<?= $product['name'];?>">
+                                                <input type="hidden" name="product_id" value="<?= $product['id']; ?>">
+                                                <input type="hidden" name="user_id" value="<?= $userInfo['id']; ?>">
+                                                <input type="hidden" name="user_name" value="<?= $userInfo['name']; ?>">
+                                                <input type="hidden" name="item_name" value="<?= $product['name']; ?>">
                                                 <input type="hidden" name="item_price" value="<?= floatVal($product['price']); ?>">
-                                                <input type="text" class="d-none" name="item_image" value="<?= $product['image'];?>" />
+                                                <input type="text" class="d-none" name="item_image" value="<?= $product['image']; ?>" />
                                                 <input type="text" class="d-none" name="item_description" value="<?= $product['description']; ?>" />
-                                                <button type="submit" class="btn btn-primary  btn-sm" >ADD TO CART</button>
+                                                <button type="submit" class="btn btn-primary  btn-sm">ADD TO CART</button>
+                                
                                             </form>
                                         <?php else : ?>
                                             <a href="<?= $product['ta']; ?>" class="btn btn-primary" target="_blank">VIEW TS FILES</a>

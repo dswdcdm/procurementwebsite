@@ -55,6 +55,7 @@ $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
     $routes->post('post/submitComment/(:num)', 'Product::submitComment/$1');
     $routes->post('comment/delete/(:num)', 'Product::delete/$1');    
     $routes->post('itemcart/delete/(:num)', 'Product::deleteCart/$1');    
+    $routes->post('itemscart/delete', 'Product::delete_items');    
     $routes->post('Product/addToCart/', 'Product::addToCart/');
    
     $routes->add('admin', 'Admin::index');

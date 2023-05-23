@@ -53,5 +53,17 @@ class CartModel extends Model
     }
 
 
+    public function updateData($id,$user_id, $data)
+{
+    $this->db->table('cart')->where('item_id', $id)->where('user_id', $user_id)->update($data);
+
+}
+
+public function checkData($id,$user_id)
+{
+    return $this->db->table('cart')->where('item_id', $id)->where('user_id', $user_id)->countAllResults() > 0;
+}
+
+
     
 }

@@ -408,30 +408,37 @@ class Product extends BaseController
             'item_description' => $item_description
         ];
 
-       
+
         $CartModel = new CartModel();
         $cartItems = $CartModel->findAll();
         $totalPrice = 0;
         $productExists = false;
-        foreach ($cartItems as &$item) {
-            if ($item['item_id'] == $product_id) {
-                $valuesUpdate = [
-                    'item_id' => $product_id,
-                    'user_id' => $user_id,
-                    'user_name' => $user_name,
-                    'item_name' => $item_name,
-                    'quantity' => $item['quantity'] + 1,
-                    'item_image' => $item_image,
-                    'item_price' => (float) $item_price,
-                    'item_description' => $item_description
-                ];
-        
-                $CartModel->update($item['item_id'],$valuesUpdate);
-            }
-        }
 
-        if (!$productExists) {
-            // Product is not in the cart, add it as a new item
+        $exists = $CartModel->checkData($product_id,$user_id);
+    
+        if ($exists) {
+            foreach ($cartItems as &$item) {
+            
+                if ($item['item_id'] == $product_id && $user_id == $item['user_id']) {
+                    $productExists = true;
+    
+                    $valuesUpdate = [
+                        'item_id' => $product_id,
+                        'user_id' => $user_id,
+                        'user_name' => $user_name,
+                        'item_name' => $item_name,
+                        'quantity' => $item['quantity'] + 1,
+                        'item_image' => $item_image,
+                        'item_price' => (float) $item_price,
+                        'item_description' => $item_description
+                    ];
+    
+                    $CartModel = new CartModel();
+                    $CartModel->updateData($product_id, $user_id, $valuesUpdate);
+                    return redirect()->back()->with('success', 'comment success');
+                }
+            }
+        } else {
             $values = [
                 'item_id' => $product_id,
                 'user_id' => $user_id,
@@ -449,11 +456,55 @@ class Product extends BaseController
                 return redirect()->back()->with('success', 'comment success');
             }
         }
+        /* foreach ($cartItems as &$item) {
+            
+            if ($item['item_id'] == $product_id && $user_id == $item['user_id']) {
+                $productExists = true;
 
+                $valuesUpdate = [
+                    'item_id' => $product_id,
+                    'user_id' => $user_id,
+                    'user_name' => $user_name,
+                    'item_name' => $item_name,
+                    'quantity' => $item['quantity'] + 1,
+                    'item_image' => $item_image,
+                    'item_price' => (float) $item_price,
+                    'item_description' => $item_description
+                ];
+
+                $CartModel = new CartModel();
+                $CartModel->updateData($product_id, $user_id, $valuesUpdate);
+                return redirect()->back()->with('success', 'comment success');
+            }
+
+
+            if (!$productExists) {
+                // Product is not in the cart, add it as a new item
+                $values = [
+                    'item_id' => $product_id,
+                    'user_id' => $user_id,
+                    'user_name' => $user_name,
+                    'item_name' => $item_name,
+                    'quantity' => 1,
+                    'item_image' => $item_image,
+                    'item_price' => (float) $item_price,
+                    'item_description' => $item_description
+                ];
+                $query = $CartModel->insert($values);
+                if (!$query) {
+                    return redirect()->back()->with('fail', 'something went wrong');
+                } else {
+                    return redirect()->back()->with('success', 'comment success');
+                }
+            }
+
+
+            
+        }
+ */
 
         foreach ($cartItems as $item) {
             $totalPrice += $item['item_price'] * $item['quantity'];
         }
-        
     }
 }
