@@ -151,10 +151,11 @@ class Dashboard extends BaseController
 
         // Set some content in the PDF
         $pdf->SetFont('helvetica', '', 12);
-        $pdf->Cell(0, 10, 'This is a printable  PDF generated using CodeIgniter 4 and TCPDF.', 0, 1);
+        $pdf->Cell(0, 10, 'BILL OF QUANTITIES.', 0, 1);
+        $pdf->SetFont('helvetica', '', 12);
         $pdf->Cell(0, 10, 'DATE.', 0, 1);
-        $pdf->Cell(0, 10, 'DATE.', 0, 1);
-        $pdf->Cell(0, 10, 'DATE.', 0, 1);
+        $pdf->Cell(0, 10, 'REQUESTED BY.', 0, 1);
+        $pdf->Cell(0, 10, 'OFFICE NAME.', 0, 1);
         foreach ($cartData as $cartitem) {
             if ($cartitem['user_id'] == $userid) {
                 $pdf->Cell(0,10,$cartitem['quantity'] . '---------'.'1'. '---------' . $cartitem['item_name'] . '---------'. $cartitem['item_price'].'---------' . $cartitem['item_price'] * $cartitem['quantity']   ,0,1);
