@@ -165,6 +165,74 @@ class Dashboard extends BaseController
         $pdf->Cell(0, 10, 'GRAND TOTAL .' . $totalPrice , 0, 1);    
         $pdf->SetFont('helvetica', '', 12);
 
+     // Create new TCPDF object
+     $pdf = new TCPDF();
+     $cellPaddingTop = 10;
+     $cellMarginBottom = 10;
+     // Set document properties
+     $pdf->SetCreator(PDF_CREATOR);
+     $pdf->SetAuthor('Your Name');
+     $pdf->SetTitle('Printable PDF');
+     $pdf->SetSubject('Printing PDF in CodeIgniter 4');
+     $pdf->SetKeywords('PDF, CodeIgniter 4, Printing');
+
+     // Add a new page
+     $pdf->AddPage();
+     $pdf->SetFont('helvetica', 'B', 12);
+
+     $pdf->Cell(0, $cellPaddingTop, 'BILL OF QUANTITIES', 0, 1, 'C');
+     $lineY = $pdf->GetY(); 
+     $pdf->Line(10, $lineY, $pdf->getPageWidth() - 10, $lineY); 
+     $pdf->Cell(0, $cellMarginBottom, '', 0, 1, 'C');
+     $pdf->SetFont('helvetica', '', 12);
+   
+     // Create a table
+     $pdf->Cell(0, 0, 'Date : ', 1, 1, 'L');
+     $pdf->Cell(0, 0, 'Requested by : ', 1, 1, 'L');
+     $pdf->Cell(0, 0, 'Office Name : ', 1, 1, 'L');
+     $pdf->Ln();
+
+     $header = array('QTY', 'UNIT', 'DESCRIPTION', 'UNITCOST', 'TOTAL');
+     $data = array();
+     
+        foreach ($cartData as $cartItem) {
+            $priceWithPeso = 'Php ' . $cartItem['item_price'];
+            $totalPrice =  $cartItem['item_price'] * $cartItem['quantity'];
+            $data[] = array(
+                $cartItem['quantity'],
+                'unit',
+                $cartItem['item_name'],
+                $priceWithPeso,
+                'Php '.$totalPrice
+            );
+        }
+     array('', '', '', 'GRAND TOTAL', $totalPrice);
+
+     $pdf->SetFillColor(255, 255, 255);
+     $pdf->SetTextColor(0);
+     $pdf->SetDrawColor(0);
+     $pdf->SetFont('', 'B');
+
+     $columnWidths = array(13, 15, 100, 30, 30); // Set the desired width for each column
+        foreach ($header as $key => $col) {
+            $pdf->Cell($columnWidths[$key], 7, $col, 1, 0, 'C', 1);
+        }
+
+        
+        $pdf->Ln();
+
+        // Data rows
+        $pdf->SetFont('');
+        foreach ($data as $row) {
+            foreach ($row as $key => $col) {
+                $pdf->Cell($columnWidths[$key], 6, $col, 1, 0, 'L');
+            }
+            $pdf->Ln();
+        }
+
+     // Output the PDF
+     $pdf->Output('example.pdf', 'I');
+
         // Output the PDF as a download
         $pdf->Output('technicalSpecification.pdf', 'D');
     }
