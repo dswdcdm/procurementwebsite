@@ -110,6 +110,7 @@
 
                                             <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
                                                 <div class="d-flex flex-row align-items-center mb-1">
+
                                                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                                         <?= $cartitem['quantity']; ?>
                                                     </span>

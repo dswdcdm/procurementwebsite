@@ -7,6 +7,8 @@ use App\Models\CartModel;
 use App\Models\CommentModel;
 use App\Models\ProductModel;
 
+$session = \Config\Services::session();
+
 
 class Product extends BaseController
 {
@@ -414,14 +416,14 @@ class Product extends BaseController
         $totalPrice = 0;
         $productExists = false;
 
-        $exists = $CartModel->checkData($product_id,$user_id);
-    
+        $exists = $CartModel->checkData($product_id, $user_id);
+
         if ($exists) {
             foreach ($cartItems as &$item) {
-            
+
                 if ($item['item_id'] == $product_id && $user_id == $item['user_id']) {
                     $productExists = true;
-    
+
                     $valuesUpdate = [
                         'item_id' => $product_id,
                         'user_id' => $user_id,
@@ -432,10 +434,12 @@ class Product extends BaseController
                         'item_price' => (float) $item_price,
                         'item_description' => $item_description
                     ];
-    
+
                     $CartModel = new CartModel();
                     $CartModel->updateData($product_id, $user_id, $valuesUpdate);
-                    return redirect()->back()->with('success', 'comment success');
+                    return redirect()->back()->with('success', 'added success');
+                    $session = \Config\Services::session();
+                    $session->setFlashdata('toast_message', 'This is a toast message');
                 }
             }
         } else {
@@ -453,7 +457,7 @@ class Product extends BaseController
             if (!$query) {
                 return redirect()->back()->with('fail', 'something went wrong');
             } else {
-                return redirect()->back()->with('success', 'comment success');
+                return redirect()->back()->with('success', 'added success');
             }
         }
         /* foreach ($cartItems as &$item) {
