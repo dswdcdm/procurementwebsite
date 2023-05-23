@@ -44,6 +44,19 @@
   </div>
 </div>
 <!-- Gallery -->
+
+<div class=" container-fluid pt-5 pl-3 ">
+<div class="row gap-3">
+<div class="col-md-4 ratio ratio-16x9 col-12 ml-3 mr-3 col-sm-12"  >
+  <iframe src="assets/images/asgoodpractices.mp4" autoplay ></iframe>
+</div>
+
+<div  class="ratio ratio-1x1 col-sm-12 col-md-7 col-12  h-50 ml-4 mr-4">
+<iframe src="uploads/bgmd.pdf"   width="100%" height="600px" ></iframe>
+</div>
+
+</div>
+</div>
         <article>
             <section class="section services-section" id="services">
                 <div class="container">
