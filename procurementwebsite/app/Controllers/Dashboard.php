@@ -59,6 +59,36 @@ class Dashboard extends BaseController
             . view('components/footer');
     }
 
+    function cart()
+    {
+        $userModel = new \App\Models\UserModel();
+        $loggedUserID = session()->get('loggedUser');
+        $userInfo = $userModel->find($loggedUserID);
+        
+        $CartModel = new CartModel();
+        $cartData['cart'] = $CartModel->findAll();
+        
+        $CartModel = new CartModel();
+        $cartItems = $CartModel->findAll(); 
+        $productPrices = $CartModel->getAllProductPrices();
+        $totalPrice = 0;
+        foreach ($cartItems as $item) {
+            $totalPrice += $item['item_price'] * $item['quantity'];
+        }
+       
+        $data = [
+            'title' => 'Cart',
+            'userInfo' => $userInfo,
+            'cartData' => $cartData['cart'],
+            'totalPrice' => $totalPrice
+        ]; 
+        return view('components/header', $data)
+            . view('components/navbar')
+            . view('components/hero')
+            . view('pages/cart', $data)
+            . view('components/footer');
+    }
+
 
     function updateProfile()
     {

@@ -28,7 +28,7 @@
 
 <ul class="dropdown-menu">
 <li><a class="dropdown-item" href="/pages/profile">Profile</a></li>
-<li><a class="dropdown-item" href="#">Cart</a></li>
+<li><a class="dropdown-item" href="/pages/cart">Cart</a></li>
 <li><a class="dropdown-item" href="#">History</a></li>
 <li><a class="dropdown-item" href="<?= site_url('auth/logout') ?>">Log out</a></li>
 </ul>
