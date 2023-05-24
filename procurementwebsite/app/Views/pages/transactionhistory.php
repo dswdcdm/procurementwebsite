@@ -15,8 +15,9 @@
         <div class="cart text-decoration-none" id=" ">
             <div class=" menu shadow  w-100">
                 <ul class="d-flex mb-3 text-decoration-none gap-5 align-items-center justify-content-between fw-bold">
-                    <li class="menu-item mt-2"><span>CART</span></li>
-                    <li class="menu-item text-dark mt-2"><span class="text-dark"><?= $userInfo['name']; ?></span></li>
+                    <li class="menu-item mt-2"><span>History</span></li>
+                    <li class="menu-item mt-2"><span class ="text-danger">Files has been Downloaded</span></li>
+                    <li class="menu-item text-dark mt-2"><span class="text-success">Completed</span></li>
                 </ul>
             </div>
 

@@ -163,8 +163,9 @@ class Dashboard extends BaseController
         $userModel = new \App\Models\EmployeeModel();
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);
+        
         $data = [
-            'title' => 'Product',
+            'title' => 'Directory',
             'userInfo' => $userInfo
         ];
         $model = new EmployeeModel();
