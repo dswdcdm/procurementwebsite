@@ -12,7 +12,7 @@
             </div>
         </div>
 
-<div class="cart text-decoration-none" id=" ">
+        <div class="cart text-decoration-none" id=" ">
             <div class=" menu shadow  w-100">
                 <ul class="d-flex mb-3 text-decoration-none gap-5 align-items-center justify-content-between fw-bold">
                     <li class="menu-item mt-2"><span>CART</span></li>
@@ -33,9 +33,7 @@
                                             <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0 ">
                                                 <div class="bg-image hover-zoom ripple rounded ripple-surface">
                                                     <img src="<?= $cartitem['item_image']; ?>" width="50%" height="60%" alt="logo" />
-
                                                     <img src="<?php echo base_url('assets/images/checked.png'); ?>" width="20%" height="20%" alt="logo" />
-
                                                 </div>
                                             </div>
 
@@ -50,17 +48,31 @@
 
                                             <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
                                                 <div class="d-flex flex-row align-items-center mb-1">
-                                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+
+                                                    <!--      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                                         <?= $cartitem['quantity']; ?>
-                                                    </span>
-                                                    <h4 class="mb-1 me-1">₱ <?= $cartitem['item_price']; ?></h4>
+                                                    </span> -->
+                                                    <h4 class="mb-1 me-1 ">₱ <?= $cartitem['item_price']; ?></h4>
+
                                                 </div>
 
-                                                <form method="POST" class="" action="<?= site_url('itemcart/delete/' . $cartitem['id']) ?>">
+                                                <form method="POST" action="<?= site_url('itemcart/delete/' . $cartitem['id']) ?>">
                                                     <div class="d-flex flex-column mt-4">
                                                         <button type="submit" class="btn btn-danger btn-sm">DELETE</button>
+
                                                     </div>
                                                 </form>
+                                                <span class="mb-1 me-1 mt-2 mx-auto">
+                                                    <form method="POST" action="<?php echo htmlspecialchars(base_url('cart/deleteItem/') . $cartitem['item_id'] . "/" . $cartitem['user_id']); ?>" autocomplete="off">
+                                                        <button class="btn btn-primary btn-sm " type="submit">-</button>
+                                                    </form>
+                                                    
+                                                    <input type="number" style="width: 40px;" placeholder="<?= $cartitem['quantity']; ?>" value="<?= $cartitem['quantity']; ?>" class="text-center " required />
+                                                    
+                                                    <form method="POST" action="<?php echo htmlspecialchars(base_url('cart/addItem/') . $cartitem['item_id']."/".$cartitem['user_id']); ?>" autocomplete="off">
+                                                        <button type="submit" class="btn btn-primary btn-sm ">+</button>
+                                                    </form>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -84,7 +96,8 @@
                     </div>
                 </div>
             </div>
-            </div>
+
+          
        
 
 </section>
