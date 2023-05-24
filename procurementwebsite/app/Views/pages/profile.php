@@ -111,15 +111,21 @@
                                             <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
                                                 <div class="d-flex flex-row align-items-center mb-1">
 
-                                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                               <!--      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                                         <?= $cartitem['quantity']; ?>
-                                                    </span>
-                                                    <h4 class="mb-1 me-1">₱ <?= $cartitem['item_price']; ?></h4>
+                                                    </span> -->
+                                                    <h4 class="mb-1 me-1 ">₱ <?= $cartitem['item_price']; ?></h4>
+                                                    
                                                 </div>
 
                                                 <form method="POST" class="" action="<?= site_url('itemcart/delete/' . $cartitem['id']) ?>">
                                                     <div class="d-flex flex-column mt-4">
                                                         <button type="submit" class="btn btn-danger btn-sm">DELETE</button>
+                                                        <span class="mb-1 me-1 mt-2 mx-auto">
+                                                        <button class="btn btn-primary btn-sm ">-</button>
+                                                            <input type="number" style="width: 40px;" placeholder="<?= $cartitem['quantity']; ?>" value="<?= $cartitem['quantity']; ?>" class="text-center " required />
+                                                        <button  class="btn btn-primary btn-sm ">+</button>
+                                                    </span>
                                                     </div>
                                                 </form>
                                             </div>

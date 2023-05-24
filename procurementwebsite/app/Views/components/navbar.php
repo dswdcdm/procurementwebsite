@@ -1,5 +1,4 @@
     <header>
-
         <div class="menu shadow position-fixed  w-100 sticky-top">
             <ul>
                 <li class="logo">
@@ -21,5 +20,4 @@
                 </li>
             </ul>
         </div>
-
     </header>
