@@ -234,6 +234,12 @@ class Dashboard extends BaseController
      $pdf->Image($imageFile, $x, $y, $width, $height, $type, $link);
      // Add a new page
      $pdf->AddPage();
+   /*   $imageFile = ('assets/images/dswdlogo.jpg');
+     $imageX = ('10');
+     $imageY =  ('10');
+     $imageWidth = ('50');
+     $imageHeight = ('50');
+     $pdf->Image($imageFile, $imageX, $imageY, $imageWidth, $imageHeight); */
      $pdf->SetFont('helvetica', 'B', 12);
      $pdf->Cell(0, $cellPaddingTop, 'BILL OF QUANTITIES', 0, 1, 'C');
      $lineY = $pdf->GetY(); 
