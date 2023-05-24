@@ -47,8 +47,8 @@ $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
     $routes->get('Product/searchProduct', 'Product::searchProduct', ['query' => '']);
     $routes->get('admin/adminsearchProduct', 'Admin::adminsearchProduct', ['query' => '']);
 
-    $routes->post('cart/addItem/(:num)/(:userId)', 'Product::addItem/$1,$2');
-    $routes->post('cart/deleteItem/(:num)/(:userId)', 'Product::deleteItem/$1,$2');
+    $routes->post('cart/addItem/(:num)/(:num)', 'Product::addItem/$1/$2');
+    $routes->post('cart/deleteItem/(:num)/(:num)', 'Product::deleteItem/$1/$2');
 
     $routes->get('pages', 'Dashboard::index');
     $routes->get('pages/profile', 'Dashboard::profile');

@@ -129,7 +129,7 @@
                                                     
                                                     <input type="number" style="width: 40px;" placeholder="<?= $cartitem['quantity']; ?>" value="<?= $cartitem['quantity']; ?>" class="text-center " required />
                                                     
-                                                    <form method="POST" action="<?php echo htmlspecialchars(base_url('cart/addItem/') . $cartitem['item_id'] . "/" . $cartitem['user_id']); ?>" autocomplete="off">
+                                                    <form method="POST" action="<?php echo htmlspecialchars(base_url('cart/addItem/') . $cartitem['item_id']."/".$cartitem['user_id']); ?>" autocomplete="off">
                                                         <button type="submit" class="btn btn-primary btn-sm ">+</button>
                                                     </form>
                                                 </span>
