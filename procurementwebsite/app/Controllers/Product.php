@@ -506,9 +506,28 @@ class Product extends BaseController
             
         }
  */
-
         foreach ($cartItems as $item) {
             $totalPrice += $item['item_price'] * $item['quantity'];
         }
     }
+
+    public function addItem($item_id,$user_id){
+
+        $CartModel = new CartModel();
+        $cartItems = $CartModel->findAll();
+
+        foreach ($cartItems as &$item) {
+
+            if ($item['item_id'] == $item_id && $user_id == $item['user_id']) {
+                $valuesUpdate = [
+                    'quantity' => $item['quantity'] + 1
+                ];
+            }
+        }
+
+        $CartModel->updateData($item_id, $user_id, $valuesUpdate);
+        return redirect()->back();
+      }
+
+    public function deleteItem($item_id) {}
 }
