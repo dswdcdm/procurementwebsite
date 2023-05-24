@@ -179,37 +179,31 @@ class Dashboard extends BaseController
         // Add a page
         $pdf->AddPage();
 
-        // Set some content in the PDF
-        $pdf->SetFont('helvetica', '', 12);
-        $pdf->Cell(0, 10, 'BILL OF QUANTITIES.', 0, 1);
-        $pdf->SetFont('helvetica', '', 12);
-        $pdf->Cell(0, 10, 'DATE.', 0, 1);
-        $pdf->Cell(0, 10, 'REQUESTED BY.', 0, 1);
-        $pdf->Cell(0, 10, 'OFFICE NAME.', 0, 1);
-        foreach ($cartData as $cartitem) {
-            if ($cartitem['user_id'] == $userid) {
-                $pdf->Cell(0,10,$cartitem['quantity'] . '---------'.'1'. '---------' . $cartitem['item_name'] . '---------'. $cartitem['item_price'].'---------' . $cartitem['item_price'] * $cartitem['quantity']   ,0,1);
-            }
-        }
-        $pdf->SetFont('helvetica', '', 12);
-        $pdf->Cell(0, 10, 'GRAND TOTAL .' . $totalPrice , 0, 1);    
-        $pdf->SetFont('helvetica', '', 12);
-
      // Create new TCPDF object
      $pdf = new TCPDF();
      $cellPaddingTop = 10;
      $cellMarginBottom = 10;
+
      // Set document properties
+
      $pdf->SetCreator(PDF_CREATOR);
      $pdf->SetAuthor('Your Name');
      $pdf->SetTitle('Printable PDF');
      $pdf->SetSubject('Printing PDF in CodeIgniter 4');
      $pdf->SetKeywords('PDF, CodeIgniter 4, Printing');
 
+     $imageFile = base_url('assets/images/logob.png');
+     $x = 50; // X-coordinate of the top-left corner of the image
+     $y = 50; // Y-coordinate of the top-left corner of the image
+     $width = 100; // Width of the image
+     $height = 75; // Height of the image
+     $type = 'JPG'; // Image type (optional, default: determined by file extension)
+     $link = 'https://www.dswd.gov.ph/'; 
+
+     $pdf->Image($imageFile, $x, $y, $width, $height, $type, $link);
      // Add a new page
      $pdf->AddPage();
      $pdf->SetFont('helvetica', 'B', 12);
-
      $pdf->Cell(0, $cellPaddingTop, 'BILL OF QUANTITIES', 0, 1, 'C');
      $lineY = $pdf->GetY(); 
      $pdf->Line(10, $lineY, $pdf->getPageWidth() - 10, $lineY); 
@@ -248,7 +242,6 @@ class Dashboard extends BaseController
             $pdf->Cell($columnWidths[$key], 7, $col, 1, 0, 'C', 1);
         }
 
-        
         $pdf->Ln();
 
         // Data rows
@@ -262,7 +255,6 @@ class Dashboard extends BaseController
 
      // Output the PDF
      $pdf->Output('example.pdf', 'I');
-
         // Output the PDF as a download
         $pdf->Output('technicalSpecification.pdf', 'D');
     }

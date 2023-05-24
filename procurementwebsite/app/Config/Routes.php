@@ -47,6 +47,9 @@ $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
     $routes->get('Product/searchProduct', 'Product::searchProduct', ['query' => '']);
     $routes->get('admin/adminsearchProduct', 'Admin::adminsearchProduct', ['query' => '']);
 
+    $routes->post('cart/addItem/(:num)/(:num)', 'Product::addItem/$1/$2');
+    $routes->post('cart/deleteItem/(:num)/(:num)', 'Product::deleteItem/$1/$2');
+
     $routes->get('pages', 'Dashboard::index');
     $routes->get('pages/profile', 'Dashboard::profile');
     $routes->get('pages/cart', 'Dashboard::cart');
@@ -59,8 +62,8 @@ $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
     $routes->post('itemcart/delete/(:num)', 'Product::deleteCart/$1');    
     $routes->post('itemscart/delete', 'Product::delete_items');    
     $routes->post('Product/addToCart/', 'Product::addToCart/');
-   
     $routes->add('admin', 'Admin::index');
+    
     $routes->add('admin/userProfile', 'Admin::userProfile');
     $routes->add('admin/adminproduct', 'Admin::adminproduct');
     $routes->add('admin/addproduct', 'Admin::adminaddproduct');
@@ -70,8 +73,8 @@ $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
     $routes->add('admin/saveupdateProduct/(:num)', 'Product::saveupdateProduct/$1');
     $routes->add('admin/ViewUser/(:num)', 'Admin::viewusers/$1');
     $routes->add('admin/UpdateUsers/(:num)', 'Admin::updateusers/$1');
-
     $routes->post('admin/adminUpdateUsers/(:num)', 'Admin::adminupdateusers/$1');
+
 });
 
 $routes->group('', ['filter' => 'AlreadyLoggedInFilter'], function ($routes) {

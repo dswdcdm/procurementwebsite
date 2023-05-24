@@ -123,6 +123,13 @@
                                         <?php if ($product['status'] == "ACTIVE") : ?>
                                             <a href="<?= $product['ta']; ?>" target="_blank" class="btn btn-primary">VIEW TS AND MS FILES</a>
                                             <form action="/Product/addToCart/" method="POST" autocomplete="off" enctype="multipart/form-data">
+                                                <?php if (!empty(session()->getFlashdata('fail'))) : ?>
+                                                    <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
+                                                <?php endif ?>
+                                                <?php if (!empty(session()->getFlashdata('success'))) : ?>
+                                                    <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
+                                                <?php endif ?>
+
                                                 <input type="hidden" name="product_id" value="<?= $product['id']; ?>">
                                                 <input type="hidden" name="user_id" value="<?= $userInfo['id']; ?>">
                                                 <input type="hidden" name="user_name" value="<?= $userInfo['name']; ?>">
@@ -131,7 +138,7 @@
                                                 <input type="text" class="d-none" name="item_image" value="<?= $product['image']; ?>" />
                                                 <input type="text" class="d-none" name="item_description" value="<?= $product['description']; ?>" />
                                                 <button type="submit" class="btn btn-primary  btn-sm">ADD TO CART</button>
-                                
+
                                             </form>
                                         <?php else : ?>
                                             <a href="<?= $product['ta']; ?>" class="btn btn-primary" target="_blank">VIEW TS FILES</a>
@@ -146,4 +153,7 @@
             <?php else : ?>
             <?php endif; ?>
         <?php endforeach; ?>
+
+
+
     </div>
