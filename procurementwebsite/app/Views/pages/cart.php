@@ -105,7 +105,7 @@
                         <div class="d-flex flex-row align-items-center mb-1">
                             <h4 class="mb-1 me-1">TOTAL : ₱ <?= $totalPrice; ?></h4>
                         </div>
-                        <form method="POST" class="" action="<?= site_url('pages/proceed/' . $cartitem['id']) ?>">
+                        <form method="POST" class="" target ="_blank"action="<?= site_url('pages/proceed/' . $cartitem['id']) ?>">
                             <div class="d-flex flex-column mt-4">
                                 <button type="submit" class="btn btn-primary btn-sm">PROCEED</button>
                             </div>
