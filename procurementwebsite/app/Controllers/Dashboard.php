@@ -264,7 +264,7 @@ class Dashboard extends BaseController
                 'unit',
                 $cartItem['item_name'],
                 $priceWithPeso,
-                'Php '.$totalPrice
+                'Php'.$totalPrice
             );
         }
      array('', '', '', 'GRAND TOTAL', $totalPrice);
