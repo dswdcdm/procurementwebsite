@@ -32,7 +32,7 @@
                                                 <h6 class="text-success"> PERMANENT </h6>
                                            
                                             <div class="d-flex flex-column mt-4">
-                                                <a href="/Product/productItem/<?= $employee['id']; ?>" class="btn btn-primary btn-sm" type="button">Contact</a>
+                                                <button class="btn btn-primary btn-sm" id="open-email-button" type="button">Contact</button>
                                             </div>
                                         </div>
                                     <?php else : ?>
@@ -93,12 +93,12 @@
         <div class="col-6 offset-md-3 offset-2">
             <div class="teamcol">
                 <div class="teamcolinner ">
-               
-                 
-                        <div class="avatar ">
-                            <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class=" img-fluid " />
-                        </div>
-         
+
+
+                    <div class="avatar ">
+                        <img src="<?php echo base_url('uploads/user.png'); ?> " alt="profile" class=" img-fluid " />
+                    </div>
+
                     <div class="member-name">
                         <h2 style="font-size:1rem;"><?= $employee['name']; ?></h2>
                         <p style="font-size:0.8em;"><?= $employee['about']; ?></p>
@@ -120,11 +120,11 @@
                 </div>
                 <div class="teamcol ">
                     <div class="teamcolinner ">
-                      
-                     
-                            <div class="avatar 1">
-                                <img src="<?php echo base_url('uploads/profileimage/bacay.png'); ?> " alt="profile" class=" img-fluid " />
-                            </div>
+
+
+                        <div class="avatar 1">
+                            <img src="<?php echo base_url('uploads/profileimage/bacay.png'); ?> " alt="profile" class=" img-fluid " />
+                        </div>
                         <div class="member-name  ">
                             <h2 style="font-size:1rem; ">ENGR. ALDWIN R. BACAY </h2>
                             <p style="font-size:0.8em;">Engineer II/ Section Head</p>
@@ -525,3 +525,13 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById("open-email-button").addEventListener("click", function() {
+            var recipient = "markbrvaldez@gmail.com";
+            var subject = "Test Email";
+            var body = "This is a test email message.";
+            var mailtoUrl = "mailto:" + recipient + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+            window.open(mailtoUrl);
+        });
+    </script>

@@ -9,12 +9,11 @@
   outline: none;
 }
 
-
 /* colors */
-.permanent{
+.permanent {
   background-color: #14d6fc;
 }
-.contract{
+.contract {
   background-color: #ede4a1;
 }
 /* color end */
@@ -37,15 +36,22 @@ hr {
 .soc-icon {
   border: none;
 }
+<<<<<<< HEAD
+/*   div{
+    border: 1px solid rgb(255, 105, 105);
+  }
+ */
+=======
   /* div{
     border: 1px solid rgb(255, 105, 105);
   } */
 
+>>>>>>> def362b852c156e6baabbc396145a6ba804f6b09
 /* directory css */
 .teamWrapper {
   margin-top: 50px;
 }
-  /* 
+/* 
   .section-container {
     --container: 2080px;
     max-width: var(--container);
@@ -58,24 +64,22 @@ hr {
   margin-top: 100px;
 }
 
-
 .topgrid {
-  margin-top:100px;
+  margin-top: 100px;
   cursor: pointer;
 }
 
 .avatar {
   position: absolute;
-  left: 0;  
+  left: 0;
   text-align: center;
 }
 
 .teamcolinner {
   position: relative;
-  
 }
 
-.avatar>img {
+.avatar > img {
   width: 100px;
   margin: auto;
   border: 1px solid rgb(170 170 173/ 1);
@@ -91,7 +95,7 @@ hr {
 }
 
 .teamcol {
-  margin-top:16%;
+  margin-top: 16%;
   padding: 10px;
   background: #fff;
   min-width: 300px;
@@ -100,7 +104,7 @@ hr {
   transition: transform 1s ease-in-out;
 }
 .teamcol-box {
-  margin-top:16%;
+  margin-top: 16%;
   padding: 10px;
   background: #fff;
   min-width: 300px;
@@ -115,7 +119,7 @@ hr {
 }
 
 .teamcol:before {
-  content: "";
+  content: '';
   width: 50%;
   height: 50%;
   position: absolute;
@@ -127,7 +131,7 @@ hr {
 }
 
 .teamcol:after {
-  content: "";
+  content: '';
   width: 50%;
   height: 50%;
   position: absolute;
@@ -161,7 +165,7 @@ hr {
   padding: 0;
 }
 
-.social-listing>li {
+.social-listing > li {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -696,7 +700,7 @@ footer .copyrights {
   margin-right: 10px;
 }
 
-.blog-aside .latest-post-aside+.latest-post-aside {
+.blog-aside .latest-post-aside + .latest-post-aside {
   border-top: 1px solid #eee;
   padding-top: 15px;
   margin-top: 15px;
@@ -869,6 +873,6 @@ img {
   vertical-align: middle;
   border-style: none;
 }
-#input-quantity{
+#input-quantity {
   width: 10%;
 }

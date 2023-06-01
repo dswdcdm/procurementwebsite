@@ -5,7 +5,7 @@
     </ol>
     <form method="get" action="<?php echo htmlspecialchars(base_url('Product/searchProduct')); ?>" autocomplete="off">
         <div class="input-group mt-4">
-            <input type="search" name="query" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon"  required/>
+            <input type="search" name="query" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" required />
             <button type="submit" class="btn btn-outline-primary">search</button>
         </div>
     </form>
@@ -29,8 +29,9 @@
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-6">
                         <h5><?= $product['name']; ?></h5>
-                        <div class="d-flex flex-row">
 
+<<<<<<< HEAD
+=======
                             <!-- <div class="text-danger mb-1 me-2">
                                 <?php
                                 /*  for ($i = 1; $i <= $product['ratings']; $i++) { */
@@ -48,6 +49,7 @@
                             </div> -->
                             <!-- <span class="font-weight-bold"><?= $product['downloadms']; ?></span> -->
                         </div>
+>>>>>>> def362b852c156e6baabbc396145a6ba804f6b09
                         <div class="mt-1 mb-0 text-muted small">
                             <span> <?= $product['description']; ?></span>
                         </div>

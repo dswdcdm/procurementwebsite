@@ -2,11 +2,11 @@
     <ol class="breadcrumb mb-0">
         <li class="breadcrumb-item"><a href="/admin">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">Products</li>
-        
+
     </ol>
     <form method="get" action="<?= site_url('admin/adminsearchProduct'); ?>">
         <div class="input-group mt-4">
-            <input type="search" name= "query" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <input type="search" name="query" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
             <button type="submit" class="btn btn-outline-primary">search</button>
         </div>
     </form>
@@ -29,10 +29,12 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="col-md-6 col-lg-6 col-xl-6">
                         <h5><?= $product['name']; ?></h5>
                         <div class="d-flex flex-row">
+<<<<<<< HEAD
+=======
 
                             <!-- <div class="text-danger mb-1 me-2">
                                 <?php
@@ -50,6 +52,7 @@
                                 ?>
                             </div>
                             <span class="font-weight-bold"><?= $product['downloadms']; ?></span> -->
+>>>>>>> def362b852c156e6baabbc396145a6ba804f6b09
                         </div>
                         <div class="mt-1 mb-0 text-muted small">
                             <span> <?= $product['description']; ?></span>
@@ -72,7 +75,7 @@
                         <div class="d-flex flex-column mt-4">
                             <a href="/admin/updateproduct/<?= $product['id']; ?>" class="btn btn-primary btn-sm" type="button">Update</a>
                             <a href="/admin/adminproductItem/<?= $product['id']; ?>" class="btn btn-primary btn-sm mt-2" type="button">View</a>
-                           <!--  <button class="btn btn-outline-primary btn-sm mt-2" type="button">
+                            <!--  <button class="btn btn-outline-primary btn-sm mt-2" type="button">
                                 Update
                             </button> -->
                         </div>

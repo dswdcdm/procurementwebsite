@@ -35,7 +35,7 @@
                 <input placeholder="Email" name="email" type="email" class="input_field" id="email_field" value="<?= set_value('email'); ?>">
                 <span class="text-danger"><?= isset($validation) ? display_error($validation, 'email') : '' ?></span>
             </div>
-
+            <input type="hidden" value="<?php echo base_url('assets/images/logob.png'); ?>" name="image">
             <div class="input_container">
                 <label class="input_label" for="address">Address</label>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-geo-alt icon" viewBox="0 0 16 16">
