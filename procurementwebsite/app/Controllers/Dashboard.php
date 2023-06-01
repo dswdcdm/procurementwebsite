@@ -228,10 +228,10 @@ class Dashboard extends BaseController
         // Add a new page
         $pdf->AddPage();
         $imageFile = ('assets/images/header.png');
-        $imageX = ('5');
-        $imageY = ('2');
+        $imageX = ('8');
+        $imageY = ('10');
         $imageWidth = ('200');
-        $imageHeight = ('30');
+        $imageHeight = ('15');
         
         $pdf->Image($imageFile, $imageX, $imageY, $imageWidth, $imageHeight);
         $pdf->Cell(0, $cellMarginBottom, '', 0, 1, 'C');
@@ -263,14 +263,14 @@ class Dashboard extends BaseController
         $data = array();
 
         foreach ($cartData as $cartItem) {
-            $priceWithPeso = 'Php ' . $cartItem['item_price'];
+            $priceWithPeso = 'P ' . $cartItem['item_price'];
             $totalPrice = $cartItem['item_price'] * $cartItem['quantity'];
             $data[] = array(
                 $cartItem['quantity'],
                 'unit',
                 $cartItem['item_name'],
                 $priceWithPeso,
-                'Php' . $totalPrice
+                'P ' . $totalPrice
             );
         }
         array('', '', '', 'GRAND TOTAL', $totalPrice);
