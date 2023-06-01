@@ -5,11 +5,14 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Libraries\Hash;
 
+$session = \Config\Services::session();
+
+
 class Auth extends Controller
 {
     public function __construct()
     {
-        helper(['url', 'form']);
+        helper(['url', 'form', 'request']);
     }
     public function index()
     {
@@ -93,12 +96,15 @@ class Auth extends Controller
                 . view('auth/register', ['validation' => $this->validator])
                 . view('components/footer');
         } else {
+
+            $files = request()->getFiles();
             //register user into dswd user db
             $name = $_POST['name'];
             $email = $_POST['email'];
             $password = $_POST['password'];
             $address = $_POST['address'];
             $phone = $_POST['phone'];
+            $image = $_POST['image'];
 
             $allowed_domains = array('gmail.com', 'gmail.com');
             $domain = explode('@', $email);
@@ -107,9 +113,10 @@ class Auth extends Controller
             $values = [
                 'name' => $name,
                 'email' => $email,
-                'address'=> $address,
-                'phone'=>$phone,
-                'password' => Hash::make($password)
+                'address' => $address,
+                'phone' => $phone,
+                'password' => Hash::make($password),
+                'image' => $image
             ];
 
             if (!in_array($domain, $allowed_domains)) {

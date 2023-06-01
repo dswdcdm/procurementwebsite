@@ -24,7 +24,7 @@
                             <h6>
                                 <!--Image-->
                                 <label for="formFileSm" class="form-label">SELECT IMAGE</label>
-                                <input class="form-control form-control-sm" name="image" id="formFileSm" type="file" required  />
+                                <input class="form-control form-control-sm" name="image" id="formFileSm" type="file" required />
                                 <h6 class="text-dark">
                                     <label for="name">PRODUCT NAME</label>
                                     <div class="input_container">
