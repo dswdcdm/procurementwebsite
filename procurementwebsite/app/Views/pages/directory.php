@@ -12,7 +12,7 @@
                                     <?php if ($employee['id'] == 1) : ?>
                                         <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0 ">
                                             <div class="bg-image text-center hover-zoom ripple rounded ripple-surface">
-                                                <img src="<?php echo base_url('uploads/profileimage/evangelistaace.jpg'); ?> " alt="profile" class="rounded-circle img-fluid " style="width: 180px;" />
+                                                <img src="<?php echo base_url('uploads/profileimage/karen.png'); ?> " alt="profile" class="rounded-circle img-fluid " style="width: 180px;" />
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-lg-6 col-xl-6">

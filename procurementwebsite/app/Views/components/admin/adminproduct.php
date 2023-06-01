@@ -33,26 +33,6 @@
                     <div class="col-md-6 col-lg-6 col-xl-6">
                         <h5><?= $product['name']; ?></h5>
                         <div class="d-flex flex-row">
-<<<<<<< HEAD
-=======
-
-                            <!-- <div class="text-danger mb-1 me-2">
-                                <?php
-                                /*  for ($i = 1; $i <= $product['ratings']; $i++) { */
-                                echo '  <i class="fa fa-download"></i> TS DOWNLOADS';
-                                /*   } */
-                                ?>
-                            </div>
-                            <span class="font-weight-bold"><?= $product['downloadts']; ?> &nbsp; </span>
-                            <div class="text-danger mb-1 me-2">
-                                <?php
-                                /*  for ($i = 1; $i <= $product['ratings']; $i++) { */
-                                echo '  <i class="fa fa-download"></i> MS DOWNLOADS';
-                                /*   } */
-                                ?>
-                            </div>
-                            <span class="font-weight-bold"><?= $product['downloadms']; ?></span> -->
->>>>>>> def362b852c156e6baabbc396145a6ba804f6b09
                         </div>
                         <div class="mt-1 mb-0 text-muted small">
                             <span> <?= $product['description']; ?></span>
