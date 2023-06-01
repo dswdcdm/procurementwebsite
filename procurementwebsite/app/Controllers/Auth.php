@@ -185,12 +185,16 @@ class Auth extends Controller
         }
     }
 
-
     function logout()
     {
         if (session()->has('loggedUser')) {
             session()->remove('loggedUser');
             return redirect()->to('/auth?access=out')->with('fail', 'Logged out!');
         }
+    }
+
+    function isAdmin()
+    {
+        
     }
 }

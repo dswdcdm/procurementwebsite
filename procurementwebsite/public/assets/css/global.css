@@ -36,10 +36,17 @@ hr {
 .soc-icon {
   border: none;
 }
+<<<<<<< HEAD
 /*   div{
     border: 1px solid rgb(255, 105, 105);
   }
  */
+=======
+  /* div{
+    border: 1px solid rgb(255, 105, 105);
+  } */
+
+>>>>>>> def362b852c156e6baabbc396145a6ba804f6b09
 /* directory css */
 .teamWrapper {
   margin-top: 50px;
