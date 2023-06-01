@@ -16,24 +16,21 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-lg-6 col-xl-6">
-                                            <h5> ENGR.ALFREDO C.EVANGELISTA II</h5>
+                                            <h5> Atty. Karina Antonette A. Agudo </h5>
                                             <div class="d-flex flex-row">
-                                                <span class="font-weight-bold"><?= $employee['about']; ?></span>
+                                                <span class="font-weight-bold">CESE Director IV</span>
                                             </div>
                                             <div class="mt-1 mb-0 text-muted small">
-                                                <span> <?= $employee['email']; ?></span>
+                                                <span> Admin@dswd.gov.ph</span>
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
                                             <div class="d-flex flex-row align-items-center mb-1">
-                                                <h4 class="mb-1 me-1"> <!-- <?= $employee['name']; ?> --></h4>
+                                                <h4 class="mb-1 me-1"> Atty. Karina Antonette A. Agudo</h4>
                                             </div>
-                                            <?php if ($employee['status'] == "PERMANENT") : ?>
-                                                <h6 class="text-success"> <!-- <?= $employee['status']; ?> --> </h6>
-                                            <?php else : ?>
-                                                <h6 class="text-danger"> <!-- <?= $employee['status']; ?> --> </h6>
-                                            <?php endif; ?>
-
+                                        
+                                                <h6 class="text-success"> PERMANENT </h6>
+                                           
                                             <div class="d-flex flex-column mt-4">
                                                 <a href="/Product/productItem/<?= $employee['id']; ?>" class="btn btn-primary btn-sm" type="button">Contact</a>
                                             </div>
@@ -41,6 +38,50 @@
                                     <?php else : ?>
                                     <?php endif; ?>
                                 <?php endforeach; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section-container">
+        <div class="topgrid">
+            <div class="colmun pl-5 pr-5">
+                <div class="teamcol">
+                    <div class="teamcolinner">
+                        <div class="card-body">
+                            <div class="row">
+                               
+                                        <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0 ">
+                                            <div class="bg-image text-center hover-zoom ripple rounded ripple-surface">
+                                                <img src="<?php echo base_url('uploads/profileimage/evangelistaace.jpg'); ?> " alt="profile" class="rounded-circle img-fluid " style="width: 180px;" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6 col-xl-6">
+                                            <h5> ENGR. ALFREDO C.EVANGELISTA II</h5>
+                                            <div class="d-flex flex-row">
+                                                <span class="font-weight-bold">Engineer III/Officer-in-Charge</span>
+                                            </div>
+                                            <div class="mt-1 mb-0 text-muted small">
+                                                <span> aceevalista@dswd.gov.ph</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                                            <div class="d-flex flex-row align-items-center mb-1">
+                                                <h4 class="mb-1 me-1"> ENGR. ALFREDO C.EVANGELISTA II</h4>
+                                            </div>
+                                           
+                                                <h6 class="text-success"> PERMANENT </h6>
+                                        
+
+                                            <div class="d-flex flex-column mt-4">
+                                                <a href="/Product/productItem/<?= $employee['id']; ?>" class="btn btn-primary btn-sm" type="button">Contact</a>
+                                            </div>
+                                        </div>
+                                    
                             </div>
                         </div>
                     </div>
