@@ -34,7 +34,7 @@
                         <h5><?= $product['name']; ?></h5>
                         <div class="d-flex flex-row">
 
-                            <div class="text-danger mb-1 me-2">
+                            <!-- <div class="text-danger mb-1 me-2">
                                 <?php
                                 /*  for ($i = 1; $i <= $product['ratings']; $i++) { */
                                 echo '  <i class="fa fa-download"></i> TS DOWNLOADS';
@@ -49,7 +49,7 @@
                                 /*   } */
                                 ?>
                             </div>
-                            <span class="font-weight-bold"><?= $product['downloadms']; ?></span>
+                            <span class="font-weight-bold"><?= $product['downloadms']; ?></span> -->
                         </div>
                         <div class="mt-1 mb-0 text-muted small">
                             <span> <?= $product['description']; ?></span>
