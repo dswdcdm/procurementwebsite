@@ -190,7 +190,7 @@ class Dashboard extends BaseController
             $totalPrice += $item['item_price'] * $item['quantity'];
         }
 
-        $cartData =  $cartData['cart'];
+        $cartData = $cartData['cart'];
 
         $data = [
             'title' => 'Profile',
@@ -224,24 +224,29 @@ class Dashboard extends BaseController
         $pdf->SetSubject('Printing PDF in CodeIgniter 4');
         $pdf->SetKeywords('PDF, CodeIgniter 4, Printing');
 
-        $imageFile = base_url('assets/images/logob.png');
-        $x = 50; // X-coordinate of the top-left corner of the image
-        $y = 50; // Y-coordinate of the top-left corner of the image
-        $width = 100; // Width of the image
-        $height = 75; // Height of the image
-        $type = 'JPG'; // Image type (optional, default: determined by file extension)
-        $link = 'https://www.dswd.gov.ph/';
-
-        $pdf->Image($imageFile, $x, $y, $width, $height, $type, $link);
+        
         // Add a new page
         $pdf->AddPage();
-        /*   $imageFile = ('assets/images/dswdlogo.jpg');
-     $imageX = ('10');
-     $imageY =  ('10');
-     $imageWidth = ('50');
-     $imageHeight = ('50');
-     $pdf->Image($imageFile, $imageX, $imageY, $imageWidth, $imageHeight); */
+        $imageFile = ('assets/images/header.png');
+        $imageX = ('8');
+        $imageY = ('10');
+        $imageWidth = ('200');
+        $imageHeight = ('15');
+        
+        $pdf->Image($imageFile, $imageX, $imageY, $imageWidth, $imageHeight);
+        $pdf->Cell(0, $cellMarginBottom, '', 0, 1, 'C');
+        $pdf->Cell(0, $cellMarginBottom, '', 0, 1, 'C');
+
+        $imageFile = ('assets/images/receiptfooter.png');
+        $imageX = ('5');
+        $imageY = ('236');
+        $imageWidth = ('200');
+        $imageHeight = ('40');
+        $pdf->Image($imageFile, $imageX, $imageY, $imageWidth, $imageHeight);
+
+       
         $pdf->SetFont('helvetica', 'B', 12);
+        
         $pdf->Cell(0, $cellPaddingTop, 'BILL OF QUANTITIES', 0, 1, 'C');
         $lineY = $pdf->GetY();
         $pdf->Line(10, $lineY, $pdf->getPageWidth() - 10, $lineY);
@@ -258,14 +263,14 @@ class Dashboard extends BaseController
         $data = array();
 
         foreach ($cartData as $cartItem) {
-            $priceWithPeso = 'Php ' . $cartItem['item_price'];
-            $totalPrice =  $cartItem['item_price'] * $cartItem['quantity'];
+            $priceWithPeso = 'P ' . $cartItem['item_price'];
+            $totalPrice = $cartItem['item_price'] * $cartItem['quantity'];
             $data[] = array(
                 $cartItem['quantity'],
                 'unit',
                 $cartItem['item_name'],
                 $priceWithPeso,
-                'Php' . $totalPrice
+                'P ' . $totalPrice
             );
         }
         array('', '', '', 'GRAND TOTAL', $totalPrice);
