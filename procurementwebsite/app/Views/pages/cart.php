@@ -108,16 +108,17 @@
                                 <?php endif; ?>
                             <?php endforeach; ?>
                         </div>
-                        <form method="POST" class="" target="_blank" action="<?= site_url('pages/proceed/' . $cartitem['id']) ?>">
-                            <div class="d-flex flex-column mt-4">
-                                <button type="submit" class="btn btn-primary btn-sm">PROCEED</button>
-                            </div>
-                        </form>
+                        <?php foreach ($cartData as $cartitem) : ?>
+                            <?php if ($cartitem['user_id'] == $userInfo['id']) : ?>
+                                <form method="POST" class="" target="_blank" action="<?= site_url('pages/proceed/' . $cartitem['id']) ?>">
+                                    <div class="d-flex flex-column mt-4">
+                                        <button type="submit" class="btn btn-primary btn-sm">PROCEED</button>
+                                    </div>
+                                </form>
+                            <?php else : ?>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
-
-
-
-
 </section>
