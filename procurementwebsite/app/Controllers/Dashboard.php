@@ -207,7 +207,7 @@ class Dashboard extends BaseController
         if ($isSubmitted) {
             echo 'error';
         } else {
-            redirect('')
+            redirect('');
             // The form has not been submitted
         }
     }
