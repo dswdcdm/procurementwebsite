@@ -179,6 +179,56 @@ class Dashboard extends BaseController
     }
 
 
+    public function submitCart($user_id)
+    { // Google Form URL
+        $googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdKjduGDV9WBSYoXcZGTfDFEA13Y1SzByrneLRVbf9RTu60qw/viewform?fbclid=IwAR16hrEoYSBKttfNeLiEnODofPtZKFaapzNjSjcAwYxSwi6lLqkK9c8dspY';
+
+        // Form data to be submitted
+        $formData = [
+            'dataInput' => 'John Doe', // Replace with the actual field names and values
+
+            // Add more form fields as needed
+        ];
+
+        // Prepare the POST request
+        // Initialize cURL
+        $ch = curl_init($googleFormUrl);
+
+        // Set cURL options
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($formData));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        // Execute the cURL request
+        $response = curl_exec($ch);
+        // Check if the submission was successful
+        $isSubmitted = $this->isFormSubmitted($response);
+
+        if ($isSubmitted) {
+            echo 'error';
+        } else {
+            redirect('')
+            // The form has not been submitted
+        }
+    }
+    /**
+     * Check if the Google Form submission was successful.
+     *
+     * @param string $htmlContent HTML content of the Google Form submission response page
+     * @return bool
+     */
+    private function isFormSubmitted(string $htmlContent): bool
+    {
+        // Implement the logic to check if the form submission was successful
+        // You can use string functions, regular expressions, or HTML parsing libraries like Simple HTML DOM Parser (https://simplehtmldom.sourceforge.io/)
+        // Look for unique elements or patterns on the confirmation page that indicate a successful submission
+
+        // Example check: If the confirmation page contains a specific success message
+        $successMessage = 'Thank you for your submission!';
+        $isSubmitted = strpos($htmlContent, $successMessage) !== false;
+
+        return $isSubmitted;
+    }
     public function generatePDF($userid)
     {
 
@@ -224,7 +274,7 @@ class Dashboard extends BaseController
         $pdf->SetSubject('Printing PDF in CodeIgniter 4');
         $pdf->SetKeywords('PDF, CodeIgniter 4, Printing');
 
-        
+
         // Add a new page
         $pdf->AddPage();
         $imageFile = ('assets/images/header.png');
@@ -232,7 +282,7 @@ class Dashboard extends BaseController
         $imageY = ('10');
         $imageWidth = ('200');
         $imageHeight = ('15');
-        
+
         $pdf->Image($imageFile, $imageX, $imageY, $imageWidth, $imageHeight);
         $pdf->Cell(0, $cellMarginBottom, '', 0, 1, 'C');
         $pdf->Cell(0, $cellMarginBottom, '', 0, 1, 'C');
@@ -244,9 +294,9 @@ class Dashboard extends BaseController
         $imageHeight = ('40');
         $pdf->Image($imageFile, $imageX, $imageY, $imageWidth, $imageHeight);
 
-       
+
         $pdf->SetFont('helvetica', 'B', 12);
-        
+
         $pdf->Cell(0, $cellPaddingTop, 'BILL OF QUANTITIES', 0, 1, 'C');
         $lineY = $pdf->GetY();
         $pdf->Line(10, $lineY, $pdf->getPageWidth() - 10, $lineY);
