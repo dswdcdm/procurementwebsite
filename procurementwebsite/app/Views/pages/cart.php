@@ -112,7 +112,8 @@
                             <?php if ($cartitem['user_id'] == $userInfo['id']) : ?>
                                 <form method="POST" class="" target="_blank" action="<?= site_url('pages/submitCart/' . $cartitem['id']) ?>">
                                     <div class="d-flex flex-column mt-4">
-                                        <button type="submit" class="btn btn-primary btn-sm" onclick="openGoogleForm(event)">PROCEED</button>
+                                        <input type="hidden" name="dataInput" id="" value="sample data">
+                                        <button type="submit" class="btn btn-primary btn-sm">PROCEED</button>
                                     </div>
                                 </form>
                             <?php else : ?>
@@ -127,7 +128,7 @@
     function openGoogleForm(event) {
         event.preventDefault(); // Prevent the default form submission behavior
         // Open Google Form in a new tab or window
-        window.open('https://docs.google.com/forms/d/e/1FAIpQLSdKjduGDV9WBSYoXcZGTfDFEA13Y1SzByrneLRVbf9RTu60qw/viewform?fbclid=IwAR16hrEoYSBKttfNeLiEnODofPtZKFaapzNjSjcAwYxSwi6lLqkK9c8dspY');
+        window.open('https://docs.google.com/forms/d/e/1FAIpQLSfN8-qEfNCqSzcbhA9FA6WtDHtxumRqaHJEVwvX-4R0b5uiIA/viewform');
         // You can perform additional actions here or wait for the form submission
     }
 </script>

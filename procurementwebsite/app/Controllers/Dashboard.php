@@ -181,53 +181,28 @@ class Dashboard extends BaseController
 
     public function submitCart($user_id)
     { // Google Form URL
-        $googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdKjduGDV9WBSYoXcZGTfDFEA13Y1SzByrneLRVbf9RTu60qw/viewform?fbclid=IwAR16hrEoYSBKttfNeLiEnODofPtZKFaapzNjSjcAwYxSwi6lLqkK9c8dspY';
 
         // Form data to be submitted
-        $formData = [
-            'dataInput' => 'John Doe', // Replace with the actual field names and values
-
+        $googleFormData = [
+            'dataInput' => 'dataInput', // Replace with the actual field names and values
+            'dataInput' => 'dataInput',
             // Add more form fields as needed
         ];
 
+        $queryString = http_build_query($googleFormData);
         // Prepare the POST request
         // Initialize cURL
-        $ch = curl_init($googleFormUrl);
 
         // Set cURL options
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($formData));
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-        // Execute the cURL request
-        $response = curl_exec($ch);
-        // Check if the submission was successful
-        $isSubmitted = $this->isFormSubmitted($response);
-
-        if ($isSubmitted) {
-            echo 'error';
-        } else {
-            redirect('');
-            // The form has not been submitted
-        }
+        $googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdKjduGDV9WBSYoXcZGTfDFEA13Y1SzByrneLRVbf9RTu60qw/viewform?fbclid=IwAR16hrEoYSBKttfNeLiEnODofPtZKFaapzNjSjcAwYxSwi6lLqkK9c8dspY' . $queryString;
+        return redirect()->to($googleFormUrl);
     }
-    /**
-     * Check if the Google Form submission was successful.
-     *
-     * @param string $htmlContent HTML content of the Google Form submission response page
-     * @return bool
-     */
-    private function isFormSubmitted(string $htmlContent): bool
+    public function postSubmissionActions()
     {
-        // Implement the logic to check if the form submission was successful
-        // You can use string functions, regular expressions, or HTML parsing libraries like Simple HTML DOM Parser (https://simplehtmldom.sourceforge.io/)
-        // Look for unique elements or patterns on the confirmation page that indicate a successful submission
+        // Perform post-submission actions
+        // Generate the download link or perform any other actions
 
-        // Example check: If the confirmation page contains a specific success message
-        $successMessage = 'Thank you for your submission!';
-        $isSubmitted = strpos($htmlContent, $successMessage) !== false;
-
-        return $isSubmitted;
+        // Return the view with the download link or perform other actions
     }
     public function generatePDF($userid)
     {
