@@ -53,7 +53,10 @@ $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
     $routes->get('pages', 'Dashboard::index');
     $routes->get('pages/profile', 'Dashboard::profile');
     $routes->get('pages/cart', 'Dashboard::cart');
+    $routes->get('pages/cartfile', 'Dashboard::cartfile');
     $routes->get('pages/history', 'Dashboard::historycart');
+
+
 
     $routes->post('pages/proceed/(:num)', 'Dashboard::generatePDF/$1');
     $routes->get('pages/updateProfile', 'Dashboard::updateProfile');

@@ -7,6 +7,7 @@ use App\Models\CommentModel;
 use App\Models\Downloads;
 use App\Models\UserModel;
 use App\Models\ProductModel;
+use App\Helpers\GoogleFormsHelper;
 
 class Admin extends BaseController
 {
@@ -17,6 +18,7 @@ class Admin extends BaseController
 
     public function index()
     {
+
         $userModel = new \App\Models\UserModel();
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID);

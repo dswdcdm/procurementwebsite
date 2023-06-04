@@ -11,6 +11,7 @@ use TCPDF;
 
 class Dashboard extends BaseController
 {
+
     public function index()
     {
         $userModel = new \App\Models\UserModel();
@@ -59,8 +60,7 @@ class Dashboard extends BaseController
             . view('pages/profile', $data)
             . view('components/footer');
     }
-
-    function cart()
+    function  cartfile()
     {
         $userModel = new \App\Models\UserModel();
         $loggedUserID = session()->get('loggedUser');
@@ -74,8 +74,37 @@ class Dashboard extends BaseController
         $productPrices = $CartModel->getAllProductPrices();
         $hascart = false;
 
+        $totalPrice = 0;
+        foreach ($cartItems as $item) {
+            $totalPrice += $item['item_price'] * $item['quantity'];
+        }
 
+        $data = [
+            'title' => 'Cart',
+            'userInfo' => $userInfo,
+            'cartData' => $cartData['cart'],
+            'totalPrice' => $totalPrice,
+            'hascart' => $hascart
+        ];
+        return view('components/header', $data)
+            . view('components/navbar')
+            . view('components/hero')
+            . view('pages/cartfile', $data)
+            . view('components/footer');
+    }
+    function cart()
+    {
+        $userModel = new \App\Models\UserModel();
+        $loggedUserID = session()->get('loggedUser');
+        $userInfo = $userModel->find($loggedUserID);
 
+        $CartModel = new CartModel();
+        $cartData['cart'] = $CartModel->findAll();
+
+        $CartModel = new CartModel();
+        $cartItems = $CartModel->findAll();
+        $productPrices = $CartModel->getAllProductPrices();
+        $hascart = false;
 
         $totalPrice = 0;
         foreach ($cartItems as $item) {
@@ -196,22 +225,16 @@ class Dashboard extends BaseController
             'dataInput' => 'dataInput',
             // Add more form fields as needed
         ];
-
         $queryString = http_build_query($googleFormData);
         // Prepare the POST request
-        // Initialize cURL
 
         // Set cURL options
         $googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdKjduGDV9WBSYoXcZGTfDFEA13Y1SzByrneLRVbf9RTu60qw/viewform?fbclid=IwAR16hrEoYSBKttfNeLiEnODofPtZKFaapzNjSjcAwYxSwi6lLqkK9c8dspY' . $queryString;
+        // Prepare the POST request
+
         return redirect()->to($googleFormUrl);
     }
-    public function postSubmissionActions()
-    {
-        // Perform post-submission actions
-        // Generate the download link or perform any other actions
 
-        // Return the view with the download link or perform other actions
-    }
     public function generatePDF($userid)
     {
 
