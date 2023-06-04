@@ -20,7 +20,6 @@
                 </ul>
             </div>
 
-
             <div class="cart text-decoration-none mt-2" id="">
                 <div class=" menu shadow  w-100">
                     <?php foreach ($cartData as $cartitem) : ?>
@@ -50,7 +49,6 @@
 
                                             <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
                                                 <div class="d-flex flex-row align-items-center mb-1">
-
                                                     <!--      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                                         <?= $cartitem['quantity']; ?>
                                                     </span> -->
@@ -61,7 +59,6 @@
                                                 <form method="POST" action="<?= site_url('itemcart/delete/' . $cartitem['id']) ?>">
                                                     <div class="d-flex flex-column mt-4">
                                                         <button type="submit" class="btn btn-danger btn-sm">DELETE</button>
-
                                                     </div>
                                                 </form>
                                                 <span class="mb-1 me-1 mt-2">
@@ -123,7 +120,6 @@
                                 </div>
                             </form>
                         <?php endif ?>
-
                     </div>
                 </div>
             </div>
@@ -134,6 +130,5 @@
         event.preventDefault(); // Prevent the default form submission behavior
         // Open Google Form in a new tab or window
         window.open('https://docs.google.com/forms/d/e/1FAIpQLSfN8-qEfNCqSzcbhA9FA6WtDHtxumRqaHJEVwvX-4R0b5uiIA/viewform');
-        // You can perform additional actions here or wait for the form submission
     }
 </script>
