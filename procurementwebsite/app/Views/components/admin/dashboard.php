@@ -15,11 +15,7 @@
                     <?= $download['download_number']; ?>
                   </span> TA DOWNLOADS <br />
                 <?php endif; ?>
-                <?php if ($download['id'] == 2): ?>
-                  <span class="text-success"><i class="fa fa-download"></i>
-                    <?= $download['download_number']; ?>
-                  </span> MS DOWNLOADS
-                <?php endif; ?>
+                
               <?php endforeach; ?>
             </p>
           </div>

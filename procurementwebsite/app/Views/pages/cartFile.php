@@ -119,7 +119,7 @@
                             <form method="POST" class="" target="_blank" action="<?= site_url('pages/proceed/' . $cartitem['id']) ?>">
                                 <div class="d-flex flex-column mt-4">
                                     <input type="hidden" name="dataInput" id="" value="sample data">
-                                    <button type="submit" class="btn btn-primary btn-sm">PREVIEW FILES</button>
+                                    <button type="submit" class="btn btn-primary btn-sm">CLICK TO DOWNLOAD</button>
                                 </div>
                             </form>
                         <?php endif ?>
