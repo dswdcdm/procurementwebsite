@@ -8,6 +8,7 @@ use App\Models\EmployeeModel;
 use App\Models\ProductModel;
 use TCPDF;
 
+
 class Dashboard extends BaseController
 {
     public function index()
@@ -166,6 +167,7 @@ class Dashboard extends BaseController
     }
     function directory()
     {
+
 
         $userModel = new \App\Models\UserModel();
         $loggedUserID = session()->get('loggedUser');
