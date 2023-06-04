@@ -103,11 +103,31 @@
                         <div class="d-flex flex-row align-items-center mb-1">
                             <?php foreach ($cartData as $cartitem) : ?>
                                 <?php if ($cartitem['user_id'] == $userInfo['id']) : ?>
-                                    <h4 class="mb-1 me-1">TOTAL : ₱ <?= $totalPrice; ?></h4>
+
+                                    <?php $hascart = true; ?>
                                 <?php else : ?>
+                                    <?php $hascart = false; ?>
                                 <?php endif; ?>
                             <?php endforeach; ?>
+                            <?php if (!$hascart) : ?>
+                                <h4 class="mb-1 me-1">TOTAL : ₱ 0000</h4>
+                            <?php else : ?>
+                                <h4 class="mb-1 me-1">TOTAL : ₱ <?= $totalPrice; ?></h4>
+
+                            <?php endif ?>
                         </div>
+                        <?php if (!$hascart) : ?>
+
+                        <?php else : ?>
+                            <form method="POST" class="" target="_blank" action="<?= site_url('pages/submitCart/' . $cartitem['id']) ?>">
+                                <div class="d-flex flex-column mt-4">
+                                    <input type="hidden" name="dataInput" id="" value="sample data">
+                                    <button type="submit" class="btn btn-primary btn-sm">PROCEED</button>
+                                </div>
+                            </form>
+
+                        <?php endif ?>
+                        <!-- 
                         <?php foreach ($cartData as $cartitem) : ?>
                             <?php if ($cartitem['user_id'] == $userInfo['id']) : ?>
                                 <form method="POST" class="" target="_blank" action="<?= site_url('pages/submitCart/' . $cartitem['id']) ?>">
@@ -118,7 +138,7 @@
                                 </form>
                             <?php else : ?>
                             <?php endif; ?>
-                        <?php endforeach; ?>
+                        <?php endforeach; ?> -->
                     </div>
                 </div>
             </div>

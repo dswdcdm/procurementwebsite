@@ -71,6 +71,11 @@ class Dashboard extends BaseController
         $CartModel = new CartModel();
         $cartItems = $CartModel->findAll();
         $productPrices = $CartModel->getAllProductPrices();
+        $hascart = false;
+
+
+
+
         $totalPrice = 0;
         foreach ($cartItems as $item) {
             $totalPrice += $item['item_price'] * $item['quantity'];
@@ -80,7 +85,8 @@ class Dashboard extends BaseController
             'title' => 'Cart',
             'userInfo' => $userInfo,
             'cartData' => $cartData['cart'],
-            'totalPrice' => $totalPrice
+            'totalPrice' => $totalPrice,
+            'hascart' => $hascart
         ];
         return view('components/header', $data)
             . view('components/navbar')
