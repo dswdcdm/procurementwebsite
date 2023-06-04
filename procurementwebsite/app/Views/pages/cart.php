@@ -127,18 +127,7 @@
                             </form>
 
                         <?php endif ?>
-                        <!-- 
-                        <?php foreach ($cartData as $cartitem) : ?>
-                            <?php if ($cartitem['user_id'] == $userInfo['id']) : ?>
-                                <form method="POST" class="" target="_blank" action="<?= site_url('pages/submitCart/' . $cartitem['id']) ?>">
-                                    <div class="d-flex flex-column mt-4">
-                                        <input type="hidden" name="dataInput" id="" value="sample data">
-                                        <button type="submit" class="btn btn-primary btn-sm">PROCEED</button>
-                                    </div>
-                                </form>
-                            <?php else : ?>
-                            <?php endif; ?>
-                        <?php endforeach; ?> -->
+
                     </div>
                 </div>
             </div>
