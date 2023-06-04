@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2023 at 02:55 AM
+-- Generation Time: Jun 04, 2023 at 05:06 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -24,6 +24,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `id` int(255) NOT NULL,
+  `item_id` int(255) NOT NULL,
+  `date_created` date NOT NULL DEFAULT current_timestamp(),
+  `quantity` int(255) NOT NULL,
+  `user_id` int(255) NOT NULL,
+  `user_name` varchar(255) NOT NULL,
+  `item_name` varchar(255) NOT NULL,
+  `item_image` varchar(255) NOT NULL,
+  `item_price` float NOT NULL,
+  `item_description` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`id`, `item_id`, `date_created`, `quantity`, `user_id`, `user_name`, `item_name`, `item_image`, `item_price`, `item_description`) VALUES
+(34, 1, '2023-06-04', 2, 1, 'sample', 'Coffee Maker', '/uploads/1683795245_b8d50f4b55e9d26feb7c.webp', 2232, '10-12 cups capacity 700-1200watts, 230V, 1Ø, 60Hz Non-stick warming plate with ON/OFF Switch and Light Indicator Reusable Cone style filter with handle Clear water level indicator on tank Heat resistant glass carafe, hinged tank  including at least 6 mont');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `comments`
 --
 
@@ -33,17 +59,19 @@ CREATE TABLE `comments` (
   `post_id` int(255) NOT NULL,
   `text` varchar(255) NOT NULL,
   `created_at` varchar(255) NOT NULL DEFAULT current_timestamp(),
-  `name` varchar(255) NOT NULL
+  `name` varchar(255) NOT NULL,
+  `item_image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `comments`
 --
 
-INSERT INTO `comments` (`id`, `user_id`, `post_id`, `text`, `created_at`, `name`) VALUES
-(1, 2, 1, 'comment try', '14-10-1222', 'name'),
-(5, 1, 1, 'hahaha', '2023-05-15 12:59:59', 'sample'),
-(6, 1, 8, 'gagi haha', '2023-05-15 13:00:27', 'sample');
+INSERT INTO `comments` (`id`, `user_id`, `post_id`, `text`, `created_at`, `name`, `item_image`) VALUES
+(1, 2, 1, 'comment try', '14-10-1222', 'name', ''),
+(6, 1, 8, 'gagi haha', '2023-05-15 13:00:27', 'sample', ''),
+(15, 7, 1, 'sample comment', '2023-06-01 20:59:45', 'asdfsfasdf', ''),
+(16, 9, 2, 'sample comment', '2023-06-02 14:53:10', 'Jeven Mata', '');
 
 -- --------------------------------------------------------
 
@@ -123,6 +151,18 @@ INSERT INTO `employee` (`id`, `name`, `about`, `email`, `image`, `date_added`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `history`
+--
+
+CREATE TABLE `history` (
+  `id` int(55) NOT NULL,
+  `item_id` int(55) NOT NULL,
+  `user_id` int(55) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `producttb`
 --
 
@@ -174,7 +214,9 @@ INSERT INTO `producttb` (`id`, `name`, `description`, `price`, `datein`, `dateou
 (19, 'NO NAME', 'Double Sided Silk Fabric, patched design Set includes eyelet for mounting purposes Dimension: 3’ x 6”', '4,950.00', '0-4-29', '0-4-29', 'INACTIVE', '5', '', '', 'NOTE', '', '', '/uploads/1683793266_4cc73f25699feea2f4cf.png', 0, 0, '', '', ''),
 (20, 'WHEELED TRASH BIN ', 'Wheeled trash bin with cover and foot pedal. Made with Polyethylene resin.    Volume Capacity: 120 L  Color: For end-user’s approval in accordance with the standard guidelines set by the Department', '6,710.00', '0-4-29', '0-4-29', 'INACTIVE', '5', 'https://drive.google.com/file/d/1ZDkqmNEesyV8Fwy5Kl21SxNsxJ349L-8/view?usp=share_link', 'https://drive.google.com/file/d/1ZDkqmNEesyV8Fwy5Kl21SxNsxJ349L-8/view?usp=share_link', 'Attached picture is for reference only. Please submit photos of the sample/brochure for\r\nreference and approval of end user.', 'SUPPLY AND DELIVERY OF WHEELED TRASH BIN', '', 'https://th.bing.com/th/id/OIP.kmtDQD5LM-Pe6-eI2yEpegHaHa?pid=ImgDet&rs=1', 0, 0, '', '', ''),
 (27, 'Product Name', '', '1321', '', '', 'STATUS', '', '', '', 'THIS NOTE', '', '', '/uploads/1683791687_b8bcd83f75d71b03a6c0.jpg', 0, 0, '', '', ''),
-(31, 'Sameple Prodyct', 'update description', '323', '', '', 'ACTIVE', '', '', '', 'NTOES', '', '', '/uploads/1684113152_ffe6db2bba51b03cf9b5.jpg', 0, 0, '', '', '1684113152_ffe6db2bba51b03cf9b5.jpg');
+(31, 'Sameple Prodyct', 'update description', '323', '', '', 'ACTIVE', '', '', '', 'NTOES', '', '', '/uploads/1684113152_ffe6db2bba51b03cf9b5.jpg', 0, 0, '', '', '1684113152_ffe6db2bba51b03cf9b5.jpg'),
+(32, 'Sample Item', '', '12324', '', '', 'ACTIVE', '', '/files/1685625542_dfc009fb404c5b312078.webp', '/files/1685625542_5294b8ff664853ac9af5.webp', 'SAMPLE NOTE', '', '', '/uploads/1685625542_9a839390e8d451b3b0ed.webp', 0, 0, '', '', ''),
+(33, 'Sample Product', '', '12345', '', '', 'ACTIVE', '', '/files/1685690335_1fe05a6991227d2d5e32.png', '/files/1685690335_25aaa3382a92c047f308.png', 'Sample note', '', '', '/uploads/1685690335_2be7c52ed7f1dbf79af6.png', 0, 0, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -191,22 +233,33 @@ CREATE TABLE `users` (
   `date_created` varchar(255) NOT NULL DEFAULT current_timestamp(),
   `status` varchar(255) NOT NULL DEFAULT 'ACTIVE',
   `address` varchar(255) NOT NULL,
-  `phone` varchar(255) NOT NULL
+  `phone` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`, `name`, `is_admin`, `date_created`, `status`, `address`, `phone`) VALUES
-(1, 'sample@gmail.com', '$2y$10$Zt3HaCDDxQIXAfJ9MRIkP.y.FB6ci5F3uOx9vdlTE4eECx0vTJQpS', 'sample', 'admin', '2023-05-03 10:35:38', 'ACTIVE', '', ''),
-(2, 'kenjie@gmail.com', '$2y$10$VTU2yst0phHLgh7gioydeeM3takVX.bx1wanIs2zqbgx2xXbonz4a', 'kenjie', 'notadmin', '2023-05-03 10:35:38', 'ACTIVE', '', ''),
-(3, 'user@gmail.com', '$2y$10$3WLXbWFHdfnSic2I7fwKF.WLwdVHqB0btYWWHqR8rkaW6y8sHDcrC', 'user', 'USER', '2023-05-03 12:20:30', 'ACTIVE', '', ''),
-(5, 'mark@example.com', '$2y$10$iZ4q0XYA2lBVfbTTDlVcyOktyAAfvDn7nQ5YzZJwqnKRVfPr7BghG', 'mark', 'USER', '2023-05-10 08:57:50', 'ACTIVE', 'address', '12313');
+INSERT INTO `users` (`id`, `email`, `password`, `name`, `is_admin`, `date_created`, `status`, `address`, `phone`, `image`) VALUES
+(1, 'sample@gmail.com', '$2y$10$Zt3HaCDDxQIXAfJ9MRIkP.y.FB6ci5F3uOx9vdlTE4eECx0vTJQpS', 'sample', 'ADMIN', '2023-05-03 10:35:38', 'ACTIVE', '', '', '/uploads/1685610347_1ec2a66cf6459bcbd483.png'),
+(2, 'kenjie@gmail.com', '$2y$10$VTU2yst0phHLgh7gioydeeM3takVX.bx1wanIs2zqbgx2xXbonz4a', 'kenjie', 'ADMIN', '2023-05-03 10:35:38', 'ACTIVE', '', '', ''),
+(3, 'user@gmail.com', '$2y$10$3WLXbWFHdfnSic2I7fwKF.WLwdVHqB0btYWWHqR8rkaW6y8sHDcrC', 'user', 'USER', '2023-05-03 12:20:30', 'ACTIVE', '', '', ''),
+(5, 'mark@example.com', '$2y$10$iZ4q0XYA2lBVfbTTDlVcyOktyAAfvDn7nQ5YzZJwqnKRVfPr7BghG', 'mark', 'USER', '2023-05-10 08:57:50', 'ACTIVE', 'address', '12313', ''),
+(6, 'admin@gmail.com', '$2y$10$8uHC4s./EPpViTUsTZgCCOoGYVwu8t2r64XNEekT9oSgmwyi.88pu', 'Jomar Mata', 'USER', '2023-06-01 20:40:21', 'ACTIVE', 'San Rafael Montalban Rizal', '232323232', 'https://fc93-112-201-162-31.ngrok-free.app/assets/images/logob.png'),
+(7, 'bok@gmail.com', '$2y$10$KiAqb/Oqaf4zJrhTxqIrY.NGup2h.uUyQ8AkYLXOmVKi0GoNl4Oy.', 'asdfsfasdf', 'USER', '2023-06-01 20:41:52', 'ACTIVE', 'asdasdas', '1233434', 'https://fc93-112-201-162-31.ngrok-free.app/assets/images/logob.png'),
+(8, 'adasda@gmail.com', '$2y$10$7F8GPOSPuEo8KM97W0tQHeNNwaynPIbNugBPeEeFoPsbzVI2mnWD.', 'jorda', 'USER', '2023-06-02 10:58:23', 'ACTIVE', 'San Rafael Montalban Rizal', '0232323232', 'http://localhost:8080/assets/images/logob.png'),
+(9, 'jevenmata@gmail.com', '$2y$10$t2J0PG8AfNdLbGEU1DwXw.NMYZq0vzfGYJJ9Uq8.n4NbSt9OcyzVm', 'Jeven Mata', 'USER', '2023-06-02 14:49:30', 'ACTIVE', 'phase 2 Hillside San Rafael', '123445454', 'https://4284-112-201-162-31.ngrok-free.app/assets/images/logob.png');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `comments`
@@ -227,6 +280,12 @@ ALTER TABLE `employee`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `history`
+--
+ALTER TABLE `history`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `producttb`
 --
 ALTER TABLE `producttb`
@@ -243,10 +302,16 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `downloads`
@@ -261,16 +326,22 @@ ALTER TABLE `employee`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
+-- AUTO_INCREMENT for table `history`
+--
+ALTER TABLE `history`
+  MODIFY `id` int(55) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `producttb`
 --
 ALTER TABLE `producttb`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
