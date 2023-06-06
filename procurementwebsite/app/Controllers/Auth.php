@@ -193,7 +193,7 @@ class Auth extends Controller
         }
     }
 
-    function isAdmin()
+    function otp()
     {
         
     }
