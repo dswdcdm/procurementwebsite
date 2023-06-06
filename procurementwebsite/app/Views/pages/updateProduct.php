@@ -57,12 +57,20 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="article-content">
-                                    <h6 class>
-                                        <label for="status" class="text-dark">PRODUCT STATUS</label>
+                                <div class="row">
+                                    <h6 class="col-md-12">
+                                    <label for="status"  class="text-dark col-md-6">PRODUCT STATUS</label>
+                                    <select name="status"  id ="status" type = "text" class="col-md-6 w-50"   value="<?= $product['status']; ?>" required>
+                                        <option value="ACTIVE"><?= $product['status']; ?></option>
+                                        <option value="ACTIVE">ACTIVE</option>
+                                        <option value="INACTIVE">INACTIVE</option>
+                                    </select>
+
+
+                                        <!-- 
                                         <div class="input_container">
                                             <input placeholder="PRODUCT STATUS" name="status" type="text" class="input_field" id="status" value="<?= $product['status']; ?>" required></p>
-                                        </div>
+                                        </div> -->
                                     </h6>
                                     </h6>
 

@@ -89,7 +89,7 @@
                             <div class="row">
                                 <div class="col-sm-3">
                                     <p class="mb-0">Date Registered</p>
-                                </div>w
+                                </div>
                                 <div class="col-sm-9">
                                     <input placeholder="Date" name="date" type="text" class="input_field w-50" id="date" disabled = "disabled" value="<?= $user['date_created']; ?>">
                                         <span class="text-danger"><?= isset($validation) ? display_error($validation, 'date_created  ') : '' ?></span>

@@ -60,15 +60,26 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="article-content">
-                            <h6 class>
+
+                        <div class="row">
+                                    <h6 class="col-md-12">
+                                    <label for="status"  class="text-dark col-md-6">PRODUCT STATUS</label>
+                                    <select name="status"  id ="status" type = "text" class="col-md-6 w-50"   value="<?= set_value('status'); ?>" required>
+                                        <option value="ACTIVE"><?= set_value('status'); ?></option>
+                                        <option value="ACTIVE">ACTIVE</option>
+                                        <option value="INACTIVE">INACTIVE</option>
+                                    </select>
+
+                                    </h6>
+                        <!-- <div class="article-content">
+                            <h6 class="text-dark">
                                 <label for="status" class="text-dark">PRODUCT STATUS</label>
 
                                 <div class="input_container">
                                     <input placeholder="PRODUCT STATUS" name="status" type="text" class="input_field" id="status" value="<?= set_value('status'); ?>" required></p>
                                 </div>
-                            </h6>
-                            </h6>
+                            </h6> -->
+                           
                             <div class="send">
                                 <button type="submit" class="px-btn theme w-100 btn btn-primary"><span>ADD PRODUCT</span> <i class="arrow"></i></button>
                             </div>
