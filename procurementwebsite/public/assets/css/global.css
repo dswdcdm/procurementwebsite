@@ -8,7 +8,22 @@
   background-color: rgba(221, 72, 20, 0.2);
   outline: none;
 }
-
+#input1{
+  width: 50px;
+  height: 40px;
+}
+#input2{
+  width: 50px;
+  height: 40px;
+}
+#input3{
+  width: 50px;
+  height: 40px;
+}
+#input4{
+  width: 50px;
+  height: 40px;
+}
 /* colors */
 .permanent {
   background-color: #14d6fc;
@@ -36,17 +51,10 @@ hr {
 .soc-icon {
   border: none;
 }
-<<<<<<< HEAD
 /*   div{
     border: 1px solid rgb(255, 105, 105);
   }
  */
-=======
-  /* div{
-    border: 1px solid rgb(255, 105, 105);
-  } */
-
->>>>>>> def362b852c156e6baabbc396145a6ba804f6b09
 /* directory css */
 .teamWrapper {
   margin-top: 50px;

@@ -14,14 +14,14 @@
                 <span class="subtitle">We have sent a verification code to your Email.</span>
             </div>
             <br>
-            <div class="d-flex align-items-center justify-content-between mt-2">
-                <input id="input1" class="form-control mr-sm-2 " type="text" maxlength="1">
-                <input id="input2" class="form-control mr-sm-2 " type="text" maxlength="1">
-                <input id="input3" class="form-control mr-sm-2 " type="text" maxlength="1">
+            <div class="d-flex align-items-center justify-content-between mt-2 mb-4 ">
+                <input id="input1" class="form-control mr-sm-5 " type="text" maxlength="1">
+                <input id="input2" class="form-control mr-sm-5 " type="text" maxlength="1">
+                <input id="input3" class="form-control mr-sm-5 " type="text" maxlength="1">
                 <input id="input4" class="form-control " type="text" maxlength="1">
             </div>
             <button type="submit" class="sign-in_btn">
-                <span id="Login-button"> Sign In </span>
+                <span id="Login-button"> Verify </span>
             </button>
           
 
