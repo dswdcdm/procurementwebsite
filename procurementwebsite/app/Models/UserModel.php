@@ -21,7 +21,7 @@ class UserModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['name', 'email', 'password', 'address', 'phone', 'image', 'is_admin', 'status'];
+    protected $allowedFields    = ['name', 'email', 'password', 'address', 'phone', 'image', 'is_admin', 'status', 'verification_code'];
 
     // Dates
     protected $useTimestamps = false;
@@ -46,4 +46,8 @@ class UserModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+    public function findByEmailOrUsername($emailOrUsername)
+    {
+        return $this->where('email', $emailOrUsername)->first();
+    }
 }
