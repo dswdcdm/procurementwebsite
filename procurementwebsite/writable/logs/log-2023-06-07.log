@@ -50,6 +50,7 @@ INFO - 2023-06-07 09:59:15 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-06-07 09:59:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-06-07 10:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-06-07 10:01:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
 INFO - 2023-06-07 10:11:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-06-07 10:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-06-07 10:12:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -341,3 +342,46 @@ ERROR - 2023-06-07 11:09:46 --> Email: Unable to send email using PHP mail(). Yo
 ERROR - 2023-06-07 11:09:46 --> 
 INFO - 2023-06-07 11:09:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-06-07 11:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+INFO - 2023-06-07 10:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-07 10:07:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-07 10:08:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-07 10:08:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-07 10:12:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> f3d55ff7b312266d34a565b8c1b26d4c74bf0017
+INFO - 2023-06-07 11:10:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-07 11:10:27 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\Email\Email.php:1735
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'D:\\xamp\\htdocs\\...', 1735)
+#1 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\Email\Email.php(1735): mail('markbrvaldez@gm...', '=?UTF-8?Q?Passw...', 'Your OTP code i...', 'Date: Wed, 7 Ju...', '-f dswdcmd@gmai...')
+#2 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\Email\Email.php(1667): CodeIgniter\Email\Email->sendWithMail()
+#3 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\Email\Email.php(1565): CodeIgniter\Email\Email->spoolEmail()
+#4 D:\xamp\htdocs\procurementwebsite\procurementwebsite\app\Controllers\Auth.php(240): CodeIgniter\Email\Email->send()
+#5 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\CodeIgniter.php(934): App\Controllers\Auth->sendResetPasswordEmail()
+#6 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xamp\htdocs\procurementwebsite\procurementwebsite\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\...')
+#10 {main}
+ERROR - 2023-06-07 11:10:27 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2023-06-07 11:10:27 --> 
+INFO - 2023-06-07 11:10:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-07 11:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-07 11:11:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-07 11:11:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-07 11:11:11 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\Email\Email.php:1735
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'D:\\xamp\\htdocs\\...', 1735)
+#1 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\Email\Email.php(1735): mail('markbrvaldez@gm...', '=?UTF-8?Q?Passw...', 'Your OTP code i...', 'Date: Wed, 7 Ju...', '-f dswdcmd@gmai...')
+#2 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\Email\Email.php(1667): CodeIgniter\Email\Email->sendWithMail()
+#3 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\Email\Email.php(1565): CodeIgniter\Email\Email->spoolEmail()
+#4 D:\xamp\htdocs\procurementwebsite\procurementwebsite\app\Controllers\Auth.php(229): CodeIgniter\Email\Email->send()
+#5 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\CodeIgniter.php(934): App\Controllers\Auth->sendResetPasswordEmail()
+#6 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xamp\htdocs\procurementwebsite\procurementwebsite\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xamp\htdocs\procurementwebsite\procurementwebsite\system\Commands\Server\rewrite.php(47): require_once('D:\\xamp\\htdocs\\...')
+#10 {main}
+ERROR - 2023-06-07 11:11:11 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2023-06-07 11:11:11 --> 
+INFO - 2023-06-07 11:11:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
