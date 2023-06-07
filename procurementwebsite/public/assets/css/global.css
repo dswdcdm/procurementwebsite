@@ -7,23 +7,14 @@
 *:focus {
   background-color: rgba(221, 72, 20, 0.2);
   outline: none;
+  /* otp verification box */
 }
-#input1{
+#input1,#input2, #input3, #input4 {
   width: 50px;
   height: 40px;
 }
-#input2{
-  width: 50px;
-  height: 40px;
-}
-#input3{
-  width: 50px;
-  height: 40px;
-}
-#input4{
-  width: 50px;
-  height: 40px;
-}
+  /* otp verification box */
+  
 /* colors */
 .permanent {
   background-color: #14d6fc;

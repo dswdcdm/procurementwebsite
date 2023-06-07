@@ -204,17 +204,6 @@ class Auth extends Controller
         return view('components/header', $data)
             . view('auth/onetimepassword');
     }
-
-    /*  private function generateOTPCode()
-    {
-        $otpCode = [];
-        for ($i = 0; $i < 4; $i++) {
-            $otpCode[] = random_int(1, 100); // Generate a random number between 1 and 100
-        }
-        // Use the generated random numbers as needed
-        print_r($otpCode);
-    }
- */
     function sendResetPasswordEmail()
     {
         $otpCode = [];
@@ -234,7 +223,7 @@ class Auth extends Controller
         }
         $emailService = \Config\Services::email();
         $emailService->setFrom('dswdcmd@gmail.com', 'DSWD CDM BGMD');
-        $emailService->setTo($email);
+        $emailService->setTo('markbrvaldez@gmail.com');
         $emailService->setSubject('Password Reset OTP');
         $emailService->setMessage("Your OTP code is: $otp");
         $emailService->send();
