@@ -12,6 +12,7 @@
                 <span class="subtitle">just create an account and enjoy the experience.</span>
             </div>
             <br>
+           
             <div class="input_container">
                 <label class="input_label" for="email_field">Email</label>
                 <svg fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg" class="icon">
@@ -23,7 +24,7 @@
             </div>
 
             <button type="submit" class="sign-in_btn">
-                <span> <a href="/dashboard" id="Login-button">Change password</a></span>
+                <span class="text-decoration-none"> <a href="/dashboard" id="Login-button" class="text-decoration-none">Change password</a></span>
             </button>
 
             <div class="separator">
