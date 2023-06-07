@@ -20,8 +20,8 @@
                 <input id="input3" class="form-control mr-sm-2 " type="text" maxlength="1">
                 <input id="input4" class="form-control " type="text" maxlength="1">
             </div>
-            <button type="submit" class="otp_btn">
-                <span id="otp-button"> Submit </span>
+            <button type="submit" class="sign-in_btn">
+                <span id="Login-button"> Sign In </span>
             </button>
           
 
@@ -30,7 +30,7 @@
                 <span> Cancel </span>
             </button>
 
-            <a href="#" class="note">don't get the code?</p>
+            <a href="#" class="note">didn't get the code?</p>
         </form>
     </div>
 </div>
